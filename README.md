@@ -1,4 +1,9 @@
 # OpenTracer
+
+[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. Reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. 
+
+
+
 ## A Dynamic Analysis Tool for EVM Transaction Traces
 
 OpenTracer is a powerful Ethereum Virtual Machine (EVM) trace dynamic analysis tool designed to extract and analyze data from transaction traces. It offers a comprehensive suite of features for developers and analysts looking to gain deeper insights into smart contract interactions and behaviors.
