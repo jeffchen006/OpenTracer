@@ -1,11 +1,11 @@
-# Trace2Inv
+# OpenTracer
 ## A Dynamic Analysis Tool for EVM Transaction Traces
 
-Trace2Inv is a powerful Ethereum Virtual Machine (EVM) trace dynamic analysis tool designed to extract and analyze data from transaction traces. It offers a comprehensive suite of features for developers and analysts looking to gain deeper insights into smart contract interactions and behaviors.
+OpenTracer is a powerful Ethereum Virtual Machine (EVM) trace dynamic analysis tool designed to extract and analyze data from transaction traces. It offers a comprehensive suite of features for developers and analysts looking to gain deeper insights into smart contract interactions and behaviors.
 
 ### Key Features
 
-1. **Open-source Transaction Explorer**: Trace2Inv provides functionalities similar to well-known transaction explorers. It allows users to input a transaction hash and obtain detailed parsed transaction traces that include contract addresses, gas costs, ether transfers, function signatures, and storage changes. The tool is comparable to:
+1. **Open-source Transaction Explorer**: OpenTracer provides functionalities similar to well-known transaction explorers. It allows users to input a transaction hash and obtain detailed parsed transaction traces that include contract addresses, gas costs, ether transfers, function signatures, and storage changes. The tool is comparable to:
    - [Phalcon](https://explorer.phalcon.xyz/)
    - [Tx Tracer](https://openchain.xyz/trace)
    - [Cruise](https://cruise.supremacy.team/)
@@ -68,17 +68,17 @@ For the function withdrawTo0xC86283C8:
 ```
 
 
-1. **Translate Results of debug_traceTransaction to other trace required by other tools**: Since Trace2Inv records all information of
-a transaction (by parsing result of `debug_traceTransaction` and augments it using `eth_getTransactionReceipt` and EtherScan results), we believe with moderate effort, Trace2Inv can translate the results to other trace formats required by other tools, to replace the modified archive node part of many research works. Here we provide an example of how to translate the results to the format required by [TxSpector] (https://github.com/OSUSecLab/TxSpector/). 
+1. **Translate Results of debug_traceTransaction to other trace required by other tools**: Since OpenTracer records all information of
+a transaction (by parsing result of `debug_traceTransaction` and augments it using `eth_getTransactionReceipt` and EtherScan results), we believe with moderate effort, OpenTracer can translate the results to other trace formats required by other tools, to replace the modified archive node part of many research works. Here we provide an example of how to translate the results to the format required by [TxSpector] (https://github.com/OSUSecLab/TxSpector/). 
 
 
 TxSpector requires an input of a special form of trace, in a txt file. Each line contains a program counter, an opcode, and key input to that opcode. For example, TxSpector provides the following [example](https://github.com/OSUSecLab/TxSpector/blob/master/example/0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b.txt). 
 
 The authors chose to modify the Geth node and print out the required information when replaying a transaction. This is primarily because no existing RPC geth endpoint provides all the required information, they would have to use multiple RPC methods to collect information, parse and combine them to get the required information. Directly modifying a Geth node is easier in this case. However, for future users of TxSpector, they would have to merge the changes to the latest version of Geth, which is not trivial. During our experiment with TxSpector, we discovered a few new EVM opcodes are not supported by TxSpector, which would require additional effort to change the Geth node, which is not trivial.
 
-We believe with moderate effort, Trace2Inv can translate the results to the format required by TxSpector. Since Trace2Inv already collects ALL information about a transaction, users only need to truncate the information to the required format. 
+We believe with moderate effort, OpenTracer can translate the results to the format required by TxSpector. Since OpenTracer already collects ALL information about a transaction, users only need to truncate the information to the required format. 
 
-We implemented a TxSpector translator on top of functionalities provided by Trace2Inv using only ~300 lines of code at `TxSpectorTranslator/translator.py`. 
+We implemented a TxSpector translator on top of functionalities provided by OpenTracer using only ~300 lines of code at `TxSpectorTranslator/translator.py`. 
 It should be much easier to maintain and extend the translator in the future. Adding a new opcode only requires modifying some if conditions in the code.
 
 As an example, we translate the demo transaction `0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b` to the format required by TxSpector, and compare it with the original TxSpector demo input. It matches.  
@@ -87,7 +87,7 @@ As an example, we translate the demo transaction `0x37085f336b5d3e588e3767454467
 
 
 ## Compatibility and Testing
-Trace2Inv has been rigorously tested on both Ubuntu Linux and MacOS.
+OpenTracer has been rigorously tested on both Ubuntu Linux and MacOS.
 
 
 ### Characteristics
@@ -99,7 +99,7 @@ Trace2Inv has been rigorously tested on both Ubuntu Linux and MacOS.
 
 
 ## Dependencies
-To ensure smooth operation of Trace2Inv, the following dependencies must be installed:
+To ensure smooth operation of OpenTracer, the following dependencies must be installed:
 
 ### sqlite3
 Utilized for caching transactions and contracts data.
@@ -178,11 +178,11 @@ The correct output
 
 ## Usage Example
 
-For a practical demonstration of Trace2Inv, let's use the contract `Punk_1` as an example. It is important to understand that TrueBlocks captures every occurrence of a contract address in transactions, but not all are relevant to the contract's functional transaction history.
+For a practical demonstration of OpenTracer, let's use the contract `Punk_1` as an example. It is important to understand that TrueBlocks captures every occurrence of a contract address in transactions, but not all are relevant to the contract's functional transaction history.
 
 For instance, suppose the target contract is `A`. A simple ERC20 transfer like `transfer(A, 1);` includes `A` in the transaction. However, since there is no invocation of `A`'s functions, such occurrences should not be considered part of `A`'s transaction history.
 
-We collected 31 transactions from TrueBlocks for `Punk_1` up to block 12995895, where a significant event (hack) occurred. Our Trace2Inv FSE 2024 paper, however, identifies only 28 transactions as relevant. This discrepancy arises because certain transactions need to be excluded for various reasons:
+We collected 31 transactions from TrueBlocks for `Punk_1` up to block 12995895, where a significant event (hack) occurred. Our OpenTracer FSE 2024 paper, however, identifies only 28 transactions as relevant. This discrepancy arises because certain transactions need to be excluded for various reasons:
 
 1. **Deployment Transaction**: The initial transaction that deploys `Punk_1` is unique and typically behaves differently from subsequent transactions. For instance, the deployment transaction identified by `0x39a78785a85250ee6f17459113efa2bdc2d5069a37f751171ee44efb3ac219f7` is excluded.
    
@@ -190,7 +190,7 @@ We collected 31 transactions from TrueBlocks for `Punk_1` up to block 12995895, 
 
 3. **Non-Invoking Transactions**: Transactions where the contract address is merely a parameter and not the primary actor do not reflect direct interactions with the contract. An example is `0x8c7cc6ab0a5ed76098152927c52a7f3d3ded6f95783fbd13e05b174574bb2763`.
 
-In the Trace2Inv paper, we also discuss how transaction history is divided into a training set (70%) and a testing set (30%), which differs from the complete history used here for invariant inference.
+In the OpenTracer paper, we also discuss how transaction history is divided into a training set (70%) and a testing set (30%), which differs from the complete history used here for invariant inference.
 
 
 
@@ -204,11 +204,11 @@ Below is a detailed overview of the folder structure provided in the artifact, w
 - `constraintPackage/`: Includes scripts and modules for generating invariants.
 - `crawlPackage/`: Includes tools for crawling blockchain-related information from sources like EtherScan, TrueBlocks, and Ethereum Archive Node.
 - `fetchPackage/`: Responsible for fetching results from debug_traceTransaction and pruning them.
-- `main.py`: The main Python script for demonstrating three main features of Trace2Inv.
+- `main.py`: The main Python script for demonstrating three main features of OpenTracer.
 - `parserPackage/`: Contains parsing utilities for processing data.
 - `staticAnalyzer/`: Contains code for analyzing Solidity and Vyper source code to assist invariant generation.
 - `trackerPackage/`: Includes tools for dynamic taint analysis.
-- `TxSpectorTranslator/`: Includes a translator for converting Trace2Inv results to the format required by TxSpector, and a demo transaction for testing.
+- `TxSpectorTranslator/`: Includes a translator for converting OpenTracer results to the format required by TxSpector, and a demo transaction for testing.
 - `utilsPackage/`: Contains utility scripts and modules supporting various functions.
 - `settings.toml`: Provides configuration settings for various scripts and tools. It is supposed to be secret and not shared.
 
@@ -219,7 +219,7 @@ There are three primary types of traces that are provided by different Ethereum 
 
 - **Transaction Trace (trace)**: Basic trace providing an overview of transaction actions.
 - **State Difference (stateDiff)**: Details all state changes resulting from transaction execution.
-- **Virtual Machine Execution Trace (vmTrace)**: Offers a detailed trace of the VM's state throughout the transaction, including subcalls. This trace is what Trace2Inv uses. 
+- **Virtual Machine Execution Trace (vmTrace)**: Offers a detailed trace of the VM's state throughout the transaction, including subcalls. This trace is what OpenTracer uses. 
 
 
 ### Tips for Managing Large Transaction Histories
