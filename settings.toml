@@ -2,9 +2,12 @@
 current = "v0.0.0-alpha"
 
 [settings]
-EtherScanApiKeys = [ ]
-ethArchives = [ ]
-rpcProviders = [ ]
+EtherScanApiKeys = [ "8SD5GA6IKF28CJQ6PF7IJPUMA2RTYSM158", "T36ZIMU3MF25YFFWD723FTQB9QWWBV1R57", "GMUISR1UKTHXUQZ1VVHBAPXHA3V6HPSSSM", "V63CW1KDZUB5CAP1IBDWX79J2T5FWA3JDQ", "I7R59ER7AQ8HEBYTNR15ETXJSMTD86BHA4", "3PCW417G8C6U4CZDEWA54Q97DNMDZ4ER7A", "MTCCCJ1BW2I8EA5EJN714N6ZH67DY74HHF", "W9C78R6J4B7ABDWK5149P73CP2JSMX8QTW", "H8CKJDHKBPU6AUD7UJGVA4E31J6RTHUJES",]
+rpcProviders = [ "https://white-flashy-research.quiknode.pro/661a68de75cca81104455a0cb1b244812d574fef/",]
+ethArchives = [ "https://eth-mainnet.g.alchemy.com/v2/weftbAqPky4MPT-_G1v9NNofoctXc_Mi", "https://eth-mainnet.g.alchemy.com/v2/86e0Q4aGWRLRihZ56NB3Z5mcXpVx9Y94", "https://eth-mainnet.g.alchemy.com/v2/aB-cCzeL6rN6XR_n0qupMJ9qqCfJ2sCz", "https://eth-mainnet.g.alchemy.com/v2/JqC73WlBFLd6UX-7lGP3B3mNcoi0mvhq", "https://eth-mainnet.g.alchemy.com/v2/F_L3iReDhsY5H09pmaixMwQEo505n9Nh", "https://eth-mainnet.g.alchemy.com/v2/YCP7UuLZXCoGuDr9cXWtNpD_VHATf5QF", "https://eth-mainnet.g.alchemy.com/v2/x44Zy65ZCU-4dzsslhp_3Fz6kz49k_yG", "https://eth-mainnet.g.alchemy.com/v2/yKflgYl9tHO-Ulkrs8e7k4NpnHXrGuyx", "https://eth-mainnet.g.alchemy.com/v2/5R25eNGFTqkx1aRtSTMvJzkOf1wKDNYS", "https://eth-mainnet.g.alchemy.com/v2/cRvZCqj5XSx2LUHzmVtGOr7AEnq6kKPY",]
 
 [runtime]
-LoggingUpperBound = 8
+LoggingUpperBound = 1000
+
+[experiment]
+trainingSetRatio = 0.7

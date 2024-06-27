@@ -207,9 +207,12 @@ class VmtraceParserGlobal:
         LoggingUpperBound = settings["runtime"]["LoggingUpperBound"]
         """Given a trace, return a list of logs restricted to <contractAddress>"""
         """These logs should be ready to feed into an invariant checker"""
+
         self.txHash = txHash
         ce = self.crawlEtherscan
+
         input, origin, value, status = self.setupGlobalState(txHash)
+        print("PARSSSSIIIING!!!")
         # funcSigMapMap = {}
         if len(self.contractAddressStack) > 0:
             contractAddress = self.contractAddressStack[-1]
@@ -228,7 +231,6 @@ class VmtraceParserGlobal:
 
         metaData = {"meta": True, "txHash": txHash, "origin": origin}
         metaTraceTree = TraceTree(metaData) # function calls represent what we really care
-
         if self.CreateContract:
             infoDict = {
                 "type": "create", "structLogsStart": -1, "addr": contractAddress,
@@ -1190,6 +1192,7 @@ def analyzeOneTxGlobal(txHash, path, cache_path = ""):
     # metaTraceTree = p.parseLogsGlobal(None, txHash, trace)
     try:
         metaTraceTree = p.parseLogsGlobal(None, txHash, trace)
+
     except KeyError as e:
         printed = "\nKey Error: " + str(e)   
         printed += "  txHash: " + txHash
@@ -1206,6 +1209,5 @@ def analyzeOneTxGlobal(txHash, path, cache_path = ""):
         if not os.path.exists(cache_path):
             metaTraceTree = {txHash: metaTraceTree}
             writeCompressedJson(cache_path, metaTraceTree)
-
     return metaTraceTree
     
