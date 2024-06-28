@@ -71,7 +71,8 @@ def writeDataSource(contract, tx, dataSourceMapList):
     path = SCRIPT_DIR + "/cache/" + contract + "/{}.pickle".format(tx)
     # print("write", path)
     # print(dataSourceMapList)
-    with open(path, 'wb') as f:
+    mode = 'ab' if(os.path.exists(path)) else "wb"
+    with open(path, mode) as f:
         pickle.dump(dataSourceMapList, f)
 
 def readDataSource(contract, tx):
@@ -92,9 +93,15 @@ def readDataSource(contract, tx):
 def writeAccessList(contract, tx, accessList):
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     path = SCRIPT_DIR + "/cache/" + contract + "_Access/{}.pickle".format(tx)
+    folder_path =SCRIPT_DIR + "/cache/"  + contract + "_Access/"
+
+    if not (os.path.exists(folder_path)):
+        os.makedirs(folder_path)
+       
     # print("write", path)
     # print(dataSourceMapList)
-    with open(path, 'wb') as f:
+    mode = 'ab' if(os.path.exists(path)) else "wb"
+    with open(path, mode) as f:
         pickle.dump(accessList, f)
 
 def readAccessList(contract, tx):
@@ -117,7 +124,14 @@ def writeSplitedTraceTree(contract, tx, splitedTraceTree):
     path = SCRIPT_DIR + "/cache/" + contract + "_SplitedTraceTree/{}.pickle".format(tx)
     # print("write", path)
     # print(dataSourceMapList)
-    with open(path, 'wb') as f:
+    mode = 'ab' if(os.path.exists(path)) else "wb"
+    folder_path =SCRIPT_DIR + "/cache/"  + contract + "_SplitedTraceTree/"
+
+    if not (os.path.exists(folder_path)):
+        os.makedirs(folder_path)
+       
+
+    with open(path, mode) as f:
         pickle.dump(splitedTraceTree, f)
 
 def readSplitedTraceTree(contract, tx):
@@ -376,11 +390,12 @@ def mainTestTime():
 
 def main():
     # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    feature0()
+    #feature0()
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
     # feature1()
+    feature3()
 
 
 def feature0():
@@ -409,6 +424,134 @@ def feature0():
     metaTraceTree.decodeABIStorage(temp['structLogs'])
     print(metaTraceTree.visualizeASE_decoded())
 
+def feature3():
+    contract = "0xe952bda8c06481506e4731c4f54ced2d4ab81659"
+    endBlock = 14465357
+    txHashes = collectTransactionHistory(contract, endBlock)
+
+    print("total transactions: ", len(txHashes))
+
+    # Step 1.2: Download history transaction traces from QuickNode
+    for tx in txHashes:
+        storeATrace(tx)    
+    pathList = []
+
+
+    l1 = []
+    l2 = []
+    l3 = []
+
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    for tx in txHashes:
+        path = SCRIPT_DIR + "/cache/" + tx + ".json.gz"
+        pathList.append(path)
+     # The following code extracts invariant-related data from the transactions
+    for ii in range(len(txHashes)):
+        # if readAccessList(contract, txHashes[ii]) != []:
+        #     continue
+        dataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, txHashes[ii], pathList[ii], l1, l2, l3)        
+        writeDataSource(contract, txHashes[ii], dataSourceMapList)
+        writeAccessList(contract, txHashes[ii], accessList)
+        writeSplitedTraceTree(contract, txHashes[ii], splitedTraceTree)
+    
+    accesslistTable = []
+    accesslistList = []
+
+    executionListTable = []
+    executionListList = []
+    
+    # Here we use 70% of the data as training data, same as in Trace2Inv Paper
+    trainingSetSize = int(0.7 * len(txHashes))
+
+    # read the data source map list
+    for ii in range( len(txHashes) ):
+        accessList = readAccessList(contract, txHashes[ii])
+        if len(accessList) > 0:
+            accesslistList.append( (txHashes[ii], accessList) )
+        
+        if len(accessList) == 1 and len(accessList[0]) == 0:
+            print("no access for tx: ", txHashes[ii]) 
+        
+
+    accesslistTable.append( (contract, accesslistList) )
+
+
+    # read the data source map list
+    for ii in range( trainingSetSize ):
+        executionList = readDataSource(contract, txHashes[ii])
+        if len(executionList) > 0 and len(executionList[0]) > 0:
+            for execution in executionList[0]:
+                executionListList.append( (txHashes[ii], execution) )
+
+    executionListTable.append( (contract, executionListList) )
+
+
+    
+    # Invariant Category 1: Access Control
+    print("=====================================================")
+    print("=============== Access Control ======================")
+    print("=====================================================")
+    inferAccessControl(accesslistTable)
+
+    # Invariant Category 2: Time Locks
+    print("=====================================================")
+    print("=================== Time Locks ======================")
+    print("=====================================================")
+
+    # enterFuncs represent the functions that a user can deposit their funds into
+    enterFuncs = []
+    # exitFuncs represent the functions that a user can withdraw their funds from
+    exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
+    inferTimeLocks(accesslistTable, enterFuncs, exitFuncs)
+
+    # Invariant Category 3: Gas Control
+    print("=====================================================")
+    print("=================== Gas Control =====================")
+    print("=====================================================")
+    inferGasControl(accesslistTable)
+
+    # Invariant Category 4: Re-entrancy
+    print("=====================================================")
+    print("=================== Re-entrancy =====================")
+    print("=====================================================")
+    enterFuncs = []
+    exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
+    inferReentrancy(accesslistTable, enterFuncs, exitFuncs)
+
+    # Invariant Category 5: Special Storage
+    print("=====================================================")
+    print("================ Special Storage ====================")
+    print("=====================================================")
+    inferSpecialStorage(accesslistTable)
+
+    # Invariant Category 6: Oracle Control
+    # Only the following benchmarks use an oracle
+    # Punk_1 does not use an oracle, but the code is still here for reference
+    # # benchmarks = ["bZx2", "Warp_interface", "CheeseBank_1", "CheeseBank_2", "CheeseBank_3", "InverseFi", \
+    # #                 "CreamFi2_1", "CreamFi2_2", "CreamFi2_3", "CreamFi2_4", "Harvest1_fUSDT", "Harvest2_fUSDC", \
+    # #                 "ValueDeFi"]
+    # inferOracleRange(benchmarks)
+
+    executionListTable = reformatExecutionTable(executionListTable)
+    # Invariant Category 7: DataFlow
+    print("=====================================================")
+    print("=================== DataFlow ========================")
+    print("=====================================================")
+    enterFuncs = []
+    exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
+    inferDataFlows(executionListTable, enterFuncs, exitFuncs)
+
+    # Invariant Category 8: MoneyFlow
+    print("=====================================================")
+    print("=================== MoneyFlow =======================")
+    print("=====================================================")
+    # transferToken is the token that is being transferred, which we try to restrict
+    transferToken = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    inferMoneyFlows(executionListTable, contract, transferToken) 
+
+
+
+
 def feature1():
  # ==========================================================================
     # Feature 1: Given a target contract, collect all transactions related to the contract.
@@ -436,6 +579,8 @@ def feature1():
         pathList.append(path)
 
 
+    
+
     # Step 2: Parse the transactions and Collect Invariant Related Data
 
     # Suppose target contract is A
@@ -451,12 +596,7 @@ def feature1():
     # l3: withdraw locator - when a user withdraws their funds from the contract
     l1 = []
     l2 = []
-    l3 = [
-        locator("withdrawTo", FUNCTION, fromAddr = "0x3bc6aa2d25313ad794b2d67f83f21d341cc3f5fb", funcAddress = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
-            name="transfer", position=1),
-        locator("withdrawToForge", FUNCTION, fromAddr = "0x3bc6aa2d25313ad794b2d67f83f21d341cc3f5fb", funcAddress = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
-            name="transfer", position=1),
-    ]
+    l3 = []
     
     # The following code extracts invariant-related data from the transactions
     for ii in range(len(txHashes)):

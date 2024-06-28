@@ -7,7 +7,7 @@ rpcProviders = [ "https://white-flashy-research.quiknode.pro/661a68de75cca811044
 ethArchives = [ "https://eth-mainnet.g.alchemy.com/v2/weftbAqPky4MPT-_G1v9NNofoctXc_Mi", "https://eth-mainnet.g.alchemy.com/v2/86e0Q4aGWRLRihZ56NB3Z5mcXpVx9Y94", "https://eth-mainnet.g.alchemy.com/v2/aB-cCzeL6rN6XR_n0qupMJ9qqCfJ2sCz", "https://eth-mainnet.g.alchemy.com/v2/JqC73WlBFLd6UX-7lGP3B3mNcoi0mvhq", "https://eth-mainnet.g.alchemy.com/v2/F_L3iReDhsY5H09pmaixMwQEo505n9Nh", "https://eth-mainnet.g.alchemy.com/v2/YCP7UuLZXCoGuDr9cXWtNpD_VHATf5QF", "https://eth-mainnet.g.alchemy.com/v2/x44Zy65ZCU-4dzsslhp_3Fz6kz49k_yG", "https://eth-mainnet.g.alchemy.com/v2/yKflgYl9tHO-Ulkrs8e7k4NpnHXrGuyx", "https://eth-mainnet.g.alchemy.com/v2/5R25eNGFTqkx1aRtSTMvJzkOf1wKDNYS", "https://eth-mainnet.g.alchemy.com/v2/cRvZCqj5XSx2LUHzmVtGOr7AEnq6kKPY",]
 
 [runtime]
-LoggingUpperBound = 1000
+LoggingUpperBound = 8
 
 [experiment]
 trainingSetRatio = 0.7

@@ -212,7 +212,6 @@ class VmtraceParserGlobal:
         ce = self.crawlEtherscan
 
         input, origin, value, status = self.setupGlobalState(txHash)
-        print("PARSSSSIIIING!!!")
         # funcSigMapMap = {}
         if len(self.contractAddressStack) > 0:
             contractAddress = self.contractAddressStack[-1]
