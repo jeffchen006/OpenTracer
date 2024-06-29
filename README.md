@@ -1,6 +1,6 @@
 # OpenTracer
 
-[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. Reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. 
+[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. Reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. Also remember to delete some newlines in the sample settings.toml (YouTube did not allow us to put links in video description unless they are separated in different lines).
 
 
 
