@@ -33,7 +33,10 @@ class TraceTree:
 
         returnStr = ""
         if "meta" in self.info:
-            returnStr += "[Meta Info] TxHash: " + self.info["txHash"] + "   tx.origin: " + self.info["origin"] + "\n"
+            reverted = ""
+            if "status" in self.info and self.info["status"] == "reverted":
+                reverted = "{Transaction Reverted!}"
+            returnStr += "[Meta Info] " + reverted + " TxHash: " + self.info["txHash"] + "   tx.origin: " + self.info["origin"] + "\n"
             pass
         else:
             typeStr = self.info["type"] if "type" in self.info else ""
@@ -314,7 +317,7 @@ class TraceTree:
 
         # part 1: decode ABI
         funcSelector = self.info['funcSelector'] if 'funcSelector' in self.info else ""
-        if funcSelector == "":
+        if funcSelector == "" and 'Raw calldata' in self.info:
             funcSelector = "0x" + self.info['Raw calldata'][:8].lower()
         
         crawlEtherScan = CrawlEtherscan()
@@ -361,11 +364,13 @@ class TraceTree:
             if depth == structLogs[ii]['depth'] and depth == structLogs[ii + 1]['depth']:
                 aTracker.stackTrack(structLogs[ii], nextStructLog = structLogs[ii + 1], info = self.info)
         self.info["sload/sstore_decoded"] = []
-        for opcode, key, value, pc, ii in self.info["sload/sstore"]:
-            if key in aTracker.preimage:
-                self.info["sload/sstore_decoded"].append((opcode, [aTracker.preimage[key][1], aTracker.preimage[key][2]], value, pc, ii))
-            else:
-                self.info["sload/sstore_decoded"].append((opcode, key, value, pc, ii))
+
+        if "sload/sstore" in self.info:
+            for opcode, key, value, pc, ii in self.info["sload/sstore"]:
+                if key in aTracker.preimage:
+                    self.info["sload/sstore_decoded"].append((opcode, [aTracker.preimage[key][1], aTracker.preimage[key][2]], value, pc, ii))
+                else:
+                    self.info["sload/sstore_decoded"].append((opcode, key, value, pc, ii))
 
         image = aTracker.preimage
         # print(image)
@@ -379,7 +384,10 @@ class TraceTree:
     def visualizeASE_decoded(self, indent=0):
         returnStr = ""
         if "meta" in self.info:
-            returnStr += "[Meta Info] TxHash: " + self.info["txHash"] + "   tx.origin: " + self.info["origin"] + "\n"
+            reverted = ""
+            if "status" in self.info and self.info["status"] == "reverted":
+                reverted = "{Transaction Reverted!}"
+            returnStr += "[Meta Info] " + reverted + " TxHash: " + self.info["txHash"] + "   tx.origin: " + self.info["origin"] + "\n"
             pass
         else:
             typeStr = self.info["type"] if "type" in self.info else ""

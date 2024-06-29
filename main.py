@@ -376,11 +376,11 @@ def mainTestTime():
 
 def main():
     # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    # feature0()
+    feature0()
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    feature1()
+    # feature1()
 
 
 def feature0():
@@ -456,6 +456,15 @@ def feature1():
         locator("withdrawToForge", FUNCTION, fromAddr = "0x3bc6aa2d25313ad794b2d67f83f21d341cc3f5fb", funcAddress = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
             name="transfer", position=1),
     ]
+
+
+    # create folders for storing cached invariant-related data
+    path1 = SCRIPT_DIR + "/cache/" + contract
+    path2 = SCRIPT_DIR + "/cache/" + contract + "_Access"
+    path3 = SCRIPT_DIR + "/cache/" + contract + "_SplitedTraceTree"
+    for path in [path1, path2, path3]:
+        if not os.path.exists(path):
+            os.makedirs(path)
     
     # The following code extracts invariant-related data from the transactions
     for ii in range(len(txHashes)):
