@@ -73,7 +73,7 @@ class vyperAnalyzer:
         if CompilerVersion is not None and EVMVersion is not None:
             return CompilerVersion, EVMVersion
         results =  self.etherScan.Contract2Sourcecode(contractAddress)
-        if "vyper" not in results[0]["CompilerVersion"]:
+        if "vyper" not in results["CompilerVersion"]:
             return None, None
         if len(results) > 1:
             sys.exit("vyperAnalyzer: cannot handle multiple Vyper contracts in one contract address")
@@ -85,7 +85,7 @@ class vyperAnalyzer:
         CompilerVersion = result["CompilerVersion"]
         EVMVersion = result["EVMVersion"]
 
-        writeStats(contractAddress, ContractName, CompilerVersion, EVMVersion, sourceCode)
+        # writeStats(contractAddress, ContractName, CompilerVersion, EVMVersion, sourceCode)
 
         return CompilerVersion, EVMVersion
     

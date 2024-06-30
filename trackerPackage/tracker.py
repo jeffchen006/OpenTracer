@@ -968,8 +968,29 @@ class tracker:
             else:
                 sys.exit("StackTracker: {} should not be touched".format(opcode))
 
+
         elif  opcode == "CALL" or opcode == "CALLCODE":
-            sys.exit("StackTracker: {} should not be touched".format(opcode))
+            hex_str = structLog["stack"][-1]
+            gas = int(hex_str, 16)
+            addr = structLog["stack"][-2]
+            value = structLog["stack"][-3]
+            argsOffset = structLog["stack"][-4]
+            argsLength = structLog["stack"][-5]
+            retOffset = structLog["stack"][-6]
+            retLength = structLog["stack"][-7]
+            if len(addr) > 42:
+                addr = '0x' + addr[-40:]
+            if addr == "0x1": # ecrecover
+                self.stackTracker.merge_last_n(6, int(retLength, 16))
+            elif addr == "0x2":
+                pass
+            elif addr == "0x3":
+                pass
+            elif addr == "0x4":
+                pass
+            else:
+                sys.exit("StackTracker: {} should not be touched".format(opcode))
+
 
         elif  opcode == "RETURN" or opcode == "DELEGATECALL":
             # new data source!

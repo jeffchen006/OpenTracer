@@ -109,16 +109,17 @@ class TraceTree:
             # next add sload and sstore
             if "sload/sstore" in self.info:
                 for ret in self.info["sload/sstore"]:
+                    opcode = ret[0]
                     if ret[0] == "sload":
-                        sload = ret[0]
                         slot = ret[1]
                         value = ret[2]
-                    elif ret[1] == "sstore":
-                        sstore = ret[0]
+                    elif ret[0] == "sstore":
                         slot = ret[1]
                         value = ret[2]
+                    else:
+                        sys.exit("TraceTree: Error: unknown opcode besides sload and sstore")
                     
-                    returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(sload, slot, value)
+                    returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(opcode, slot, value)
 
                 
             
@@ -358,9 +359,23 @@ class TraceTree:
                 structLogsStart = 0
             structLogsEnd = self.info['structLogsEnd']
 
+        # part 2.1: collect structLogs ranges for its internal calls
+        children_structLogs_ranges = []
+        for child in self.internalCalls:
+            children_structLogs_ranges.append((child.info['structLogsStart'], child.info['structLogsEnd']))
+
         depth = structLogs[structLogsStart + 1]['depth']
         aTracker = tracker(self.info["addr"])
         for ii in range(structLogsStart, structLogsEnd - 1):
+            # if ii in any of the children's structLogs range, we should skip it
+            skip = False
+            for child_structLogs_range in children_structLogs_ranges:
+                if ii >= child_structLogs_range[0] and ii <= child_structLogs_range[1]:
+                    skip = True
+                    break
+            if skip:
+                continue
+
             if depth == structLogs[ii]['depth'] and depth == structLogs[ii + 1]['depth']:
                 aTracker.stackTrack(structLogs[ii], nextStructLog = structLogs[ii + 1], info = self.info)
         self.info["sload/sstore_decoded"] = []
@@ -410,7 +425,7 @@ class TraceTree:
                 gas = self.info["gas"]
                 if isinstance(gas, str):
                     gas = int(gas, 16)
-                returnStr += "{ gas:" + gas + " } "
+                returnStr += "{ gas:" + str(gas) + " } "
 
             elif "msg.value" in self.info:
                 value = self.info["msg.value"]
@@ -463,34 +478,39 @@ class TraceTree:
             # next add sload and sstore
             if "sload/sstore_decoded" in self.info:
                 for ret in self.info["sload/sstore_decoded"]:
+                    opcode = ret[0]
                     if ret[0] == "sload":
-                        sload = ret[0]
                         slot = ret[1]
                         value = ret[2]
                     elif ret[0] == "sstore":
-                        sstore = ret[0]
                         slot = ret[1]
                         value = ret[2]
+                    else:
+                        sys.exit("TraceTree: Error: unknown opcode besides sload and sstore")
+                    
                     if isinstance(slot, list):
                         mapping = slot[0]
                         # truncate the leading 0s
                         mapping = mapping.lstrip("0")
                         mapping = "0x" + mapping
                         key = slot[1]
-                        returnStr += '  ' * (indent + 1) + "[{}] {}[ {} ]: {}\n".format(sload, mapping, key, value)
+                        returnStr += '  ' * (indent + 1) + "[{}] {}[ {} ]: {}\n".format(opcode, mapping, key, value)
                     else:
-                        returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(sload, slot, value)
+                        returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(opcode, slot, value)
+
             elif "sload/sstore" in self.info:
                 for ret in self.info["sload/sstore"]:
+                    opcode = ret[0]
                     if ret[0] == "sload":
-                        sload = ret[0]
                         slot = ret[1]
                         value = ret[2]
-                    elif ret[1] == "sstore":
-                        sstore = ret[0]
+                    elif ret[0] == "sstore":
                         slot = ret[1]
                         value = ret[2]
-                    returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(sload, slot, value)
+                    else:
+                        sys.exit("TraceTree: Error: unknown opcode besides sload and sstore")
+
+                    returnStr += '  ' * (indent + 1) + "[{}] {}: {}\n".format(opcode, slot, value)
 
         for child in self.internalCalls:
             returnStr += child.visualizeASE_decoded(indent + 2)
