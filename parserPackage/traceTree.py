@@ -59,7 +59,7 @@ class TraceTree:
                 gas = self.info["gas"]
                 if isinstance(gas, str):
                     gas = int(gas, 16)
-                returnStr += "{ gas:" + gas + " } "
+                returnStr += "{ gas:" + str(gas) + " } "
 
             elif "msg.value" in self.info:
                 value = self.info["msg.value"]
