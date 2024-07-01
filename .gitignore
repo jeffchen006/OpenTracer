@@ -8,7 +8,7 @@ staticAnalyzer/slither
 
 
 # where we store the cache of etherscan/quicknode receipts
-crawlPackage/database/
+crawlPackage/database/*
 crawlPackage/cache/
 
 settings.toml

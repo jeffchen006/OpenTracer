@@ -390,12 +390,11 @@ def mainTestTime():
 
 def main():
     # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    #feature0()
+    # feature0()
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    # feature1()
-    feature3()
+    feature1()
 
 
 def feature0():
