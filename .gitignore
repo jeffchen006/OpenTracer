@@ -18,3 +18,5 @@ cache/
 
 
 *.pyc
+
+*.pickle
