@@ -11,10 +11,12 @@ staticAnalyzer/slither
 crawlPackage/database/*
 crawlPackage/cache/
 
-
+settings.toml
 
 # where we store the cache of transactions
-# cache/ 
+cache/ 
 
 
 *.pyc
+
+*.pickle

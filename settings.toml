@@ -2,9 +2,12 @@
 current = "v0.0.0-alpha"
 
 [settings]
-EtherScanApiKeys = [ ]
-ethArchives = [ ]
-rpcProviders = [ ]
+EtherScanApiKeys = []
+rpcProviders = []
+ethArchives = []
 
 [runtime]
 LoggingUpperBound = 8
+
+[experiment]
+trainingSetRatio = 0.7
