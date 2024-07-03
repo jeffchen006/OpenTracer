@@ -28,6 +28,9 @@ settings = toml.load("settings.toml")
 
 
 
+
+
+
 def checkmapPositionInStorageMapping(mapPosition, storageMapping, preimage):
     """Given a mapPosition and a storageMapping, check if the mapPosition is in the storageMapping"""
     # storageMapping: {0: ('Ownable._owner', 'address'), 32: ('Pausable.pauser', 'address'), 52: ('Pausable.paused', 'bool'), 64: ('Blacklistable.blacklister', 'address'), 96: ('Blacklistable.blacklisted', ('address', 'bool')), 128: ('FiatTokenV1.name', 'string'), 160: ('FiatTokenV1.symbol', 'string'), 192: ('FiatTokenV1.decimals', 'uint8'), 224: ('FiatTokenV1.currency', 'string'), 256: ('FiatTokenV1.masterMinter', 'address'), 276: ('FiatTokenV1.initialized', 'bool'), 288: ('FiatTokenV1.balances', ('address', 'uint256')), 320: ('FiatTokenV1.allowed', ('address', ('address', 'uint256'))), 352: ('FiatTokenV1.totalSupply_', 'uint256'), 384: ('FiatTokenV1.minters', ('address', 'bool')), 416: ('FiatTokenV1.minterAllowed', ('address', 'uint256')), 448: ('Rescuable._rescuer', 'address'), 480: ('EIP712Domain.DOMAIN_SEPARATOR', 'bytes32'), 512: ('GasAbstraction.TRANSFER_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 544: ('GasAbstraction.APPROVE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 576: ('GasAbstraction.INCREASE_ALLOWANCE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 608: ('GasAbstraction.DECREASE_ALLOWANCE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 640: ('GasAbstraction.CANCEL_AUTHORIZATION_TYPEHASH', 'bytes32'), 672: ('GasAbstraction._authorizationStates', ('address', ('bytes32', 'GasAbstraction.AuthorizationState'))), 704: ('Permit.PERMIT_TYPEHASH', 'bytes32'), 736: ('Permit._permitNonces', ('address', 'uint256')), 768: ('FiatTokenV2._initializedV2', 'bool')}
@@ -54,6 +57,13 @@ def checkmapPositionInStorageMapping(mapPosition, storageMapping, preimage):
 
 
 
+def unifySelectors(accesList):
+    
+    for map in accesList:
+        if 'Selector' in map:
+            map["Selector"] = map["Selector"].upper()
+        
+
 
 
 class VmtraceParser:
@@ -76,6 +86,8 @@ class VmtraceParser:
         self.structLogs = None
         self.txHash = None
         self.CreateContract = None
+
+
 
     def printStack(self):
         if self.printMessageStack:
@@ -1643,6 +1655,7 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
             found = True
             break
     if not found:
+        unifySelectors(accessList)
         return [], accessList, splitedTraceTree
 
 
@@ -1653,6 +1666,7 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
         if traceTree.info["name"] == "fallback" and traceTree.info["Selector"] != "0x":
             funcSigMap = a.contract2funcSigMap(contract)
             traceTree.info["name"] = funcSigMap[traceTree.info["Selector"].lower()][0]
+        
 
         if "name" in traceTree.info and traceTree.info["name"] in targetFuncs and traceTree.info["addr"].lower() == contract.lower():
             thisLocator = None
@@ -1708,5 +1722,8 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
                             dataS.sources.pop(ii)
                             dataS.children.pop(ii)
                     executionList.append(dataSources)
+
+                  
+    unifySelectors(accessList)
 
     return executionList, accessList, splitedTraceTree

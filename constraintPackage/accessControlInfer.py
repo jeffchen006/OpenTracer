@@ -95,11 +95,9 @@ def inferAccessControl(accesslistTable):
                         sys.exit("access control infer: name is empty")
                         pass
 
-
                 if "Selector" in funcCall:
                     name += funcCall["Selector"]
 
-                
                 if name not in accessControlMap:
                     c = int(origin != sender)
                     accessControlMap[name] = {

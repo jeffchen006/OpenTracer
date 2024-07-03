@@ -228,6 +228,7 @@ class TraceTree:
         for child in self.internalCalls:
             child.filterByAddresses(addresses)
         
+
     def updateInfo(self, dict, depth = 0, allowOverwrite = False):
         if 'name' in dict and dict['name'] == 'fallback' \
             and 'Selector' in dict and dict['Selector'] == '':

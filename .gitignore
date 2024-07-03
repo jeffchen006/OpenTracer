@@ -16,5 +16,5 @@ settings.toml
 # where we store the cache of transactions
 cache/
 
-
+playground.ipynb
 *.pyc
