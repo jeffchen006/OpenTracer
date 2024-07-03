@@ -18,3 +18,7 @@ cache/
 
 playground.ipynb
 *.pyc
+
+
+*.pickle
+

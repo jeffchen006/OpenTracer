@@ -135,6 +135,15 @@ def readJson(filePath: str) -> dict:
     with open(filePath, "r") as f:
         jsonDict = json.load(f)                 
         return jsonDict
+    
+def setUpDirectories(script_dir , contract):
+    path1 = script_dir + "/cache/" + contract
+    path2 = script_dir + "/cache/" + contract + "_Access"
+    path3 = script_dir + "/cache/" + contract + "_SplitedTraceTree"
+    for path in [path1, path2, path3]:
+        if not os.path.exists(path):
+            os.makedirs(path)
+    
 
 if __name__ == "__main__":
     # filePath = "/home/zhiychen/Documents/TxGuard/Benchmarks/CVEAccessControl/Txs/0x4b89f8996892d137c3de1312d1dd4e4f4ffca171/0x0ba17dc46e3a67796376e707c618898e6e1a8d163988af5acbdb6012e7e36dd1.json.gz"
