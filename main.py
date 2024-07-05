@@ -381,16 +381,7 @@ def main():
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    # feature1()
-
-  ##  feature3()
-    collectTraceAndInvariants(contract="0xe952bda8c06481506e4731c4f54ced2d4ab81659", endBlock=14465357, l1=[], l2=[], l3=[])
-
-
-
-
-
-
+    feature1()
 
   ##  feature3()
     ##collectTraceAndInvariants(contract="0xe952bda8c06481506e4731c4f54ced2d4ab81659", endBlock=14465357, l1=[], l2=[], l3=[])
@@ -641,6 +632,7 @@ def collectTraceAndInvariants(contract, endBlock, l1 ,l2, l3):
     
     # The following code extracts invariant-related data from the transactions
     for ii in range(len(txHashes)):
+        print(txHashes[ii])
         # if readAccessList(contract, txHashes[ii]) != []:
         #     continue
         dataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, txHashes[ii], pathList[ii], l1, l2, l3)        
@@ -794,4 +786,3 @@ def feature2():
         print("The translated result of Trace2Inv is the same as the input required by TxSpector")
     else:
         print("The translated result of Trace2Inv is different from the input required by TxSpector")
-

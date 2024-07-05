@@ -58,10 +58,9 @@ def checkmapPositionInStorageMapping(mapPosition, storageMapping, preimage):
 
 
 def unifySelectors(accesList):
-    
     for map in accesList:
         if 'Selector' in map:
-            map["Selector"] = map["Selector"].upper()
+            map["Selector"] = map["Selector"].lower()
         
 
 
