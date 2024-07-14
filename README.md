@@ -2,6 +2,7 @@
 
 [Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. Reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. Also remember to delete some newlines in the sample settings.toml (YouTube did not allow us to put links in video description unless they are separated in different lines).
 
+For other users of OpenTracer, please fill in your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) in `settings.toml` in order to use it.
 
 
 ## A Dynamic Analysis Tool for EVM Transaction Traces
