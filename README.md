@@ -1,6 +1,6 @@
 # OpenTracer
 
-[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. Reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. Also remember to delete some newlines in the sample settings.toml (YouTube did not allow us to put links in video description unless they are separated in different lines).
+[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. For reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. Also remember to delete some newlines in the sample settings.toml (YouTube did not allow us to put links in video description unless they are separated in different lines).
 
 For other users of OpenTracer, please fill in your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) in `settings.toml` in order to use it.
 
@@ -9,9 +9,9 @@ For other users of OpenTracer, please fill in your own endpoints of etherscan, e
 
 OpenTracer is a powerful Ethereum Virtual Machine (EVM) trace dynamic analysis tool designed to extract and analyze data from transaction traces. It offers a comprehensive suite of features for developers and analysts looking to gain deeper insights into smart contract interactions and behaviors.
 
-### Key Features
+### Feature 1: Open-source Transaction Explorer
 
-1. **Open-source Transaction Explorer**: OpenTracer provides functionalities similar to well-known transaction explorers. It allows users to input a transaction hash and obtain detailed parsed transaction traces that include contract addresses, gas costs, ether transfers, function signatures, and storage changes. The tool is comparable to:
+OpenTracer provides functionalities similar to well-known transaction explorers. It allows users to input a transaction hash and obtain detailed parsed transaction traces that include contract addresses, gas costs, ether transfers, function signatures, and storage changes. The tool is comparable to:
    - [Phalcon](https://explorer.phalcon.xyz/)
    - [Tx Tracer](https://openchain.xyz/trace)
    - [Cruise](https://cruise.supremacy.team/)
@@ -33,7 +33,10 @@ Example output:
           [sload] 0xec01746e8e90bd328487896e4a321e712fca6dc8e63894b574abdd7f604679cc: 0x0
 ```
 
-1. **Dynamically infer invariants from transaction history**: This feature allows users to extract "any" data from transactions and infer invariants from user-defined invariant-related data. It allows users to input a smart contract address, and an end block number, and the tool will return invariants that hold for all transactions that happened from the deployment of the smart contract to the user-defined block number. This feature is e
+
+### Feature 2: Dynamically infer invariants from transaction history
+
+This feature allows users to extract "any" data from transactions and infer invariants from user-defined invariant-related data. It allows users to input a smart contract address, and an end block number, and the tool will return invariants that hold for all transactions that happened from the deployment of the smart contract to the user-defined block number. This feature is e
 
 
 
@@ -73,8 +76,9 @@ For the function withdrawTo0xC86283C8:
 
 ```
 
+### Feature 3: Translate Results of debug_traceTransaction to other trace required by other tools
 
-1. **Translate Results of debug_traceTransaction to other trace required by other tools**: Since OpenTracer records all information of
+Since OpenTracer records all information of
 a transaction (by parsing result of `debug_traceTransaction` and augments it using `eth_getTransactionReceipt` and EtherScan results), we believe with moderate effort, OpenTracer can translate the results to other trace formats required by other tools, to replace the modified archive node part of many research works. Here we provide an example of how to translate the results to the format required by [TxSpector] (https://github.com/OSUSecLab/TxSpector/). 
 
 
@@ -92,16 +96,16 @@ As an example, we translate the demo transaction `0x37085f336b5d3e588e3767454467
 
 
 
+
+
 ## Compatibility and Testing
 OpenTracer has been rigorously tested on both Ubuntu Linux and MacOS.
-
 
 ### Characteristics
 - **Soundness**: No false positives are reported; all invariants are verified across all input transactions.
 - **Interpretability**: The invariants are straightforward, generally easy to understand, and mostly human-readable.
 - **Practicality**: Derived from real-world high-profile DeFi projects and audit report recommendations.
 - **Extensibility**: Easily expandable to include additional templates or handle more complex invariants.
-
 
 
 ## Dependencies
@@ -122,7 +126,7 @@ A Solidity static analysis framework.
 python3 -m pip install slither-analyzer
 ```
 
-### TrueBlocks
+### TrueBlocks (Only needed if feature 2 is needed )
 Install TrueBlocks from the official documentation.
 
 https://trueblocks.io/docs/install/install-core/
@@ -220,7 +224,8 @@ Below is a detailed overview of the folder structure provided in the artifact, w
 
 
 
-## Types of Traces
+
+## Knowledge Base
 There are three primary types of traces that are provided by different Ethereum nodes:
 
 - **Transaction Trace (trace)**: Basic trace providing an overview of transaction actions.
