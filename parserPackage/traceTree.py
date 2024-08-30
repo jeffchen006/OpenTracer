@@ -340,8 +340,13 @@ class TraceTree:
             self.info["decoded calldata"] = Cdecoded
 
             Rtypes = funcSigMap[funcSelector][2]
-            Rdecoded = decoder().decodeSimpleABI(Rtypes, self.info["Raw returnvalue"])
-            self.info["decoded returnvalue"] = Rdecoded
+
+            try:
+                Rdecoded = decoder().decodeSimpleABI(Rtypes, self.info["Raw returnvalue"])
+                self.info["decoded returnvalue"] = Rdecoded
+            except:
+                self.info["decoded returnvalue"] = self.info["Raw returnvalue"]
+            
 
         else:
             self.info["name"] = "fallback"
@@ -367,6 +372,7 @@ class TraceTree:
 
         depth = structLogs[structLogsStart + 1]['depth']
         aTracker = tracker(self.info["addr"])
+        print("now tracking contract: ", self.info["addr"])
         for ii in range(structLogsStart, structLogsEnd - 1):
             # if ii in any of the children's structLogs range, we should skip it
             skip = False
