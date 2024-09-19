@@ -32,6 +32,8 @@ def collectTransactionHistory(contractAddress, endBlock: int = -1):
 def storeATrace(txHash: str):
     fe = fetcher()
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(SCRIPT_DIR + "/cache"):
+        os.makedirs(SCRIPT_DIR + "/cache")
     path = SCRIPT_DIR + "/cache/" + txHash + ".json.gz"
     # check if the file exists
     if os.path.exists(path):
@@ -377,11 +379,11 @@ def mainTestTime():
 
 def main():
     # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    #feature0()
+    feature0()
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    feature1()
+    # feature1()
 
   ##  feature3()
     ##collectTraceAndInvariants(contract="0xe952bda8c06481506e4731c4f54ced2d4ab81659", endBlock=14465357, l1=[], l2=[], l3=[])

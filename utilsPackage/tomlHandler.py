@@ -1,5 +1,11 @@
-import toml
-settings = toml.load("settings.toml")
+import tomlkit
+
+
+settings = None
+with open("settings.toml", "r") as f:
+    toml_content = f.read()
+    settings = tomlkit.parse(toml_content)
+
 import os
 import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -9,7 +15,7 @@ import time
 def changeSettings(category: str, key: str, value):
     settings[category][key] = value
     with open("settings.toml", "w") as f:
-        toml.dump(settings, f)
+        f.write(tomlkit.dumps(settings))
 
 def changeLoggingUpperBound(value):
     changeSettings("runtime", "LoggingUpperBound", value)
