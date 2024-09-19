@@ -2,8 +2,11 @@
 
 A video description of OpenTracer can be found here: https://youtu.be/vTdmjWdYd30
 
-For users of OpenTracer, please fill in your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) in `settings.toml` in order to use it.
 
+
+For users of OpenTracer, we've provided a sample `settings.toml` which contains the necessary configurations for the tool to function correctly. We collected these configurations from various sources, including EtherScan, Ethereum Archive Node, and QuickNode.
+
+Please note for large scale analysis, you may need to find your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) with higher access limit for these services in `settings.toml`.
 
 
 
