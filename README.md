@@ -1,8 +1,15 @@
-# OpenTracer
+# OpenTracer 
 
-[Attention!] For security reasons, we have removed all the endpoints and API keys in the `settings.toml` file. For reviewers please go to the screencast links and find a sample `settings.toml` file in the video description. Also remember to delete some newlines in the sample settings.toml (YouTube did not allow us to put links in video description unless they are separated in different lines).
+The publication of OpenTracer is accepted at ASE tool demo track. A preprint can be found at https://arxiv.org/pdf/2407.10039
 
-For other users of OpenTracer, please fill in your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) in `settings.toml` in order to use it.
+A video description of OpenTracer can be found here: https://youtu.be/vTdmjWdYd30
+
+
+
+For users of OpenTracer, we've provided a sample `settings.toml` which contains the necessary configurations for the tool to function correctly. We collected these configurations from various sources, including EtherScan, Ethereum Archive Node, and QuickNode.
+
+Please note for large scale analysis, you may need to find your own endpoints of etherscan, ethereum archive nodes, and quicknode (or any endpoint supporting `debug_traceTransaction` rpc call) with higher access limit for these services in `settings.toml`.
+
 
 
 ## A Dynamic Analysis Tool for EVM Transaction Traces
@@ -20,6 +27,8 @@ OpenTracer provides functionalities similar to well-known transaction explorers.
    - [eigenphi](https://tx.eigenphi.io/analyseTransaction)
 
 Example output:
+
+Parsed Invocation Tree
 ```plaintext
 [Meta Info] TxHash: 0xed2e82bb59e2ea39bfdc7d08ae2f7fcad7200e00163f6e3440b9a5d72fc3ef5d   tx.origin: 0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24
     [CALL] { value:0.00e+00 } 0x0000000000085d4780b73119b644ae5ecd22b376.(830E...0000) -> 1
@@ -32,6 +41,22 @@ Example output:
           [sload] 0xec01746e8e90bd328487896e4a321e712fca6dc8e63894b574abdd7f604679cc: 0x0
           [sload] 0xec01746e8e90bd328487896e4a321e712fca6dc8e63894b574abdd7f604679cc: 0x0
 ```
+
+Parsed Invocation Tree with Decoded Storage Access
+```plaintext
+[Meta Info]  TxHash: 0xed2e82bb59e2ea39bfdc7d08ae2f7fcad7200e00163f6e3440b9a5d72fc3ef5d   tx.origin: 0x710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24
+    [CALL] { value:0.00e+00 } 0x0000000000085d4780b73119b644ae5ecd22b376.fallback(830E...0000) -> 1
+      [sload] 0x6e41e0fbe643dfdb6043698bf865aada82dc46b953f754a3468eaa272a362dc7: 0xb650eb28d35691dd1bd481325d40e65273844f9b
+        [DELEGATECALL] { gas:68985, value:0.00e+00 } 0xb650eb28d35691dd1bd481325d40e65273844f9b.transfer(['0x830eba02481b20f07cbb988312e23f3ade93cc1e', 2018031817111227915404]) -> [True]
+          [sload] 0x16[ CALLER-000000000000000000000000710295b5f326c2e47e6dd2e7f6b5b0f7c5ac2f24 ]: 0x0
+          [sload] 0x16[ msg.data[4:36]-000000000000000000000000830eba02481b20f07cbb988312e23f3ade93cc1e ]: 0x0
+          [sload] 0xd0d5ab6396a7546ff8fd2ace4291181e66a87c625f7c7a692a26032f794550e: 0x6d65d13dabfeccdc8c
+          [sstore] 0xd0d5ab6396a7546ff8fd2ace4291181e66a87c625f7c7a692a26032f794550e: 0x0
+          [sload] 0xe[ msg.data[4:36]-000000000000000000000000830eba02481b20f07cbb988312e23f3ade93cc1e ]: 0x0
+          [sstore] 0xe[ msg.data[4:36]-000000000000000000000000830eba02481b20f07cbb988312e23f3ade93cc1e ]: 0x6d65d13dabfeccdc8c
+```
+
+
 
 
 ### Feature 2: Dynamically infer invariants from transaction history

@@ -533,20 +533,16 @@ class tracker:
                 sys.exit("Tracker Error: {} with length != 32".format(opcode))
             self.stackTracker.merge_last_n(1, 32)
 
-
         elif opcode == "SHA3" or opcode == "KECCAK256":
             # hash = keccak256(memory[offset:offset+length])
             offset = structLog["stack"][-1]
             length = structLog["stack"][-2]
             if length == "0x0":
                 sys.exit("tracker: Error! SHA3 with length 0x0")
-
             key = self.decoder.extractMemory(structLog["memory"], offset, length)
-
             offsetInt = int(offset, base = 16)
             lengthInt = int(length, base = 16)
             dataSrcInfo = self.memoryTracker.getInterval(offsetInt, offsetInt + lengthInt)
-
             hashValue = nextStructLog["stack"][-1]
 
             # remove 0x from hashValue and add padding 0s
@@ -829,15 +825,30 @@ class tracker:
                     if dataSrc[2].find("SHA3"):
                         isSHA3 = True
                         break
-                
-            isFind = False
-            shift = None
-            for shift in [0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -6, 7, -7, 8, -8, 9, -9, 10, -10]:
-                addShiftInt = int(key, 16) + shift
-                addShift = "0x" + f"{addShiftInt:0{len(key)-2}x}"
-                if addShift in self.preimage:
-                    isFind = True
+
+            # first we must have key similar to at least one of the preimage
+            isSimilar = False
+            for preimageKey in self.preimage:
+                if preimageKey[:10] == key[:10]:
+                    isSimilar = True
                     break
+
+
+            isFind = False
+
+            if isSimilar:
+                shift = None
+                for shift in [0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -6, 7, -7, 8, -8, 9, -9, 10, -10, \
+                            11, -11, 12, -12, 13, -13, 14, -14, 15, -15, 16, -16, 17, -17, 18, -18, 19, -19, 20, -20, \
+                                21, -21, 22, -22, 23, -23, 24, -24, 25, -25, 26, -26, 27, -27, 28, -28, 29, -29, 30, -30, 31, -31]:
+                    addShiftInt = int(key, 16) + shift
+                    addShift = "0x" + f"{addShiftInt:0{len(key)-2}x}"
+                    if addShift in self.preimage:
+                        isFind = True
+                        self.preimage[key] = (self.preimage[addShift][0], self.preimage[addShift][1], self.preimage[addShift][2], -1 * shift) 
+                        break
+
+
             if isFind:
                 addShiftInt = int(key, 16) + shift
                 addShift = "0x" + f"{addShiftInt:0{len(key)-2}x}"

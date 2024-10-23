@@ -32,6 +32,8 @@ def collectTransactionHistory(contractAddress, endBlock: int = -1):
 def storeATrace(txHash: str):
     fe = fetcher()
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(SCRIPT_DIR + "/cache"):
+        os.makedirs(SCRIPT_DIR + "/cache")
     path = SCRIPT_DIR + "/cache/" + txHash + ".json.gz"
     # check if the file exists
     if os.path.exists(path):

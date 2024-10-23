@@ -37,6 +37,10 @@ class dataSource:
         for ii in range(len(self.sources)):
             if not isinstance(self.sources[ii], str):
                 continue
+            elif (name == "CALLER" or name == "ADDRESS" or name == "ORIGIN") and self.sources[ii].startswith(name):
+                self.sources.pop(ii)
+                self.children.pop(ii)
+                return 
             elif self.sources[ii] == name:
                 self.sources.pop(ii)
                 self.children.pop(ii)
