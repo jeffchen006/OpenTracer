@@ -140,15 +140,15 @@ class tracker:
             dataS.merge(dataSrcInfo)
             for ii in range(len(funcSpec['inputs'])):
                 if funcSpec['inputs'][ii] == self.caller and any("CALLER" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "CALLER"
+                    funcSpec['inputs'][ii] = "CALLER-{}".format(self.caller)
                     # remove CALLER from dataS
                     dataS.remove("CALLER")
                 if funcSpec['inputs'][ii] == self.address and any("ADDRESS" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ADDRESS"
+                    funcSpec['inputs'][ii] = "ADDRESS-{}".format(self.address)
                     # remove ADDRESS from dataS
                     dataS.remove("ADDRESS")
                 if funcSpec['inputs'][ii] == self.origin and any("ORIGIN" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ORIGIN"
+                    funcSpec['inputs'][ii] = "ORIGIN-{}".format(self.origin)
                     # remove ORIGIN from dataS
                     dataS.remove("ORIGIN")
             retOffsetInt = int(retOffset, base = 16)
@@ -206,15 +206,15 @@ class tracker:
 
             for ii in range(len(funcSpec['inputs'])):
                 if funcSpec['inputs'][ii] == self.caller and any("CALLER" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "CALLER"
+                    funcSpec['inputs'][ii] = "CALLER-{}".format(self.caller)
                     # remove CALLER from dataS
                     dataS.remove("CALLER")
                 if funcSpec['inputs'][ii] == self.address and any("ADDRESS" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ADDRESS"
+                    funcSpec['inputs'][ii] = "ADDRESS-{}".format(self.address)
                     # remove ADDRESS from dataS
                     dataS.remove("ADDRESS")
                 if funcSpec['inputs'][ii] == self.origin and any("ORIGIN" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ORIGIN"
+                    funcSpec['inputs'][ii] = "ORIGIN-{}".format(self.origin)
                     # remove ORIGIN from dataS
                     dataS.remove("ORIGIN")
 
@@ -263,15 +263,15 @@ class tracker:
 
             for ii in range(len(funcSpec['inputs'])):
                 if funcSpec['inputs'][ii] == self.caller and any("CALLER" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "CALLER"
+                    funcSpec['inputs'][ii] = "CALLER-{}".format(self.caller)
                     # remove CALLER from dataS
                     dataS.remove("CALLER")
                 if funcSpec['inputs'][ii] == self.address and any("ADDRESS" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ADDRESS"
+                    funcSpec['inputs'][ii] = "ADDRESS-{}".format(self.address)
                     # remove ADDRESS from dataS
                     dataS.remove("ADDRESS")
                 if funcSpec['inputs'][ii] == self.origin and any("ORIGIN" in sublist for sublist in dataSrcInfo.sources):
-                    funcSpec['inputs'][ii] = "ORIGIN"
+                    funcSpec['inputs'][ii] = "ORIGIN-{}".format(self.origin)
                     # remove ORIGIN from dataS
                     dataS.remove("ORIGIN")
 
@@ -330,16 +330,17 @@ class tracker:
 
             if contains_only_f(first[2:]):
                 length = len(first[2:])
-                if length % 2 != 0:
-                    sys.exit("Tracker Error: AND with length % 2 != 0")
+                # if length % 2 != 0:
+                #     sys.exit("Tracker Error: AND with length % 2 != 0")
                 self.stackTracker.pop(2)
                 removeLength = int(32 - length / 2)
                 secondEntry.removeInterval(0, removeLength)
                 self.stackTracker.push( secondEntry )
+
             elif contains_only_f(second[2:]):
                 length = len(second[2:])
-                if length % 2 != 0:
-                    sys.exit("Tracker Error: AND with length % 2 != 0")
+                # if length % 2 != 0:
+                #     sys.exit("Tracker Error: AND with length % 2 != 0")
                 self.stackTracker.pop(2)
                 removeLength = int(32 - length / 2)
                 firstEntry.removeInterval(0, removeLength)
@@ -572,15 +573,15 @@ class tracker:
                 specialValue = None
 
                 if self.caller is not None and int(mappingSlot, 16) == int(self.caller, 16) and any("CALLER" in sublist for sublist in dataSrcInfo.sources):
-                    specialValue = "CALLER"
+                    specialValue = "CALLER-{}".format(mappingSlot)
                 elif self.address is not None and int(mappingSlot, 16) == int(self.address, 16) and any("ADDRESS" in sublist for sublist in dataSrcInfo.sources):
-                    specialValue = "ADDRESS"
+                    specialValue = "ADDRESS-{}".format(mappingSlot)
                 elif self.origin is not None and int(mappingSlot, 16) == int(self.origin, 16) and any("ORIGIN" in sublist for sublist in dataSrcInfo.sources):
-                    specialValue = "ORIGIN"
+                    specialValue = "ORIGIN-{}".format(mappingSlot)
                 
                 if isinstance(dataSrcInfo.sources, list) and len(dataSrcInfo.sources) == 1:
                     if isinstance( dataSrcInfo.sources[0], tuple) and dataSrcInfo.sources[0][0] == "msg.data":
-                        specialValue = "msg.data[{}:{}]".format(dataSrcInfo.sources[0][1], dataSrcInfo.sources[0][2])
+                        specialValue = "msg.data[{}:{}]-{}".format(dataSrcInfo.sources[0][1], dataSrcInfo.sources[0][2], mappingSlot)
 
                 if specialValue is not None:
                     self.preimage[hashValue] = (self.preimage[hashValue][0], self.preimage[hashValue][1], specialValue)
@@ -595,7 +596,9 @@ class tracker:
                     return 
                 elif mapPosition not in storageMapping and "0x" + mapPositionHex not in self.preimage:
                     storageMapping = self.analyzer.contract2storageMapping(currentContract)
-                    sys.exit("Error! mapPosition {} not in storageMappingMap".format(mapPositionHex) + " and not in preimage")
+
+                    print("warning: mapPosition {} not in storageMappingMap".format(mapPositionHex)  + " and not in preimage" )
+                    # sys.exit("Error! mapPosition {} not in storageMappingMap".format(mapPositionHex) + " and not in preimage")
 
                 self.stackTracker.push( stackEntry(32, dataSource( ("SHA3", pc) )) )
                 return

@@ -377,11 +377,11 @@ def mainTestTime():
 
 def main():
     # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    #feature0()
+    feature0()
 
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    feature1()
+    # feature1()
 
   ##  feature3()
     ##collectTraceAndInvariants(contract="0xe952bda8c06481506e4731c4f54ced2d4ab81659", endBlock=14465357, l1=[], l2=[], l3=[])
@@ -403,8 +403,22 @@ def feature0():
     txHash = "0xed2e82bb59e2ea39bfdc7d08ae2f7fcad7200e00163f6e3440b9a5d72fc3ef5d"
     storeATrace(txHash)
     temp = readATrace(txHash)
+
+    # print(temp)
+
     for ii in range(0, 10):
         print(temp['structLogs'][ii])
+    # 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c
+
+    # contracts = ["0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb", "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e", "0x54586bE62E3c3580375aE3723C145253060Ca0C2"]
+
+    # strstr = str(temp).lower()
+    # for contract in contracts:
+    #     if contract.lower() in strstr:
+    #         print("Contract Found: ", contract)
+    #     else:
+    #         print("not found")
+    
 
     # Step 2: Parse the transaction trace
     print("=================== Trace Tree =====================")
@@ -412,11 +426,12 @@ def feature0():
     path = SCRIPT_DIR + "/cache/" + txHash + ".json.gz"
     metaTraceTree = analyzeOneTxGlobal(txHash, path)
     print(metaTraceTree.visualizeASE())
-
     # Step 3: Decode function ABI and Storage Accesses (dynamically track SHA3)
     print("=================== Decoded Trace Tree =====================")
     metaTraceTree.decodeABIStorage(temp['structLogs'])
     print(metaTraceTree.visualizeASE_decoded())
+
+
 
 def feature1():
  # ==========================================================================
