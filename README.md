@@ -19,12 +19,8 @@ OpenTracer is a powerful Ethereum Virtual Machine (EVM) trace dynamic analysis t
 ### Feature 1: Open-source Transaction Explorer
 
 OpenTracer provides functionalities similar to well-known transaction explorers. It allows users to input a transaction hash and obtain detailed parsed transaction traces that include contract addresses, gas costs, ether transfers, function signatures, and storage changes. The tool is comparable to:
-   - [Phalcon](https://explorer.phalcon.xyz/)
-   - [Tx Tracer](https://openchain.xyz/trace)
-   - [Cruise](https://cruise.supremacy.team/)
-   - [Ethtx](https://ethtx.info/)
-   - [Tenderly](https://dashboard.tenderly.co/explorer)
-   - [eigenphi](https://tx.eigenphi.io/analyseTransaction)
+[Phalcon](https://explorer.phalcon.xyz/)  [Tx Tracer](https://openchain.xyz/trace)  [Cruise](https://cruise.supremacy.team/)
+[Ethtx](https://ethtx.info/)  [Tenderly](https://dashboard.tenderly.co/explorer)    [eigenphi](https://tx.eigenphi.io/analyseTransaction)
 
 Example output:
 
