@@ -1,6 +1,6 @@
 # OpenTracer 
 
-The publication of OpenTracer is accepted at ASE tool demo track. A preprint can be found at https://arxiv.org/pdf/2407.10039
+The publication of OpenTracer is accepted at ASE 2024 tool demo track. A preprint can be found at https://arxiv.org/pdf/2407.10039
 
 A video description of OpenTracer can be found here: https://youtu.be/vTdmjWdYd30
 
