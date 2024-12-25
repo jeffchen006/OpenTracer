@@ -6,6 +6,11 @@ A video description of OpenTracer can be found here:
 [![Watch video](https://img.youtube.com/vi/vTdmjWdYd30/0.jpg)](https://www.youtube.com/watch?v=vTdmjWdYd30)
 
 
+Here is a comparison of OpenTracer with other popular transaction explorers : 
+![Comparison with Other Transaction Explorers](images/Comparison.png)
+The image above highlights how OpenTracer outperforms other tools in terms of features and efficiency.
+
+
 
 For users of OpenTracer, we've provided a sample `settings.toml` which contains the necessary configurations for the tool to function correctly. We collected these configurations from various sources, including EtherScan, Ethereum Archive Node, and QuickNode.
 
