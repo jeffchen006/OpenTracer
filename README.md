@@ -243,6 +243,40 @@ Below is a detailed overview of the folder structure provided in the artifact, w
 - `settings.toml`: Provides configuration settings for various scripts and tools. It is supposed to be secret and not shared.
 
 
+## Citation Information
+
+If you would like to use this tool or repository, please consider citing the following publications:
+
+### OpenTracer: A Dynamic Transaction Trace Analyzer for Smart Contract Invariant Generation and Beyond  (  [PDF Link on arXiv](https://arxiv.org/pdf/2407.10039)  )
+
+```bash
+@inproceedings{chen2024opentracer,  
+  title={OpenTracer: A Dynamic Transaction Trace Analyzer for Smart Contract Invariant Generation and Beyond},  
+  author={Chen, Zhiyang and Liu, Ye and Beillahi, Sidi Mohamed and Li, Yi and Long, Fan},  
+  booktitle={Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},  
+  pages={2399--2402},  
+  year={2024},  
+}
+```
+
+### Demystifying Invariant Effectiveness for Securing Smart Contracts ( [PDF Link on arXiv](https://arxiv.org/pdf/2404.14580) )
+```bash
+@article{chen2024demystifying,  
+  title={Demystifying invariant effectiveness for securing smart contracts},  
+  author={Chen, Zhiyang and Liu, Ye and Beillahi, Sidi Mohamed and Li, Yi and Long, Fan},  
+  journal={Proceedings of the ACM on Software Engineering},  
+  volume={1},  
+  number={FSE},  
+  pages={1772--1795},  
+  year={2024},  
+  publisher={ACM New York, NY, USA}  
+}
+```
+
+
+
+
+
 
 
 ## Knowledge Base
