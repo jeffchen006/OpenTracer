@@ -378,64 +378,71 @@ def mainTestTime():
 
 
 def main():
-    # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    feature0()
-
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     # Collect all snippets of the transactions related to the target contract, collect invariant-related data, generate invariants
-    # feature1()
-
-  ##  feature3()
-    ##collectTraceAndInvariants(contract="0xe952bda8c06481506e4731c4f54ced2d4ab81659", endBlock=14465357, l1=[], l2=[], l3=[])
+    feature1()
 
 
-
-
-
-
-
-
-def feature0():
-    # ==========================================================================
-    # Feature 0: Given a transaction hash, fetch and parse the transaction trace
-    # ==========================================================================
-    changeLoggingUpperBound(1000)
-    # time.sleep(1)
-    # Step 1: Fetch a transaction trace
-    txHash = "0xed2e82bb59e2ea39bfdc7d08ae2f7fcad7200e00163f6e3440b9a5d72fc3ef5d"
-    storeATrace(txHash)
-    temp = readATrace(txHash)
-
-    # print(temp)
-
-    for ii in range(0, 10):
-        print(temp['structLogs'][ii])
-    # 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c
-
-    # contracts = ["0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb", "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e", "0x54586bE62E3c3580375aE3723C145253060Ca0C2"]
-
-    # strstr = str(temp).lower()
-    # for contract in contracts:
-    #     if contract.lower() in strstr:
-    #         print("Contract Found: ", contract)
-    #     else:
-    #         print("not found")
-    
-
-    # Step 2: Parse the transaction trace
-    print("=================== Trace Tree =====================")
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    path = SCRIPT_DIR + "/cache/" + txHash + ".json.gz"
-    metaTraceTree = analyzeOneTxGlobal(txHash, path)
-    print(metaTraceTree.visualizeASE())
-    # Step 3: Decode function ABI and Storage Accesses (dynamically track SHA3)
-    print("=================== Decoded Trace Tree =====================")
-    metaTraceTree.decodeABIStorage(temp['structLogs'])
-    print(metaTraceTree.visualizeASE_decoded())
 
 
 
 def feature1():
+
+# DoughFina: 0x92cdcc732eebf47200ea56123716e337f6ef7d5ad714a2295794fdc6031ebb2e
+# 0x9f54e8eaa9658316bb8006e03fff1cb191aafbe6  
+# 0x534a3bb1ecb886ce9e7632e33d97bf22f838d085 implemented at 0x8a3f35e9eb756ad10242655bf5075178bcb7b59f
+
+# Bedrock_DeFi: 0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+# 0x004e9c3ef86bc1ca1f0bb5c7662861ee93350568
+# 0x51a7f889480c57cbeea81614f7d0be2b70db6c5e
+# 0x047d41f2544b7f63a8e991af2068a363d210d6da implemented at 0x702696b2aa47fd1d4feaaf03ce273009dc47d901
+
+
+# OnyxDAO: 0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+# 0x2ccb7d00a9e10d0c3408b5eefb67011abfacb075  
+# 0xcc53f8ff403824a350885a345ed4da649e060369  implemented at 0x3047d790879714930e83b7a7d8e76c2bb64d87b9
+# 0xbd20ae088dee315ace2c08add700775f461fea64  implemented at 0xa6a292ce698cce04710824e9573da1c166812b76
+# 0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18  
+# 0xf3354d3e288ce599988e23f9ad814ec1b004d74a  
+# 0x7a89e16cc48432917c948437ac1441b78d133a16  
+# 0x2c6650126b6e0749f977d280c98415ed05894711  
+# 0xee894c051c402301bc19be46c231d2a8e38b0451  
+
+# BlueberryProtocol: 0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+# 0xffadb0bba4379dfabfb20ca6823f6ec439429ec2  
+# 0x643d448cea0d3616f0b32e3718f563b164e7edd2 implemented at 0x3eedb4396387032f03d04fd0db1887f6b76d7bfa
+# 0x08830038a6097c10f4a814274d5a68e64648d91c implemented at 0xba4ab7577d4b4d4a4e9fad4dc40564c6e5c9e365
+# 0x649127d0800a8c68290129f091564ad2f1d62de1 bUSDC
+# 0xe61ad5b0e40c856e6c193120bd3fa28a432911b6 bWBTC
+
+
+# PrismaFi: 0x00c503b595946bccaea3d58025b5f9b3726177bbdc9674e634244135282116c7
+# 0x4591dbff62656e7859afe5e45f6f47d3669fbb28
+# 0xcc7218100da61441905e0c327749972e3cbee9ee 
+# 0x72c590349535ad52e6953744cb2a36b409542719 
+
+
+# PikeFinance
+# 0xfc7599cffea9de127a9f9c748ccb451a34d2f063
+
+# GFOX
+# 0x11a4a5733237082a6c08772927ce0a2b5f8a86b6
+# 0x8f1cece048cade6b8a05dfa2f90ee4025f4f2662
+
+# UwULend
+# 0x2409af0251dcb89ee3dee572629291f9b087c668 implemented at 0x05bfa9157e92690b179033ca2f6dd1e86b25ea4d
+#                                                           0x2e9f846ce3820531b52c08d3d4543be5c8fe7ddb
+#                                                           0x3c0ada81038a078cc1272ac22745ddd1ab8839af
+#                                                           0xaede01960810a655aecf86278bfdf5c968198b89
+
+
+# For invariant OB, we need to mark enter function and exit function, 
+# For invariant DFU, don't need to do any thing
+
+
+
+
+
  # ==========================================================================
     # Feature 1: Given a target contract, collect all transactions related to the contract.
     #            Collect all snippets of the transactions related to the target contract and collect invariant-related data.
@@ -558,19 +565,19 @@ def feature1():
     print("=====================================================")
     inferGasControl(accesslistTable)
 
-    # Invariant Category 4: Re-entrancy
-    print("=====================================================")
-    print("=================== Re-entrancy =====================")
-    print("=====================================================")
-    enterFuncs = []
-    exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
-    inferReentrancy(accesslistTable, enterFuncs, exitFuncs)
+    # # Invariant Category 4: Re-entrancy
+    # print("=====================================================")
+    # print("=================== Re-entrancy =====================")
+    # print("=====================================================")
+    # enterFuncs = []
+    # exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
+    # inferReentrancy(accesslistTable, enterFuncs, exitFuncs)
 
-    # Invariant Category 5: Special Storage
-    print("=====================================================")
-    print("================ Special Storage ====================")
-    print("=====================================================")
-    inferSpecialStorage(accesslistTable)
+    # # Invariant Category 5: Special Storage
+    # print("=====================================================")
+    # print("================ Special Storage ====================")
+    # print("=====================================================")
+    # inferSpecialStorage(accesslistTable)
 
     # Invariant Category 6: Oracle Control
     # Only the following benchmarks use an oracle
@@ -589,13 +596,13 @@ def feature1():
     exitFuncs = ['withdrawAllToForge', 'withdrawTo', 'withdrawToForge']
     inferDataFlows(executionListTable, enterFuncs, exitFuncs)
 
-    # Invariant Category 8: MoneyFlow
-    print("=====================================================")
-    print("=================== MoneyFlow =======================")
-    print("=====================================================")
-    # transferToken is the token that is being transferred, which we try to restrict
-    transferToken = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
-    inferMoneyFlows(executionListTable, contract, transferToken) 
+    # # Invariant Category 8: MoneyFlow
+    # print("=====================================================")
+    # print("=================== MoneyFlow =======================")
+    # print("=====================================================")
+    # # transferToken is the token that is being transferred, which we try to restrict
+    # transferToken = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    # inferMoneyFlows(executionListTable, contract, transferToken) 
 
 
 
@@ -610,23 +617,19 @@ def collectTraceAndInvariants(contract, endBlock, l1 ,l2, l3):
     # ==========================================================================
     # Punk_1
 
-
     # Step 1: Collect transactions
     # Step 1.1: Collect transaction history using TrueBlocks
     txHashes = collectTransactionHistory(contract, endBlock)
-
     print("total transactions: ", len(txHashes))
 
     # Step 1.2: Download history transaction traces from QuickNode
     for tx in txHashes:
         storeATrace(tx)    
     pathList = []
-
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     for tx in txHashes:
         path = SCRIPT_DIR + "/cache/" + tx + ".json.gz"
         pathList.append(path)
-
 
     # Step 2: Parse the transactions and Collect Invariant Related Data
 
@@ -774,32 +777,3 @@ if __name__ == '__main__':
 
 
 
-
-
-
-def feature2():
-    # ==========================================================================
-    # Feature 2: Given a transaction, collect logs from debug_traceTransaction RPC call,
-    #           translate the logs into other logs required by other tools. 
-    #           aims to replace the modified Geth part in other tools
-    # ==========================================================================
-
-    # this is the example transaction used as a demo in TxSpector repository https://github.com/OSUSecLab/TxSpector
-    txHash = "0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b"
-    # step 1: fetch the trace
-    storeATrace(txHash)
-    # step 2: read the trace and translate it to TxSpector desired format
-    trace = readATrace(txHash)
-    translated = TxSpectorTranslator().parseLogs(trace)
-    with open ("TxSpectorTranslator/Trace2InvTranslated.txt", "w") as f:
-        f.write(translated)
-    # step 3: compare translated result with ground truth, which is the demo input of TxSpector
-    #         placed in TxSpectorTranslator/0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b.txt
-    #         original file at https://github.com/OSUSecLab/TxSpector/blob/master/example/0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b.txt
-    groundTruth = None
-    with open ("TxSpectorTranslator/0x37085f336b5d3e588e37674544678f8cb0fc092a6de5d83bd647e20e5232897b.txt", "r") as f:
-        groundTruth = f.read()
-    if translated == groundTruth + "\n":
-        print("The translated result of Trace2Inv is the same as the input required by TxSpector")
-    else:
-        print("The translated result of Trace2Inv is different from the input required by TxSpector")

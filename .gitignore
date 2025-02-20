@@ -22,3 +22,9 @@ playground.ipynb
 
 *.pickle
 
+
+settings.toml
+settings copy.toml
+
+newBenchmarks/*
+

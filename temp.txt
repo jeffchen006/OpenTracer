@@ -1,0 +1,260 @@
+[Meta Info]  TxHash: 0xd38ecd1f02b192b741852569ef0c46e83bff8ea304f0185b5aca5e2bdad84983   tx.origin: 0xc7bf1bf8d639db5ae9c52c905747795752dc967a
+
+                [CALL] { gas:319085, value:0.00e+00 } 0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2.fallback(a0b8...9e16) -> 299b...ef00
+                  [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x5faab9e1adbddad0a08734be8a52185fd6558e14
+                    [DELEGATECALL] { gas:313607, value:0.00e+00 } 0x5faab9e1adbddad0a08734be8a52185fd6558e14.repay(['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 178705133312, 2, '0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [178705133312]
+                        [DELEGATECALL] { gas:307289, value:0.00e+00 } 0x5547d7d54d10c359108e36d098016c4020443fd4.fallback(3400...0000) -> 299b...ef00
+                          [sload] 0x34[ 000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 ]: 0x7d0068e7780005e2ce30003e8a50628d21f401e14
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf21: 0x56794c280063f969909a2f00000000036666a541c78daf29f90adc
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf22: 0x6970bd54438bdad48da22c0000000003727f5a864062312e1e475e
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf24: 0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf25: 0xb0fe3d292f4bd50de902ba5bdf120ad66e9d7a39
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf26: 0x72e95b8931767c79ba4eee721354d6e99a61d004
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075d91cf5618dc7438da22c
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075d91cf5618dc7438da22c
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf27: 0x642a8dacc59b73491dcaa3bcef046d660901fcc1
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf28: 0x1a4dce50a0
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf21: 0x56794c280063f969909a2f00000000036666a541c78daf29f90adc
+                          [sstore] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf21: 0x55ca07553f8e0322438c1300000000036666a541c78daf29f90adc
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075d91cf5618dc7438da22c
+                          [sstore] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075083bf31d53ab699c81d0
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf22: 0x6970bd54438bdad48da22c0000000003727f5a864062312e1e475e
+                          [sstore] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf22: 0x689fdc51ff51befa9c81d00000000003727f5a864062312e1e475e
+                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075083bf31d53ab699c81d0
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400042
+                          [sstore] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400002
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400002
+                          [sload] 0x36[ 0000000000000000000000000000000000000000000000000000000000000000 ]: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+                          [sload] 0x34[ 000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 ]: 0x103e80001b7740000155cc005dc85122904206c1f72
+                            [STATICCALL] { gas:299355 } 0x72e95b8931767c79ba4eee721354d6e99a61d004.fallback() -> 34c6...cacf
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xac725cb59d16c81061bdea61041a8a5e73da9ec6
+                                [DELEGATECALL] { gas:294172 } 0xac725cb59d16c81061bdea61041a8a5e73da9ec6.scaledTotalSupply([]) -> [928444475558607]
+                                  [sload] 0x3a: 0x34c6a5328cacf
+                            [STATICCALL] { gas:297989 } 0xb0fe3d292f4bd50de902ba5bdf120ad66e9d7a39.fallback() -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57
+                                [DELEGATECALL] { gas:292817 } 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57.getSupplyData([]) -> [0, 0, 0, 0]
+                                  [sload] 0x3f: 0x0
+                                  [sload] 0x3a: 0x0
+                                  [sload] 0x3a: 0x0
+                                  [sload] 0x3f: 0x0
+                            [STATICCALL] { gas:295644 } 0xb0fe3d292f4bd50de902ba5bdf120ad66e9d7a39.fallback(a638...9e16) -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57
+                                [DELEGATECALL] { gas:290516 } 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57.balanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [0]
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x0
+                            [STATICCALL] { gas:294059 } 0x72e95b8931767c79ba4eee721354d6e99a61d004.fallback(a638...9e16) -> 299b...ef00
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xac725cb59d16c81061bdea61041a8a5e73da9ec6
+                                [DELEGATECALL] { gas:288955 } 0xac725cb59d16c81061bdea61041a8a5e73da9ec6.balanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [178705133312]
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sload] 0x37: 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+                                    [STATICCALL] { gas:283617 } 0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2.fallback(a0b8...eb48) -> 3727...475e
+                                      [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x5faab9e1adbddad0a08734be8a52185fd6558e14
+                                        [DELEGATECALL] { gas:278709 } 0x5faab9e1adbddad0a08734be8a52185fd6558e14.getReserveNormalizedVariableDebt(['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48']) -> [1066873983324233973851113310]
+                                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf23: 0x30065f8d177000000000075d91cf5618dc7438da22c
+                                          [sload] 0xed960c71bd5fa1333658850f076b35ec5565086b606556c3dd36a916b43ddf22: 0x6970bd54438bdad48da22c0000000003727f5a864062312e1e475e
+                            [CALL] { gas:289511, value:0.00e+00 } 0x72e95b8931767c79ba4eee721354d6e99a61d004.fallback(a638...475e) -> 34c4...1e22
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xac725cb59d16c81061bdea61041a8a5e73da9ec6
+                                [DELEGATECALL] { gas:284469, value:0.00e+00 } 0xac725cb59d16c81061bdea61041a8a5e73da9ec6.burn(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', 178705133312, 1066873983324233973851113310]) -> [928276972052002]
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sstore] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sload] 0x3a: 0x34c6a5328cacf
+                                  [sstore] 0x3a: 0x34c43532c1e22
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e000000000000000000000026fffcacad
+                                  [sstore] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x3727f5a864062312e1e475e00000000000000000000000000000000
+                                  [sload] 0x3d: 0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb06
+                                  [sload] 0x3a: 0x34c43532c1e22
+                                    [CALL] { gas:271318, value:0.00e+00 } 0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb.fallback(a638...acad) -> None
+                                      [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xe7b67f44ea304dd7f6d215b13686637ff64cd2b2
+                                        [DELEGATECALL] { gas:266593, value:0.00e+00 } 0xe7b67f44ea304dd7f6d215b13686637ff64cd2b2.handleAction(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', 928444475558607, 167503506605]) -> []
+                                          [sload] 0x4ba33687ddacd057cd141427be2712bc56f5891fc9bca4e09ce17d67f81afc0b: 0x0
+                            [STATICCALL] { gas:272874 } 0x642a8dacc59b73491dcaa3bcef046d660901fcc1.fallback(299b...6f5c) -> 55ca...81d0
+                                [STATICCALL] { gas:266965 } 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.fallback(98c2...6f5c) -> 57be...6ff7
+                                  [sload] 0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b: 0x807a96288a1a408dbc13de2b1d087d10356395d2
+                                  [sload] 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd
+                                    [DELEGATECALL] { gas:262054 } 0x43506849d7c04f9138d1a2050bbf3a0c054402dd.balanceOf(['0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c']) -> [96477731057655]
+                                      [sload] 0x9[ msg.data[4:36]-00000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c ]: 0x57bef8e36ff7
+                            [CALL] { gas:249611, value:0.00e+00 } 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.fallback(a638...ef00) -> 1
+                              [sload] 0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b: 0x807a96288a1a408dbc13de2b1d087d10356395d2
+                              [sload] 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd
+                                [DELEGATECALL] { gas:244962, value:0.00e+00 } 0x43506849d7c04f9138d1a2050bbf3a0c054402dd.transferFrom(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', '0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c', 178705133312]) -> [True]
+                                  [sload] 0x1: 0x4914f61d25e5c567143774b76edbf4d5109a8566
+                                  [sload] 0x9[ CALLER-00000000000000000000000087870bca3f3fd6335c3f4ce8392d69350b4fa4e2 ]: 0x0
+                                  [sload] 0x9[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x29bac523ec
+                                  [sload] 0x9[ msg.data[36:68]-00000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c ]: 0x57bef8e36ff7
+                                  [sload] 0xa7d30eb6d6500986b6245640abd77e540281d07d2bbe89f614b11c151d9aac07[ CALLER-00000000000000000000000087870bca3f3fd6335c3f4ce8392d69350b4fa4e2 ]: 0x299ba7ef00
+                                  [sload] 0x9[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x29bac523ec
+                                  [sload] 0x9[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x29bac523ec
+                                  [sload] 0x9[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x29bac523ec
+                                  [sstore] 0x9[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1f1d34ec
+                                  [sload] 0x9[ msg.data[36:68]-00000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c ]: 0x57bef8e36ff7
+                                  [sload] 0x9[ msg.data[36:68]-00000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c ]: 0x57bef8e36ff7
+                                  [sstore] 0x9[ msg.data[36:68]-00000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c ]: 0x57e8948b5ef7
+                                  [sload] 0xa7d30eb6d6500986b6245640abd77e540281d07d2bbe89f614b11c151d9aac07[ CALLER-00000000000000000000000087870bca3f3fd6335c3f4ce8392d69350b4fa4e2 ]: 0x299ba7ef00
+                                  [sstore] 0xa7d30eb6d6500986b6245640abd77e540281d07d2bbe89f614b11c151d9aac07[ CALLER-00000000000000000000000087870bca3f3fd6335c3f4ce8392d69350b4fa4e2 ]: 0x0
+                            [CALL] { gas:239694, value:0.00e+00 } 0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c.fallback(a638...ef00) -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d
+                                [DELEGATECALL] { gas:235431, value:0.00e+00 } 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d.handleRepayment(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', '0xa6381631e0634e97e23a80a3c57f9582aa959e16', 178705133312]) -> []
+                
+                
+                
+                
+                
+                [CALL] { gas:249918, value:0.00e+00 } 0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2.fallback(c02a...9e16) -> 184a...d197
+                  [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x5faab9e1adbddad0a08734be8a52185fd6558e14
+                    [DELEGATECALL] { gas:245495, value:0.00e+00 } 0x5faab9e1adbddad0a08734be8a52185fd6558e14.withdraw(['0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 448058064546113180055, '0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [448058064546113180055]
+                      [sload] 0x3b: 0x1c00000000000009c4
+                      [sload] 0x38[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x0
+                        [STATICCALL] { gas:240511 } 0x2f39d218133afab8f2b819b1066c7e434ad94e9e.getPriceOracle([]) -> ['0x54586be62e3c3580375ae3723c145253060ca0c2']
+                          [sload] 0x740f710666bd7a12af42df98311e541e47f7fd33d382d11602457a6d540cbd63: 0x54586be62e3c3580375ae3723c145253060ca0c2
+                        [DELEGATECALL] { gas:239168, value:0.00e+00 } 0x589f82ff8162fa96545b435435713e9d6ca79fbb.fallback(3400...0000) -> 184a...d197
+                          [sload] 0x34[ 000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 ]: 0x103e80001b7740000155cc005dc85122904206c1f72
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec0: 0xd863c5f9de8df0608ae6c00000000034d27e25a3a6f76da9546d5
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec1: 0x143c33f6bc138028917fde00000000035af67795c38143894f06aa
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec3: 0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec4: 0x102633152313c81cd80419b6ecf66d14ad68949a
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec5: 0xea51d7853eefb32b6ee06b1c12e6dcca88be0ffe
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce24488c289b221ab48f3
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce24488c289b221ab48f3
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec6: 0x6b1ec378618ea736a65395ea5cab69a2410493b
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec7: 0xea2a2b42fd6c0dd4
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec0: 0xd863c5f9de8df0608ae6c00000000034d27e25a3a6f76da9546d5
+                          [sstore] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec0: 0xd8ad62a0cf2b4e117a96a00000000034d27e25a3a6f76da9546d5
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce24488c289b221ab48f3
+                          [sstore] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce72ed6ebd6af6e3905e8
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec1: 0x143c33f6bc138028917fde00000000035af67795c38143894f06aa
+                          [sstore] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec1: 0x143fa4c70c2fcb115b1dbc00000000035af67795c38143894f06aa
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce72ed6ebd6af6e3905e8
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400002
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce72ed6ebd6af6e3905e8
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400002
+                          [sstore] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400000
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400000
+                          [sload] 0x955e9ce776af37e65046118cd5228d014861ba9c60669ad4c90bed5a1bcea06a: 0x400000
+                          [sload] 0x34[ 000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 ]: 0x103e80001b7740000155cc005dc85122904206c1f72
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec0: 0xd8ad62a0cf2b4e117a96a00000000034d27e25a3a6f76da9546d5
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec1: 0x143fa4c70c2fcb115b1dbc00000000035af67795c38143894f06aa
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec2: 0x65f8d17700000000004ce72ed6ebd6af6e3905e8
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec3: 0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec4: 0x102633152313c81cd80419b6ecf66d14ad68949a
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec5: 0xea51d7853eefb32b6ee06b1c12e6dcca88be0ffe
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec6: 0x6b1ec378618ea736a65395ea5cab69a2410493b
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec7: 0xea2a2b42fd6c0dd4
+                          [sload] 0xf81d8d79f42adb4c73cc3aa0c78e25d3343882d0313c0b80ece3d3a103ef1ec8: 0x0
+                          [sload] 0x36[ 000000000000000000000000000000000000000000000000000000000000000b ]: 0xd533a949740bb3306d119cc777fa900ba034cd52
+                          [sload] 0x34[ 000000000000000000000000d533a949740bb3306d119cc777fa900ba034cd52 ]: 0x5f5e1000000000000003e80009896800004c4b400dac85122a4e10040dac
+                          [sload] 0xd76b69b0f7b1c04da356d786043ab33773b3ac2ca4b62d97fc88b41c43fd1255: 0x1b7d3f4b3c032a5ae656e30eea4e8e1ba376068f
+                          [sload] 0xd76b69b0f7b1c04da356d786043ab33773b3ac2ca4b62d97fc88b41c43fd1252: 0xb0065f7be6700000000009ae5d2a65b4d15bd7a4ce6
+                          [sload] 0xd76b69b0f7b1c04da356d786043ab33773b3ac2ca4b62d97fc88b41c43fd1251: 0x31ccdc9488a4985016069300000000039001f19a3f336278fcba96
+                          [sload] 0xd76b69b0f7b1c04da356d786043ab33773b3ac2ca4b62d97fc88b41c43fd1254: 0x90d9cd005e553111eb8c9c31abe9706a186b6048
+                            [STATICCALL] { gas:232232 } 0xea51d7853eefb32b6ee06b1c12e6dcca88be0ffe.fallback() -> 6c3d...f183
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xac725cb59d16c81061bdea61041a8a5e73da9ec6
+                                [DELEGATECALL] { gas:228097 } 0xac725cb59d16c81061bdea61041a8a5e73da9ec6.scaledTotalSupply([]) -> [511142843890760608706947]
+                                  [sload] 0x3a: 0x6c3d1bed4fcb3228f183
+                            [STATICCALL] { gas:230866 } 0x102633152313c81cd80419b6ecf66d14ad68949a.fallback() -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57
+                                [DELEGATECALL] { gas:226743 } 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57.getSupplyData([]) -> [0, 0, 0, 0]
+                                  [sload] 0x3f: 0x0
+                                  [sload] 0x3a: 0x0
+                                  [sload] 0x3a: 0x0
+                                  [sload] 0x3f: 0x0
+                            [STATICCALL] { gas:228541 } 0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8.fallback(a638...9e16) -> 17c5...f43e
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d
+                                [DELEGATECALL] { gas:224493 } 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d.scaledBalanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [438528547442676003902]
+                                  [sload] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                            [STATICCALL] { gas:225217 } 0x06b1ec378618ea736a65395ea5cab69a2410493b.fallback(184a...14e8) -> d8ad...1dbc
+                                [STATICCALL] { gas:220053, value:0.00e+00 } 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.balanceOf(['0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8']) -> [144251399962999385139001]
+                                  [sload] 0x3[ msg.data[4:36]-0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8 ]: 0x1e8be251d5aceeb2a739
+                            [CALL] { gas:204729, value:0.00e+00 } 0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8.fallback(a638...46d5) -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d
+                                [DELEGATECALL] { gas:201006, value:0.00e+00 } 0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d.burn(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', '0xa6381631e0634e97e23a80a3c57f9582aa959e16', 448058064546113180055, 1021730665332985795475490517]) -> []
+                                  [sload] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                                  [sload] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                                  [sstore] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                                  [sload] 0x36: 0x8be66ef6433e2cc97a57
+                                  [sstore] 0x36: 0x8bcea927e4c4800c8619
+                                  [sload] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                                  [sload] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d50000000000000017c5ce5e79acbcf43e
+                                  [sstore] 0x34[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x34d27e25a3a6f76da9546d500000000000000000000000000000000
+                                  [sload] 0x39: 0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb12
+                                  [sload] 0x3d: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+                                    [CALL] { gas:189130, value:0.00e+00 } 0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb.fallback(a638...f43e) -> None
+                                      [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xe7b67f44ea304dd7f6d215b13686637ff64cd2b2
+                                        [DELEGATECALL] { gas:185689, value:0.00e+00 } 0xe7b67f44ea304dd7f6d215b13686637ff64cd2b2.handleAction(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', 660659687907956642904663, 438528547442676003902]) -> []
+                                          [sload] 0x76f8b43dabb591eb6681562420f7f6aa393e6903d4e02e6f59e2957d94ceab20: 0x0
+                                    [CALL] { gas:183198, value:0.00e+00 } 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.transfer(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', 448058064546113180055]) -> [True]
+                                      [sload] 0x3[ CALLER-0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8 ]: 0x1e8be251d5aceeb2a739
+                                      [sload] 0x3[ CALLER-0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8 ]: 0x1e8be251d5aceeb2a739
+                                      [sstore] 0x3[ CALLER-0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8 ]: 0x1e739843d1e25a93d5a2
+                                      [sload] 0x3[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x0
+                                      [sstore] 0x3[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184a0e03ca941ed197
+                            [STATICCALL] { gas:156252 } 0x54586be62e3c3580375ae3723c145253060ca0c2.getAssetPrice(['0xd533a949740bb3306d119cc777fa900ba034cd52']) -> [65867170]
+                              [sload] 0x[ msg.data[4:36]-000000000000000000000000d533a949740bb3306d119cc777fa900ba034cd52 ]: 0xcd627aa160a6fa45eb793d19ef54f5062f20f33f
+                                [STATICCALL] { gas:153057 } 0xcd627aa160a6fa45eb793d19ef54f5062f20f33f.latestAnswer([]) -> [65867170]
+                                  [sload] 0x5: 0x0
+                                  [sload] 0x2: 0xb4c4a493ab6356497713a78ffa6c60fb53517c630001
+                                    [STATICCALL] { gas:149820 } 0xb4c4a493ab6356497713a78ffa6c60fb53517c63.latestAnswer([]) -> [65867170]
+                                      [sload] 0x30[ CALLER-000000000000000000000000cd627aa160a6fa45eb793d19ef54f5062f20f33f ]: 0x1
+                                      [sload] 0x2a: 0x63c7060001a49a0379eece1f3544e30ad10554ec57024464
+                                      [sload] 0x2b[ 00000000000000000000000000000000000000000000000000000000000063c7 ]: 0x65f8c9df000000000000000000000000000000000000000003ed0da2
+                            [STATICCALL] { gas:152131 } 0x1b7d3f4b3c032a5ae656e30eea4e8e1ba376068f.fallback(a638...9e16) -> 1
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0xac725cb59d16c81061bdea61041a8a5e73da9ec6
+                                [DELEGATECALL] { gas:149277 } 0xac725cb59d16c81061bdea61041a8a5e73da9ec6.scaledBalanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [1]
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x38fdc1e2cee7cbaa2a59acc00000000000000000000000000000001
+                            [STATICCALL] { gas:148478 } 0x90d9cd005e553111eb8c9c31abe9706a186b6048.fallback(a638...9e16) -> None
+                              [sload] 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc: 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57
+                                [DELEGATECALL] { gas:145649 } 0x15c5620dffac7c7366eed66c20ad222ddbb1ed57.balanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [0]
+                                  [sload] 0x38[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x0
+            [CALL] { gas:158406, value:0.00e+00 } 0xa6381631e0634e97e23a80a3c57f9582aa959e16.fallback(4000...6cc2) -> None
+                [CALL] { gas:149390, value:0.00e+00 } 0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640.fallback(a638...0000) -> 1f1d...5643
+                  [sload] 0x0: 0x10002d302d3000702f83500000000000041b1a1bef6beeb3a6e2ff239dfb6
+                  [sload] 0x0: 0x10002d302d3000702f83500000000000041b1a1bef6beeb3a6e2ff239dfb6
+                  [sstore] 0x0: 0x2d302d3000702f83500000000000041b1a1bef6beeb3a6e2ff239dfb6
+                  [sload] 0x4: 0xd33e38f3ddaf280b
+                  [sload] 0x1: 0x87070e2e529bbddd1f4dc2360e69
+                  [sload] 0x6[ 000000000000000000000000000000000000000000000000000000000000004c ]: 0x9e1feeb5b6241d7f8ad0de63a37033ae98fa47af178d3ed7185dffdf7dbdffff
+                  [sload] 0x0: 0x2d302d3000702f83500000000000041b1a1bef6beeb3a6e2ff239dfb6
+                  [sstore] 0x0: 0x2d302d3000702f83500000000000041b19f439f6d7dd1bbbf1a609a34
+                  [sstore] 0x1: 0x87070e33262bbe2a13fb2c5574f0
+                  [sload] 0x0: 0x2d302d3000702f83500000000000041b19f439f6d7dd1bbbf1a609a34
+                  [sstore] 0x0: 0x10002d302d3000702f83500000000000041b19f439f6d7dd1bbbf1a609a34
+                    [CALL] { gas:128191, value:0.00e+00 } 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.transfer(['0xa6381631e0634e97e23a80a3c57f9582aa959e16', 147566987176421821]) -> [True]
+                      [sload] 0x3[ CALLER-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x23ea2f15f25fbfd6665
+                      [sload] 0x3[ CALLER-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x23ea2f15f25fbfd6665
+                      [sstore] 0x3[ CALLER-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x23ea0e51bc160c3bca8
+                      [sload] 0x3[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184a0e03ca941ed197
+                      [sstore] 0x3[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184c1a472f2f587b54
+                    [STATICCALL] { gas:121244 } 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.fallback(88e6...5640) -> 4534...c9da
+                      [sload] 0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b: 0x807a96288a1a408dbc13de2b1d087d10356395d2
+                      [sload] 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd
+                        [DELEGATECALL] { gas:118610 } 0x43506849d7c04f9138d1a2050bbf3a0c054402dd.balanceOf(['0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640']) -> [76092153514458]
+                          [sload] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x453495c7c9da
+                    [CALL] { gas:119116, value:0.00e+00 } 0xa6381631e0634e97e23a80a3c57f9582aa959e16.fallback(1f1d...0000) -> None
+                        [CALL] { gas:115835, value:0.00e+00 } 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.fallback(88e6...34eb) -> 1
+                          [sload] 0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b: 0x807a96288a1a408dbc13de2b1d087d10356395d2
+                          [sload] 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd
+                            [DELEGATECALL] { gas:113282, value:0.00e+00 } 0x43506849d7c04f9138d1a2050bbf3a0c054402dd.transfer(['0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640', 522007787]) -> [True]
+                              [sload] 0x1: 0x4914f61d25e5c567143774b76edbf4d5109a8566
+                              [sload] 0x9[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1f1d34ec
+                              [sload] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x453495c7c9da
+                              [sload] 0x9[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1f1d34ec
+                              [sload] 0x9[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1f1d34ec
+                              [sload] 0x9[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1f1d34ec
+                              [sstore] 0x9[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x1
+                              [sload] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x453495c7c9da
+                              [sload] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x453495c7c9da
+                              [sstore] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x4534b4e4fec5
+                    [STATICCALL] { gas:108741 } 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.fallback(88e6...5640) -> 4534...fec5
+                      [sload] 0x10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b: 0x807a96288a1a408dbc13de2b1d087d10356395d2
+                      [sload] 0x7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd
+                        [DELEGATECALL] { gas:106302 } 0x43506849d7c04f9138d1a2050bbf3a0c054402dd.balanceOf(['0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640']) -> [76092675522245]
+                          [sload] 0x9[ msg.data[4:36]-00000000000000000000000088e6a0c2ddd26feeb64f039a2c41296fcb3f5640 ]: 0x4534b4e4fec5
+            [CALL] { gas:107052, value:0.00e+00 } 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.balanceOf(['0xa6381631e0634e97e23a80a3c57f9582aa959e16']) -> [448205631533289601876]
+              [sload] 0x3[ msg.data[4:36]-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184c1a472f2f587b54
+            [CALL] { gas:105829, value:0.00e+00 } 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.transfer(['0xe8c060f8052e07423f71d445277c61ac5138a2e5', 448205631533289601876]) -> [True]
+              [sload] 0x3[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184c1a472f2f587b54
+              [sload] 0x3[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x184c1a472f2f587b54
+              [sstore] 0x3[ CALLER-000000000000000000000000a6381631e0634e97e23a80a3c57f9582aa959e16 ]: 0x0
+              [sload] 0x3[ msg.data[4:36]-000000000000000000000000e8c060f8052e07423f71d445277c61ac5138a2e5 ]: 0x0
+              [sstore] 0x3[ msg.data[4:36]-000000000000000000000000e8c060f8052e07423f71d445277c61ac5138a2e5 ]: 0x184c1a472f2f587b54
+        [CALL] { gas:0, value:1.09e+17 } 0xbd3afb0bb76683ecb4225f9dbc91f998713c3b01.fallback() -> None
