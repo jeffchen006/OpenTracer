@@ -174,6 +174,13 @@ class Analyzer:
             return {}
         
         funcSigMap2 = None
+
+        unableCompile = [
+            "0x0b89ccd6b803ccec4f0e0fbefaee1f7d16e734e2",
+            "0x90995dbd1aae85872451b50a569de947d34ac4ee", 
+        ]
+        if contractAddress in unableCompile:
+            return funcSigMap
         try: 
             self.crawlEtherscan.Contract2Sourcecode(contractAddress)
             if not self.isVyper(contractAddress):
@@ -183,6 +190,7 @@ class Analyzer:
                 # func sig map from vyper compile results
                 funcSigMap2 = self.vyperAnalyzer.Contract2funcSigMap(contractAddress)
         except Exception as ex:
+            print("contractAddress is", contractAddress)
             return funcSigMap
         
         # merge two maps

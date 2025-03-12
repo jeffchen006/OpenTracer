@@ -294,6 +294,8 @@ class CrawlEtherscan:
 
     def Tx2Receipt(self, Tx: str) -> dict:
         """Given a Tx hash, return the receipt"""
+        # if Tx == "0x2c1b020e1f467903b84dd7797ef62ad07592a2e4c9ac5d1028c0bfa190befda4":
+        #     print("now is the time")
         receiptStored = _load_transaction_receipt(Tx, self.cur)
         if receiptStored is not None:
             # print("stored")
@@ -358,9 +360,11 @@ class CrawlEtherscan:
         toAddress = receipt['to']
         contractAddress = receipt['contractAddress']
         status = receipt['status']
+        gasUsed = receipt['gasUsed']
         # status: 0 => failed, 1 => success
         # to: Address of the receiver or null in a contract creation transaction.
-        ret = {"contractAddress": contractAddress, "from": fromAddress, "to": toAddress, "status": status}
+        ret = {"contractAddress": contractAddress, "from": fromAddress, "to": toAddress, \
+               "status": status, "gasUsed": gasUsed}
         return ret
 
     def Tx2Block(self, Tx: str) -> int:

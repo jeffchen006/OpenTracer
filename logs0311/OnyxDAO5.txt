@@ -1,0 +1,98 @@
+benchmark:  OnyxDAO5
+now works on benchmark:  OnyxDAO  contract:  0x7a89e16cc48432917c948437ac1441b78d133a16
+total transactions:  82
+total:  82
+now finish:  0  total:  82
+now finish:  1  total:  82
+now finish:  2  total:  82
+now finish:  3  total:  82
+now finish:  4  total:  82
+now finish:  5  total:  82
+now finish:  6  total:  82
+now finish:  7  total:  82
+now finish:  8  total:  82
+now finish:  9  total:  82
+now finish:  10  total:  82
+now finish:  11  total:  82
+now finish:  12  total:  82
+now finish:  13  total:  82
+now finish:  14  total:  82
+now finish:  15  total:  82
+now finish:  16  total:  82
+now finish:  17  total:  82
+now finish:  18  total:  82
+now finish:  19  total:  82
+now finish:  20  total:  82
+now finish:  21  total:  82
+now finish:  22  total:  82
+now finish:  23  total:  82
+now finish:  24  total:  82
+now finish:  25  total:  82
+now finish:  26  total:  82
+now finish:  27  total:  82
+now finish:  28  total:  82
+now finish:  29  total:  82
+now finish:  30  total:  82
+now finish:  31  total:  82
+now finish:  32  total:  82
+now finish:  33  total:  82
+now finish:  34  total:  82
+now finish:  35  total:  82
+now finish:  36  total:  82
+now finish:  37  total:  82
+now finish:  38  total:  82
+now finish:  39  total:  82
+now finish:  40  total:  82
+now finish:  41  total:  82
+now finish:  42  total:  82
+now finish:  43  total:  82
+now finish:  44  total:  82
+now finish:  45  total:  82
+now finish:  46  total:  82
+now finish:  47  total:  82
+now finish:  48  total:  82
+now finish:  49  total:  82
+now finish:  50  total:  82
+now finish:  51  total:  82
+now finish:  52  total:  82
+now finish:  53  total:  82
+now finish:  54  total:  82
+now finish:  55  total:  82
+now finish:  56  total:  82
+now finish:  57  total:  82
+now finish:  58  total:  82
+now finish:  59  total:  82
+now finish:  60  total:  82
+now finish:  61  total:  82
+now finish:  62  total:  82
+now finish:  63  total:  82
+now finish:  64  total:  82
+now finish:  65  total:  82
+now finish:  66  total:  82
+now finish:  67  total:  82
+now finish:  68  total:  82
+now finish:  69  total:  82
+now finish:  70  total:  82
+now finish:  71  total:  82
+now finish:  72  total:  82
+now finish:  73  total:  82
+now finish:  74  total:  82
+now finish:  75  total:  82
+now finish:  76  total:  82
+now finish:  77  total:  82
+now finish:  78  total:  82
+now finish:  79  total:  82
+now finish:  80  total:  82
+now finish:  81  total:  82
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{}
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{}

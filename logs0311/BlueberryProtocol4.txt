@@ -1,0 +1,137 @@
+benchmark:  BlueberryProtocol4
+now works on benchmark:  BlueberryProtocol  contract:  0x649127d0800a8c68290129f091564ad2f1d62de1
+total transactions:  121
+total:  121
+now finish:  0  total:  121
+now finish:  1  total:  121
+now finish:  2  total:  121
+now finish:  3  total:  121
+now finish:  4  total:  121
+now finish:  5  total:  121
+now finish:  6  total:  121
+now finish:  7  total:  121
+now finish:  8  total:  121
+now finish:  9  total:  121
+now finish:  10  total:  121
+now finish:  11  total:  121
+now finish:  12  total:  121
+now finish:  13  total:  121
+now finish:  14  total:  121
+now finish:  15  total:  121
+now finish:  16  total:  121
+now finish:  17  total:  121
+now finish:  18  total:  121
+now finish:  19  total:  121
+now finish:  20  total:  121
+now finish:  21  total:  121
+now finish:  22  total:  121
+now finish:  23  total:  121
+now finish:  24  total:  121
+now finish:  25  total:  121
+now finish:  26  total:  121
+now finish:  27  total:  121
+now finish:  28  total:  121
+now finish:  29  total:  121
+now finish:  30  total:  121
+now finish:  31  total:  121
+now finish:  32  total:  121
+now finish:  33  total:  121
+now finish:  34  total:  121
+now finish:  35  total:  121
+now finish:  36  total:  121
+now finish:  37  total:  121
+now finish:  38  total:  121
+now finish:  39  total:  121
+now finish:  40  total:  121
+now finish:  41  total:  121
+now finish:  42  total:  121
+now finish:  43  total:  121
+now finish:  44  total:  121
+now finish:  45  total:  121
+now finish:  46  total:  121
+now finish:  47  total:  121
+now finish:  48  total:  121
+now finish:  49  total:  121
+now finish:  50  total:  121
+now finish:  51  total:  121
+now finish:  52  total:  121
+now finish:  53  total:  121
+now finish:  54  total:  121
+now finish:  55  total:  121
+now finish:  56  total:  121
+now finish:  57  total:  121
+now finish:  58  total:  121
+now finish:  59  total:  121
+now finish:  60  total:  121
+now finish:  61  total:  121
+now finish:  62  total:  121
+now finish:  63  total:  121
+now finish:  64  total:  121
+now finish:  65  total:  121
+now finish:  66  total:  121
+now finish:  67  total:  121
+now finish:  68  total:  121
+now finish:  69  total:  121
+now finish:  70  total:  121
+now finish:  71  total:  121
+now finish:  72  total:  121
+now finish:  73  total:  121
+now finish:  74  total:  121
+now finish:  75  total:  121
+now finish:  76  total:  121
+now finish:  77  total:  121
+now finish:  78  total:  121
+now finish:  79  total:  121
+now finish:  80  total:  121
+now finish:  81  total:  121
+now finish:  82  total:  121
+now finish:  83  total:  121
+now finish:  84  total:  121
+now finish:  85  total:  121
+now finish:  86  total:  121
+now finish:  87  total:  121
+now finish:  88  total:  121
+now finish:  89  total:  121
+now finish:  90  total:  121
+now finish:  91  total:  121
+now finish:  92  total:  121
+now finish:  93  total:  121
+now finish:  94  total:  121
+now finish:  95  total:  121
+now finish:  96  total:  121
+now finish:  97  total:  121
+now finish:  98  total:  121
+now finish:  99  total:  121
+now finish:  100  total:  121
+now finish:  101  total:  121
+now finish:  102  total:  121
+now finish:  103  total:  121
+now finish:  104  total:  121
+now finish:  105  total:  121
+now finish:  106  total:  121
+now finish:  107  total:  121
+now finish:  108  total:  121
+now finish:  109  total:  121
+now finish:  110  total:  121
+now finish:  111  total:  121
+now finish:  112  total:  121
+now finish:  113  total:  121
+now finish:  114  total:  121
+now finish:  115  total:  121
+now finish:  116  total:  121
+now finish:  117  total:  121
+now finish:  118  total:  121
+now finish:  119  total:  121
+now finish:  120  total:  121
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 
+==invariant map: 
+{}
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark BlueberryProtocol: 
+==invariant map: 
+{}

@@ -1,0 +1,29 @@
+benchmark:  GFOX1
+now works on benchmark:  GFOX  contract:  0x11a4a5733237082a6c08772927ce0a2b5f8a86b6
+total transactions:  7615
+total:  7615
+now finish:  6169  total:  7615
+no access for tx:  0xa2f420cf4a0bd2304b9a0907905c681ffacc60b42c271d4e8d7aa2180e247667
+no access for tx:  0xbc33abe595ae454e21f1dbc70e10674685bc1bc79c0f4b41a0251e0f72b58856
+no access for tx:  0xfad333b077d059c0e8ef6b20e04fdfe72617a1f1abb376781dfe6e70eaff7c83
+no access for tx:  0x4a748290dd07bd909d7e49da984f6c14fe66ab6118df5223a44dea3864e9b404
+no access for tx:  0x20fa337b73e1ee39829ca35537fee74e734fe6339cae2f274021d9619a13e995
+no access for tx:  0x59ecfc718f000dfae34b1d8dd1f425921521f514610ce39da1578ab117e01af7
+no access for tx:  0x76b3c3f41676143495e9655d3c3c54f32f965baadd624806c559f93148fdbab3
+no access for tx:  0x5ec02eda1683a8658a0e026b06fda661cca2899bd33bc90a32348f9306923d19
+no access for tx:  0x6f114ecfec145ddf6d51b772c6c14f6ac8443ab8e717b9467217486cef8cecf0
+no access for tx:  0xf5a9a9ff0dee0ed84e441ad495f6f65cab1afc685288504637a8bfcbef5bbc15
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark GFOX: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

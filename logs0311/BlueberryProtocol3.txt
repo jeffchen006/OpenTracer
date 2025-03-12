@@ -1,0 +1,67 @@
+benchmark:  BlueberryProtocol3
+now works on benchmark:  BlueberryProtocol  contract:  0x08830038a6097c10f4a814274d5a68e64648d91c
+total transactions:  30
+total:  30
+no access for tx:  0xc8448e1a2d29c52386c599cf00cc89fcd4b7ce2b7c6f916b14b5257eccc8325d
+no access for tx:  0x4dca943bb252be77174b328accd4738be11b5e69087cc1a0d2ab0b6147c1239e
+no access for tx:  0x5c8020f0cb33f9ccfd8651b0784ce0a469dfcd1adba9b7733d49e9bcca164cc3
+no access for tx:  0xb9108ca7ee88f90830a4e2a2b7a5d6883cb70bb8ed523dccb7b24e44231d7d70
+no access for tx:  0x9eedd9e333d11a0c26b71083ea6f53492fb1149c517340b7009eb6bcec09bf6e
+no access for tx:  0xf128d5ba606ffcdf567ed91228bb862690c46d7d603fd977bd88ca84dd83541a
+no access for tx:  0x12c142c638a746557525c9c6d4ee752a80acb42587c93e940be46e1d4fbb0240
+no access for tx:  0x6d96567eadad93c44099bc98234ad64a8c0b8608ee4096055e7013e77615bce8
+no access for tx:  0x6d9d1f8e001bbf6acc750bc4df38eb31452b11d8983c29297fa313ce15e1f2f9
+no access for tx:  0xed11f1fc92cfa64a5013dc2adfba061f751a72281aab59c38a9de516484cd785
+no access for tx:  0xe814079725e7d2414e20ffa578dddbabc1177f605794c62995a16ae4b693496e
+no access for tx:  0x28e522e8e0a68cd36f567d76ec6c93fcb04a1a7847f30a355262161a70a93b84
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func mint0xa0712d68 has only 1 sender
+func mint0xa0712d68 has more than 5 origins
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                       'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                   'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                   'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                            'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isSenderOwner': '0x8120e2f07c75bcb2bf1af0e347b3a4f0fd8e5545',
+                      'require(origin==sender)': False},
+  'redeem0xdb006a75': { 'isOriginOwner': '0x7450d9e6a3f274bbbfc0ab8f4af47f1ae37a675e',
+                        'isSenderOwner': '0x8120e2f07c75bcb2bf1af0e347b3a4f0fd8e5545',
+                        'require(origin==sender)': False}}
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(origin==sender)']
+0		21	9
+5 sampled FPs for require(origin==sender)
+len(txList3):  30
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark BlueberryProtocol: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  '_setReserveFactor0xfca7820b': {},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 159760,
+                      'require(gasStart <= constant)': 269174},
+  'redeem0xdb006a75': {}}
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  17

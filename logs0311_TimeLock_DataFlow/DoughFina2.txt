@@ -1,0 +1,29 @@
+benchmark:  DoughFina2
+now works on benchmark:  DoughFina  contract:  0x534a3bb1ecb886ce9e7632e33d97bf22f838d085
+total transactions:  11
+total:  11
+now finish:  3  total:  11
+now finish:  7  total:  11
+no access for tx:  0x697b7b7a8771e709a55ada23fddc0e688e9478812d7b8ede29436fb5278eab93
+no access for tx:  0xe306539ce6915e146d0308ff5697905f2741ca7d7c9d922da5422cedee3a3a4d
+no access for tx:  0xca1203178b8adf94754f8bf01cf2df47d030d8fe7d6b825c98732f8f38b5303a
+no access for tx:  0x6569d6950a96ffd83d3a6884cf791a52ae64c25e68c5d74c177e025ce7d35b75
+no access for tx:  0x6e10e7836e9cbed2447c07d468c95f04dd677c6e7184178a299a22b1bc27bffb
+no access for tx:  0x20a04b264c9814623fe12a912775c7dc766337699ca745ff8fccd5c604c4067f
+no access for tx:  0xfa7544379d6b47bb5a0dcc3cb34929ac6feb7ebdb79df18cf95955ca20cbf377
+no access for tx:  0xf4c9af7ef2085fa7d6e22beaa6825a1de8c23ab4421e23e6b8e69426bbd40abb
+no access for tx:  0x92cdcc732eebf47200ea56123716e337f6ef7d5ad714a2295794fdc6031ebb2e
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark DoughFina: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

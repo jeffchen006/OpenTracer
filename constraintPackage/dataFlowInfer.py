@@ -15,6 +15,9 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import toml
 settings = toml.load("settings.toml")
+proportion = settings["experiment"]["trainingSetRatio"] # how much transactions used as traning set
+
+
 
 
 
@@ -76,7 +79,8 @@ def funcMsgDataRange2Type(msgDataStart, msgDataEnd, types):
 def ABIName2Types(ABI, name: str):
     inputs = []
     for function in ABI:
-        if "type" in function and function["type"] == "function" and function["name"] == name:
+        if "type" in function and function["type"] == "function" and \
+            function["name"] == name and len(function["inputs"]) != 0:
             for input in function["inputs"]:
                 # if input["type"] != input["internalType"]:
                 #     print("input[type] = {}".format(input["type"]))
@@ -156,6 +160,8 @@ def readValuePCTypeFromSource(source, metaData, ABI):
                 elif source[1] == 100 and source[2] == 196:
                     type = "bytes"
             else:
+
+
                 types = ABIName2Types(ABI, metaData["targetFunc"])
                 type = funcMsgDataRange2Type(source[1], source[2], types)
             
@@ -606,17 +612,78 @@ def readValuePCTypeFromSource(source, metaData, ABI):
 
 
 
+def printFPMap(invariantMap, FPMap, benchmarkName, txCount):
+
+    invariants = ['mapping', 'callvalue', 'dataFlowUpperBound', 'dataFlowLowerBound']
+    invariants = ['dataFlowUpperBound']
+
+    if invariantMap == {}:
+        print("N/A\tN/A\tN/A\tN/A\tN/A\tN/A")
+        return
+    print(invariants)
+
+    if "mapping" in invariantMap and invariantMap["mapping"] == {}:
+        if "mapping" in FPMap:
+            del FPMap["mapping"]
+    if "callvalue" in invariantMap and invariantMap["callvalue"] == {}:
+        if "callvalue" in FPMap:
+            del FPMap["callvalue"]
+    if "dataFlow" in invariantMap and invariantMap["dataFlow"] == {}:
+        if "dataFlowUpperBound" in FPMap:
+            del FPMap["dataFlowUpperBound"]
+        if "dataFlowLowerBound" in FPMap:
+            del FPMap["dataFlowLowerBound"]
+
+    totalSum = 0
+    if "dataFlow" in invariantMap:
+        for func in invariantMap["dataFlow"]:
+            funcMap = invariantMap["dataFlow"][func]
+            totalSum += len(funcMap.keys())
+        # print("dataFlow: ", totalSum)
+
+
+    for invariant in invariants:
+        if invariant in FPMap:
+            print("{}\t".format(len(FPMap[invariant]) ), end ="" )
+        else:
+            print("N/A\t", end = "")
+
+    testingSet = int(txCount * (1 - proportion) - 1)
+    trainingSet = txCount - testingSet
+    print("\t{}\t{}".format( trainingSet, testingSet ))
+
+
+    for invariant in invariants:
+        if invariant in FPMap:
+            print("5 sampled FPs for {}".format(invariant))
+            sampledFPs = sample_five_elements(FPMap[invariant])
+            for fp in sampledFPs:
+                print(fp)
+        
+
+        
+
 # check X invariants
 # 1. upper bounds for data flow
 # 2. ranges for data flow
 
-def inferDataFlows(executionTable, enterFuncs, exitFuncs):
+def inferDataFlows(executionTable, enterFuncs, exitFuncs, txCount, trainTxList, benchmarkName, exploitTx):
     crawlQuickNode = CrawlQuickNode()
     crawlEtherscan = CrawlEtherscan()
 
-    for  contract, executionList in executionTable:
+    isStart = False
+    for contract, executionList in executionTable:
+        print("====== benchmark {}: ".format(benchmarkName))
+        # print("====== contract {}: ".format(contract))
+        # print("====== exploitTx {}: ".format(exploitTx))
+
+        if benchmarkName == "VisorFi":
+            exploitTx = "0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f"
+
+    
         if contract in proxyMap:
             contract = proxyMap[contract]
+
         # build read-only functions
         ABI = crawlEtherscan.Contract2ABI(contract)
         readOnlyFunctions = ["fallback"]
@@ -642,6 +709,7 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
         # }
         # 
         }
+
         # dataType = callvalue
         # only consider <=
         callvalueMap = {
@@ -653,6 +721,7 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
         # }
         # 
         }
+
         # dataType = externalStaticCall/balance/selfbalance/storage/argument
         dataFlowMap = {
         # { "func+type": 
@@ -663,11 +732,26 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
         #          }
         # }
         }
+
+
         # precheck(executionList)
+
+        counter = -1
+
+        txList1 = []
         for tx, dataS in executionList:
-            if tx == "0x30fd944ddd5a68a9ab05048a243b852daf5f707e0448696b172cea89e757f4e5":
-                # buggy tx
-                continue
+            counter += 1
+
+            if tx not in trainTxList:
+                break
+
+            txList1.append(tx)
+
+            if tx == exploitTx:
+                print("Warning: training set touch exploit tx")
+                break
+            
+
             sources = dataS["sources"]
             children = dataS["children"]
             for child in children:
@@ -706,6 +790,8 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
             #            6. mapping    <=
             #            7. storage    
             #            8. argument
+
+
 
             for source in sources:
                 value, pc, type, dataType = readValuePCTypeFromSource(source, metaData, ABI)
@@ -801,8 +887,8 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
                 maxValue = max(mappingMap[func][pc])
                 invariantMap["mapping"][func][pc] = (minValue, maxValue)
 
-        # print("mapping map: ")
-        # print(mappingMap)
+        print("mapping map: ")
+        print(mappingMap)
 
         # callvalue
         for func in callvalueMap:
@@ -812,9 +898,11 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
             maxValue = max(callvalueMap[func])
             invariantMap["callvalue"][func] = (minValue, maxValue)
 
-        # print("callvalue map: ")
-        # print(callvalueMap)
+        print("callvalue map: ")
+        print(callvalueMap)
+
         # dataFlow
+        isHavingDataFlow = False
         for func in dataFlowMap:
             if dataFlowMap[func] == {}:
                 continue
@@ -826,23 +914,167 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs):
                     if func not in invariantMap["dataFlow"]:
                         invariantMap["dataFlow"][func] = {}
                     invariantMap["dataFlow"][func][pc] = [source, (minValue, maxValue)]
+                    isHavingDataFlow = True
+            
 
         print("==invariant map: ")
         import pprint
         pp = pprint.PrettyPrinter(indent=2)
         pp.pprint(invariantMap)
 
-        print("Interpretation of the above invariant map: ")
+
+
+        positivePath = SCRIPT_DIR + "/cache/positives/dataFlowUpperBound/{}.txt".format(benchmarkName)
+
+        # stage 3: validation
+        FPMap = {
+            "mapping": [],
+            "callvalue": [],
+            "dataFlowUpperBound": [],
+            "dataFlowLowerBound": [],
+        }
+
+
+        txList2 = []
+        isFiltered = False
+        isFilteredByDataFlowUpperBound = False
+
+        gasDFOverHeadMap = {}
+
+        gasOBorDFUOverheadMap = {}
 
         
+        for ii, (tx, dataS) in enumerate(executionList[counter:]):
+            currentIndex = ii + counter
+            if tx not in txList2:
+                txList2.append(tx)
 
-        for key in invariantMap:
-            print("For the invariant {}:".format(key))
-            for func in invariantMap[key]:
-                print("\tIt can be applied to function {}:".format(func))
+            # if tx == "0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6":
+            #     print("now is the time")
+            
+            # gas 192021
+            # tx = 0xa2eebfe1ceda00253bf073f47c7d2f9189093a17ebd23439c70a4c48b5a0d2d5
+            sources = dataS["sources"]
+            children = dataS["children"]
+            metaData = dataS["metaData"]
+            key = tx + "_" + str(metaData["gas"])
 
-                for key2 in invariantMap[key][func]:
-                    print("\t\tFor Data Source read from pc = {}".format(key2))
-                    print("\t\t\twith lowerbound = {}".format( invariantMap[key][func][key2][1][0] ))
-                    print("\t\t\twith upperbound = {}".format( invariantMap[key][func][key2][1][1] ))
+            targetFunc = metaData["targetFunc"]
+            targetFuncType = metaData["targetFuncType"]
+            name = targetFunc + "_" + targetFuncType 
+
+
+            transferAmount = None
+            if "value" in metaData:
+                transferAmount = metaData["value"]
+            elif len(sources) == 1 and isinstance(sources[0], str) and sources[0] ==  "msg.value":
+                transferAmount = metaData["msg.value"] 
+            else:
+                print(sources)
+                sys.exit("dataFlowInfer: transferAmount is not in metaData")
+
+            if isinstance(transferAmount, str):
+                transferAmount = int(transferAmount, 16)
+
+            if tx == exploitTx:
+                # print("reach exploit tx")
+                # print("trainingExecutionSet: ", len(txList1))
+                # print("testingExecutionSet: ", len(txList2))
+                
+                for source in sources:
+                    value, pc, type, dataType = readValuePCTypeFromSource(source, metaData, ABI)
+                    if value == None and pc == None:
+                        continue
+
+                    if dataType == "mapping":
+                        if name in invariantMap["mapping"] and \
+                                pc in invariantMap["mapping"][name]:
+                            minValue, maxValue = invariantMap["mapping"][name][pc]
+                            if value > maxValue:
+                                isFiltered = True
+                                print("Successfully stops the exploit using mapping")
+
+                    elif dataType == "callvalue":
+                        if name in invariantMap["callvalue"]:
+                            minValue, maxValue = invariantMap["callvalue"][name]
+                            if value > maxValue:
+                                isFiltered = True
+                                print("Successfully stops the exploit using callvalue")
+
+                    else:
+                        if "int" in type:
+                            if name in invariantMap["dataFlow"] and \
+                                    pc in invariantMap["dataFlow"][name]:
+                                minValue, maxValue = invariantMap["dataFlow"][name][pc][1]
+
+                                if value > maxValue:
+                                    isFiltered = True
+                                    isFilteredByDataFlowUpperBound = True
+                                    print("Successfully stops the exploit using dataFlow upper bound")
+                                    print("value {} > maxValue {}".format(value, maxValue))
+                                
+                                if value < minValue:
+                                    isFiltered = True
+                                    print("Successfully stops the exploit using dataFlow lower bound")
+                                    print("value {} < minValue {}".format(value, minValue))
+
+                                    
+
+                if len(executionList) == currentIndex + 1 or executionList[currentIndex + 1][0] != exploitTx:
+                    newList = copy.deepcopy(FPMap["dataFlowUpperBound"])
+                    newList.insert(0, 'exploitTx: {}'.format(exploitTx))
+
+                    if isFilteredByDataFlowUpperBound:
+                        newList.append(exploitTx)
+
+                    print("exploitTx: ", exploitTx)
+                    print("FPMap: ", end="")
+                    printFPMap(invariantMap, FPMap, benchmarkName, txCount)
+
+            
+            elif len(executionList) == currentIndex + 1:
+                print("does not meet the exploit tx")
+                print("FPMap: ", end="")
+                printFPMap(invariantMap, FPMap, benchmarkName, txCount)
+
+                newList = copy.deepcopy(FPMap["dataFlowUpperBound"] if "dataFlowUpperBound" in FPMap else [])
+                newList.insert(0, 'exploitTx: {}'.format(exploitTx))
+                writeListTxt(positivePath, newList)
+
+            else:
+                for source in sources:
+                    value, pc, type, dataType = readValuePCTypeFromSource(source, metaData, ABI)
                     
+                    if value == None and pc == None:
+                        continue
+
+                    if dataType == "mapping":
+                        if name in invariantMap["mapping"] and \
+                                pc in invariantMap["mapping"][name]:
+                            minValue, maxValue = invariantMap["mapping"][name][pc]
+                            if value > maxValue:
+                                if tx not in FPMap["mapping"]:
+                                    FPMap["mapping"].append(tx)
+                    elif dataType == "callvalue":
+                        if name in invariantMap["callvalue"]:
+                            minValue, maxValue = invariantMap["callvalue"][name]
+                            if value > maxValue:
+                                if tx not in FPMap["callvalue"]:
+                                    FPMap["callvalue"].append(tx)
+                    else:
+
+                        if "int" in type:
+                            if name in invariantMap["dataFlow"] and \
+                                    pc in invariantMap["dataFlow"][name]:
+                                minValue, maxValue = invariantMap["dataFlow"][name][pc][1]
+
+                                if value > maxValue:
+                                    if tx not in FPMap["dataFlowUpperBound"]:
+                                        FPMap["dataFlowUpperBound"].append(tx + "=" + metaData["targetFunc"] + "=" + metaData["gas"])
+                                
+                                if value < minValue:
+                                    if tx not in FPMap["dataFlowLowerBound"]:
+                                        FPMap["dataFlowLowerBound"].append(tx)
+                                
+
+                                

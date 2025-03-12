@@ -94,7 +94,8 @@ class vyperAnalyzer:
         CompilerVersion, EVMVersion = self.contract2Sourcecode(contractAddress)
 
         if EVMVersion != "Default":
-            sys.exit("vyperAnalyzer: cannot handle non-default EVM version for now")
+            return 
+            # sys.exit("vyperAnalyzer: cannot handle non-default EVM version for now")
 
         compilerVersion = Version(CompilerVersion)
         storageLayoutVersion = Version("0.2.16")

@@ -1,0 +1,57 @@
+benchmark:  DoughFina1
+now works on benchmark:  DoughFina  contract:  0x9f54e8eaa9658316bb8006e03fff1cb191aafbe6
+total transactions:  20
+total:  20
+no access for tx:  0x441927294d45c9527de1af9c17b44ec35adb472764e75937101d9e3fa3db4605
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark DoughFina: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func delegateDoughCall0xf5c301c8 has only 1 sender
+func delegateDoughCall0xf5c301c8 has only 1 origin
+func flashloanReq0x9daee0cc has more than 5 senders
+func flashloanReq0x9daee0cc has only 1 origin
+func executeOperation0x920f5c84 has only 1 sender
+func executeOperation0x920f5c84 has only 1 origin
+==invariant map: 
+{ 'constructor': { 'isOriginOwner': '0x7f7d0fceb73e34933d109598ae2cb1a064280d4b',
+                   'isSenderOwner': '0x7f7d0fceb73e34933d109598ae2cb1a064280d4b',
+                   'require(origin==sender)': True},
+  'delegateDoughCall0xf5c301c8': { 'isOriginOwner': '0x7f7d0fceb73e34933d109598ae2cb1a064280d4b',
+                                   'isSenderOwner': '0x851b20f8ae0264a2162a941854693f73816f7255',
+                                   'require(origin==sender)': False},
+  'executeOperation0x920f5c84': { 'isOriginOwner': '0x7f7d0fceb73e34933d109598ae2cb1a064280d4b',
+                                  'isSenderOwner': '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2',
+                                  'require(origin==sender)': False},
+  'flashloanReq0x9daee0cc': { 'isOriginOwner': '0x7f7d0fceb73e34933d109598ae2cb1a064280d4b',
+                              'require(origin==sender)': False}}
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using isOriginOwner
+exploitTx:  0x92cdcc732eebf47200ea56123716e337f6ef7d5ad714a2295794fdc6031ebb2e
+FPMap: ['require(origin==sender)']
+0		14	6
+5 sampled FPs for require(origin==sender)
+len(txList3):  20
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark DoughFina: 
+no gas
+0xb077348a66815e69c47c48b364b3fca35ee805b1e9ca4ca4653489bb61c3e610
+==invariant map: 
+{ 'delegateDoughCall0xf5c301c8': { 'require(gasStart - gasEnd <= constant)': 2886391,
+                                   'require(gasStart <= constant)': 3180755},
+  'executeOperation0x920f5c84': { 'require(gasStart - gasEnd <= constant)': 2304108,
+                                  'require(gasStart <= constant)': 2397526},
+  'flashloanReq0x9daee0cc': { 'require(gasStart - gasEnd <= constant)': 2483728,
+                              'require(gasStart <= constant)': 2735403}}
+For the func flashloanReq0x9daee0cc, gas 830154 - 146116 = 684038
+For the func executeOperation0x920f5c84, gas 719687 - 134017 = 585670
+exploitTx:  0x92cdcc732eebf47200ea56123716e337f6ef7d5ad714a2295794fdc6031ebb2e
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  19

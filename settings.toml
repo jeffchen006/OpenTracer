@@ -2,12 +2,22 @@
 current = "v0.0.0-alpha"
 
 [settings]
-EtherScanApiKeys = ["MBXWI4I69KTZW873HZHKG6DDRGHGW4B1EM", "GA7PY4PE6I3PIYXDSMWW4I98QASKSA11DK", "THF8Q6FVQCYSSHUBY89RX987IFEW5FBYD7"] # free etherScan API keys can be got at https://etherscan.io/myapikey
-rpcProviders = [ "https://docs-demo.quiknode.pro/"  ] # this is a demo rpc provider by QuickNode, for large scale use, you can get a paid plan at https://www.quiknode.io/
-ethArchives = [ "https://eth.llamarpc.com" ] # free rpc providers can also be got at alchemy.com
+EtherScanApiKeys = [ "8SD5GA6IKF28CJQ6PF7IJPUMA2RTYSM158", "T36ZIMU3MF25YFFWD723FTQB9QWWBV1R57", "GMUISR1UKTHXUQZ1VVHBAPXHA3V6HPSSSM", "V63CW1KDZUB5CAP1IBDWX79J2T5FWA3JDQ", "I7R59ER7AQ8HEBYTNR15ETXJSMTD86BHA4", "3PCW417G8C6U4CZDEWA54Q97DNMDZ4ER7A", "MTCCCJ1BW2I8EA5EJN714N6ZH67DY74HHF", "W9C78R6J4B7ABDWK5149P73CP2JSMX8QTW", "H8CKJDHKBPU6AUD7UJGVA4E31J6RTHUJES", "MBXWI4I69KTZW873HZHKG6DDRGHGW4B1EM", "GA7PY4PE6I3PIYXDSMWW4I98QASKSA11DK", "THF8Q6FVQCYSSHUBY89RX987IFEW5FBYD7"]
+rpcProviders = [ "https://light-sparkling-dew.quiknode.pro/8dfa60a4923ea5a62724ba36d4e8c77ccfa4b882", 
+"https://skilled-convincing-fire.quiknode.pro/4b19fc5dd2e7e9981a21452c333af3cc336bc006", 
+"https://boldest-still-arrow.quiknode.pro/c15cec89e5fd795d48e26dcb2ea35686f9792f3f", 
+"https://clean-skilled-orb.quiknode.pro/42c4f4e2d875b27c589311789eec9710b58b9631", 
+"https://billowing-empty-isle.quiknode.pro/328042db960aa2b0635eb103e7076cb929f85d5b", 
+"https://nameless-cosmopolitan-owl.quiknode.pro/57c8cea8188cb00d61c8a55150f0856a27a30b0c", 
+"https://smart-serene-cherry.quiknode.pro/8e37a261aa720afe2dcced7695dd08082d0dff4b", 
+"https://special-indulgent-paper.quiknode.pro/fd5da260672fc7c1573b7e4ee4dacf442a215201", 
+"https://chaotic-aged-spring.quiknode.pro/1ca4b44e741c2fa865ca1f9acc7351b9adb4f618", 
+"https://white-icy-aura.quiknode.pro/2ee56a9a04f8fb63f05c0c24cf832ae140e3859d"]
+
+ethArchives = [ "https://eth.llamarpc.com", "https://eth-mainnet.g.alchemy.com/v2/weftbAqPky4MPT-_G1v9NNofoctXc_Mi", "https://eth-mainnet.g.alchemy.com/v2/86e0Q4aGWRLRihZ56NB3Z5mcXpVx9Y94", "https://eth-mainnet.g.alchemy.com/v2/aB-cCzeL6rN6XR_n0qupMJ9qqCfJ2sCz", "https://eth-mainnet.g.alchemy.com/v2/JqC73WlBFLd6UX-7lGP3B3mNcoi0mvhq", "https://eth-mainnet.g.alchemy.com/v2/F_L3iReDhsY5H09pmaixMwQEo505n9Nh", "https://eth-mainnet.g.alchemy.com/v2/YCP7UuLZXCoGuDr9cXWtNpD_VHATf5QF", "https://eth-mainnet.g.alchemy.com/v2/x44Zy65ZCU-4dzsslhp_3Fz6kz49k_yG", "https://eth-mainnet.g.alchemy.com/v2/yKflgYl9tHO-Ulkrs8e7k4NpnHXrGuyx", "https://eth-mainnet.g.alchemy.com/v2/5R25eNGFTqkx1aRtSTMvJzkOf1wKDNYS", "https://eth-mainnet.g.alchemy.com/v2/cRvZCqj5XSx2LUHzmVtGOr7AEnq6kKPY", "https://rpc.ankr.com/eth/27a7a25ff72292403efa82a282fcab5c4a99b2165dff8a4da212217ccf9e5011", "https://rpc.ankr.com/eth/963aac86fa1f28e89735ad83b66b990605ad3be1d7bea19e4d2fc8ed266b9d11", "https://rpc.ankr.com/eth/5d6b10f53af1ed3bbf12d2f6480871438eb2bedc9596021f887869bb90259d33", "https://rpc.ankr.com/eth/d81f3fbb1f894af172b06e04687b43b7d94d335c2331656722ede40d9888a46e",]
 
 [runtime]
-LoggingUpperBound = 1000
+LoggingUpperBound = 8
 
 [experiment]
 trainingSetRatio = 0.7

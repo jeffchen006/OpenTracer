@@ -4,7 +4,14 @@ import gzip
 import time
 import json
 import pickle
+import random
 
+def sample_five_elements(input_list):
+    if len(input_list) < 5:
+        return input_list
+    else:
+        return random.sample(input_list, 5)
+    
 
 def writeDataSource(SCRIPT_DIR, contract, tx, dataSourceMapList):
     path = SCRIPT_DIR + "/../cache/" + contract + "/{}.pickle".format(tx)

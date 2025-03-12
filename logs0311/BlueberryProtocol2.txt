@@ -1,0 +1,75 @@
+benchmark:  BlueberryProtocol2
+now works on benchmark:  BlueberryProtocol  contract:  0x643d448cea0d3616f0b32e3718f563b164e7edd2
+total transactions:  98
+total:  98
+no access for tx:  0x0e3c01d6e300a0fc95a7cb48de5c538950613a903eeac86c56a032884a49a723
+no access for tx:  0xd6816e02ac1077c3838944e8965f8dc979ada1247e3d0a0a3e6c1b2927149b6f
+no access for tx:  0xadbc16a66194a07cce9b87489d25c6ccfa0dfa44ddb07b9119502ff158b0fc98
+no access for tx:  0xb9108ca7ee88f90830a4e2a2b7a5d6883cb70bb8ed523dccb7b24e44231d7d70
+no access for tx:  0x59be1ba93f300f375bf6c33fb2e79cdcd7bc0cf93faa2b5d18575564cfc6be3a
+no access for tx:  0x3cbf346a21db2c40734a8dc2eaa995833c67d2521cf6186a8f5df2c974b80dd4
+no access for tx:  0x12c142c638a746557525c9c6d4ee752a80acb42587c93e940be46e1d4fbb0240
+no access for tx:  0x60a1b5e599e612ab99eb037d1129c4a529f76e4104355554a2486affd5d00e97
+no access for tx:  0x98c7067db819ddce73717ffe88abcde719ad621fc32d125e644986c25942e07e
+no access for tx:  0x0b1baadd0efe5dca928470c685030d584438eb1f255890564e4d9e828ec11c83
+no access for tx:  0x28e522e8e0a68cd36f567d76ec6c93fcb04a1a7847f30a355262161a70a93b84
+no access for tx:  0x8e7b711ebca73ba583478cd7a55b0496fdfd9222f8b7d0245baee51816aee155
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func mint0xa0712d68 has only 1 sender
+func mint0xa0712d68 has more than 5 origins
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+==invariant map: 
+{ '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                       'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                       'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                   'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                   'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                            'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isSenderOwner': '0xccd438a78376955a3b174be619e50aa3ddd65469',
+                      'require(origin==sender)': False},
+  'redeem0xdb006a75': { 'isOriginManager': [ '0x67e5ab5b573f01030a1076dda7a79ef0f31a1bfa',
+                                             '0x7450d9e6a3f274bbbfc0ab8f4af47f1ae37a675e',
+                                             '0x1fe82bea7aa95e9595777a10712a4a60bcf9c6be'],
+                        'isSenderOwner': '0xccd438a78376955a3b174be619e50aa3ddd65469',
+                        'require(origin==sender)': False}}
+Successfully stops the exploit using isSenderOwner
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(origin==sender)']
+0		68	30
+5 sampled FPs for require(origin==sender)
+len(txList3):  98
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark BlueberryProtocol: 
+==invariant map: 
+{ '_becomeImplementation0x56e67728': {},
+  '_setReserveFactor0xfca7820b': {},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 157685,
+                      'require(gasStart <= constant)': 249932},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 116240,
+                        'require(gasStart <= constant)': 372195}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mint0xa0712d68, gas 2023454 - 1813280 = 210174
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2023454 - 1813280 = 210174 > 157685
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	0	
+5 sampled FPs for require(gasStart <= constant)
+0x13dd159d40f922a121a0aa2bd70b5a1b6fcdd6f86e47a02a93fb94b56f463ff9
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  85

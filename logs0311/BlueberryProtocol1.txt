@@ -1,0 +1,146 @@
+benchmark:  BlueberryProtocol1
+now works on benchmark:  BlueberryProtocol  contract:  0xffadb0bba4379dfabfb20ca6823f6ec439429ec2
+total transactions:  476
+total:  476
+now finish:  27  total:  476
+now finish:  29  total:  476
+now finish:  83  total:  476
+now finish:  115  total:  476
+now finish:  149  total:  476
+now finish:  150  total:  476
+now finish:  181  total:  476
+now finish:  190  total:  476
+now finish:  195  total:  476
+now finish:  200  total:  476
+now finish:  241  total:  476
+now finish:  252  total:  476
+now finish:  256  total:  476
+now finish:  260  total:  476
+now finish:  328  total:  476
+now finish:  350  total:  476
+now finish:  354  total:  476
+now finish:  368  total:  476
+now finish:  411  total:  476
+now finish:  419  total:  476
+now finish:  429  total:  476
+no access for tx:  0xf2f879b74942c8d293fb555d52bf4df0bd718433bce89cb9be0599f9c7eb3748
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func _become0x1d504dc6 has only 1 sender
+func _become0x1d504dc6 has only 1 origin
+func updateBTokenVersion0x0aa57477 has more than 5 senders
+func updateBTokenVersion0x0aa57477 has only 1 origin
+func _supportMarket0x36bdd087 has only 1 sender
+func _supportMarket0x36bdd087 has only 1 origin
+func mintAllowed0x4ef4c3e1 has more than 5 senders
+func mintAllowed0x4ef4c3e1 has more than 5 origins
+func mintVerify0x41c728b9 has more than 5 senders
+func mintVerify0x41c728b9 has more than 5 origins
+func _setPriceOracle0x55ee1fe1 has only 1 sender
+func _setPriceOracle0x55ee1fe1 has only 1 origin
+func _setBorrowPaused0x18c882a5 has only 1 sender
+func _setBorrowPaused0x18c882a5 has only 1 origin
+func _setCollateralFactor0xe4028eee has only 1 sender
+func _setCollateralFactor0xe4028eee has only 1 origin
+func _setMarketBorrowCaps0x607ef6c1 has only 1 sender
+func _setMarketBorrowCaps0x607ef6c1 has only 1 origin
+func _setCloseFactor0x317b0b77 has only 1 sender
+func _setCloseFactor0x317b0b77 has only 1 origin
+func _setLiquidationIncentive0x4fd42e17 has only 1 sender
+func _setLiquidationIncentive0x4fd42e17 has only 1 origin
+func redeemAllowed0xeabe7d91 has more than 5 senders
+func redeemAllowed0xeabe7d91 has more than 5 origins
+func redeemVerify0x51dff989 has more than 5 senders
+func redeemVerify0x51dff989 has more than 5 origins
+func _setGuardian0xe38e8c0f has only 1 sender
+func _setGuardian0xe38e8c0f has only 1 origin
+==invariant map: 
+{ '_become0x1d504dc6': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                         'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                         'require(origin==sender)': True},
+  '_setBorrowPaused0x18c882a5': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                  'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                  'require(origin==sender)': True},
+  '_setCloseFactor0x317b0b77': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                 'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                 'require(origin==sender)': True},
+  '_setCollateralFactor0xe4028eee': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                      'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                      'require(origin==sender)': True},
+  '_setGuardian0xe38e8c0f': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                              'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                              'require(origin==sender)': True},
+  '_setLiquidationIncentive0x4fd42e17': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                          'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                          'require(origin==sender)': True},
+  '_setMarketBorrowCaps0x607ef6c1': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                      'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                      'require(origin==sender)': True},
+  '_setPriceOracle0x55ee1fe1': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                 'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                 'require(origin==sender)': True},
+  '_supportMarket0x36bdd087': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                'require(origin==sender)': True},
+  'constructor': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                   'isSenderOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                   'require(origin==sender)': True},
+  'mintAllowed0x4ef4c3e1': {'require(origin==sender)': False},
+  'mintVerify0x41c728b9': {'require(origin==sender)': False},
+  'redeemAllowed0xeabe7d91': {'require(origin==sender)': False},
+  'redeemVerify0x51dff989': {'require(origin==sender)': False},
+  'updateBTokenVersion0x0aa57477': { 'isOriginOwner': '0x100fe48127438776484fa988598600b174c8b1bf',
+                                     'require(origin==sender)': False}}
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(origin==sender)']
+0		333	143
+5 sampled FPs for require(origin==sender)
+len(txList3):  455
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark BlueberryProtocol: 
+no gas
+0x10b39b7d1c4377c1a6a835634b69ed042254287ae33159ccbb3eca7d908281cc
+==invariant map: 
+{ '_become0x1d504dc6': {},
+  '_setBorrowPaused0x18c882a5': {'require(gasStart <= constant)': 51484},
+  '_setCloseFactor0x317b0b77': {},
+  '_setCollateralFactor0xe4028eee': { 'require(gasStart - gasEnd <= constant)': 100831,
+                                      'require(gasStart <= constant)': 157586},
+  '_setGuardian0xe38e8c0f': {},
+  '_setLiquidationIncentive0x4fd42e17': {},
+  '_setMarketBorrowCaps0x607ef6c1': {},
+  '_setPriceOracle0x55ee1fe1': {},
+  '_supportMarket0x36bdd087': { 'require(gasStart - gasEnd <= constant)': 90706,
+                                'require(gasStart <= constant)': 135419},
+  'mintAllowed0x4ef4c3e1': { 'require(gasStart - gasEnd <= constant)': 13499,
+                             'require(gasStart <= constant)': 255022},
+  'mintVerify0x41c728b9': { 'require(gasStart - gasEnd <= constant)': 3700,
+                            'require(gasStart <= constant)': 207463},
+  'redeemAllowed0xeabe7d91': { 'require(gasStart - gasEnd <= constant)': 12332,
+                               'require(gasStart <= constant)': 309265},
+  'redeemVerify0x51dff989': { 'require(gasStart - gasEnd <= constant)': 4513,
+                              'require(gasStart <= constant)': 256860},
+  'updateBTokenVersion0x0aa57477': { 'require(gasStart - gasEnd <= constant)': 23864,
+                                     'require(gasStart <= constant)': 1351750}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1916302 - 1878846 = 37456
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1916302 - 1878846 = 37456 > 13499
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintVerify0x41c728b9, gas 1814191 - 1785386 = 28805
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1814191 - 1785386 = 28805 > 3700
+exploitTx:  0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	1	
+5 sampled FPs for require(gasStart <= constant)
+0xf3839f44184a01b120c24df84e0bfa3b7913b041909a6cd05005df9612490381
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0xf3839f44184a01b120c24df84e0bfa3b7913b041909a6cd05005df9612490381
+len(txList3):  440

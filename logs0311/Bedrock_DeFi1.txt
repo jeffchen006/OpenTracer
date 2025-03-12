@@ -1,0 +1,145 @@
+benchmark:  Bedrock_DeFi1
+now works on benchmark:  Bedrock_DeFi  contract:  0x004e9c3ef86bc1ca1f0bb5c7662861ee93350568
+total transactions:  3467
+total:  3467
+no access for tx:  0x9458a2073de3eac36b295e9b7b8d97441203d3f9ffec5e85dac92c5c8c47ea6d
+no access for tx:  0xd95e4dbd1a719a7123b56a2d3b9d1ae8324fb5ea351683210d04ca5983d6274b
+no access for tx:  0xd3ef36ad29a7ae54e8bc05039cecce8d1ef1138250c816cc164741cdf067d2cf
+no access for tx:  0x655f8b7c1ee177fcd6152813055b8c6ab6aa7f8214cee2356d0ef7fe169478fd
+no access for tx:  0x34ee9967794be88a6473e09b99fdecaf594aa0484eea85052f7bfff982141aa4
+no access for tx:  0xef09b90dfb5cb9bd7e998a9634da70f86ad182dbcba3d6c15db70b9ffbbc08ca
+no access for tx:  0xf42668c1124bb381091f9f3c5cdc5585865d3d1d069340322dc8b749239036c5
+no access for tx:  0xc5fe4c97ec51fc6f566d351626c03568ad83da213d79a1c61c1d6bd219660e78
+no access for tx:  0xa748a211fd76143e7758d687efc3f8f20660fe1c0ed2cbe0b274e1c0abb4cb6d
+no access for tx:  0x9576d3c87de1339332524d265f9a828e755706acce3da5b407ef957dbd2476d7
+no access for tx:  0xc8c2188135c5372b171663d34cad6c8fc7f425b6e2db903ea0a4424ffb66b6a3
+no access for tx:  0xb1834264ef46c837194fcb3e1751a956c1abcffabebb22595fb3dc17f8094630
+no access for tx:  0xa215596f4a61838065d23071a09e36a993a8f161624b037c5feb87efd905ade3
+no access for tx:  0x711a0cd3f672fa0bb3916e7d35b81afcdd748d4461e16515676e692eae3ea5d3
+no access for tx:  0x7639c62b0313b56b416eb1f62c1f0524f15a7b7e57d42c9d52b9af54d233bb21
+no access for tx:  0x3399143866fa70628479d97a8941e4fa3b30f0abfb31c3a3e8dafe537013dd5d
+no access for tx:  0x8c7804961b1b4942d847f68a45526de34bc15ecad2f7df265ade9dead35a5711
+no access for tx:  0xa1649e8457d0621b6fd9b572d7ff31879a8fdaae683a5c47929ae4694d71ed4a
+no access for tx:  0xaf9af16ff3e7fee564b7060dd9627458748958e39598ffb2d78bafbeaf5ac042
+no access for tx:  0x996ed544029722a0c40ac7272c1834ed2f1e4cc42b991954452abaab4f8d585f
+no access for tx:  0xaac66b384877ca066bb5d5e48581a5dc34bfbe3a4150fe5d6cc0098da66729c0
+no access for tx:  0x585cad54830a47c46ce111f91fdb38769ade19c1ef52e4071a227fb641334a35
+no access for tx:  0x9e6331b916854f5ae09cf2cb1aab1032e33a94788f86e03b3f3e806ee659eda9
+no access for tx:  0xa386f1abcdad207906ae31a76664215f9c89ec0324f3af2653c1f94edb02ebfd
+no access for tx:  0x73b71db645fc0d93570235225ff79c14e2078f0bced5c3a476a1d75be5cd0338
+no access for tx:  0x3806784a900a734deb54e326a856fbc28cacce4ff0190745512d788fd9b093af
+no access for tx:  0xae1dd1bfaacae2545501da917d25353dd20d98b6a407c96ad5a9b3dad9f5d063
+no access for tx:  0xac5963c86b2c15eaeb228838107ac3921ebab8cb7ec66351e30e9e3dc4e5470f
+no access for tx:  0xe1eaf3fe4f2ac7b134507c5c0fce0136a22e9245cc043c8ed127cf52277a830f
+no access for tx:  0x575acfb586c616e41d1f20e3c37ffac429cdf31f3f5db1fe61accf2ea8cbcbbc
+no access for tx:  0x1b2a97f2851d6af507c808dba45ce5c461e677ba411a6d91be04dbbd69818990
+no access for tx:  0xe09742dd4e8f0a6acba7163a45abfab880b43e35127ab1a26dab0fdfd3888e77
+no access for tx:  0x8c0715ca9e7229a0061928d982083130c3db6d6af31f0efeb12003aba7fb33fe
+no access for tx:  0xd083d23f321bdb291b548b3a6d2d7a3425a212db974e428e80a9e68ed2ca5971
+no access for tx:  0x18b02946bd6c58be5caed9a747e93a9b5e187ac62b2b3533adbb8895601139f2
+no access for tx:  0xa6bd2c163a05b40ec01f6e3115da55253593bf49533cac1589899035380f8c8d
+no access for tx:  0xa400e6f9a94672e75401ba8abd5d1a07ebe3e4fd5ea28e93d5444baa7a5805c5
+no access for tx:  0x026a37fb6846a75f718614b3ed3d0395ab2f53e2f656e6fdd513e1a533eb6bfe
+no access for tx:  0xacf7e06296ba562b5f6fac1c1dca54dd692a6543e65072357c3d752b3629db41
+no access for tx:  0x1cf81c790df1515c457f2ce7c691735dfd8ed01bbbe9c9ad662010eee8a33c66
+no access for tx:  0xd74c0c8136a1bbb328987dd2644b3531f92024569733710a4bad60ac797d4bda
+no access for tx:  0xdfdaa1ea54a5ef79d21fdc255c1010da5c715b778b40ed9f5af5a3878a687c91
+no access for tx:  0xe88fcc89827fb7e750da26ad7275d0be6eba4ced904e6fd485a2fa5f3c6ee9a1
+no access for tx:  0x19c9cb5ae801d25420ed5bab82ad471d6816656878daf56a32434d4fd91c0e5b
+no access for tx:  0x221873b398cc37bd9069a3fa7887b40e08ee239e3e87d06f90759a2e395bb23e
+no access for tx:  0xf28640a0ff4edaa6accae5dfd9abe48c8eff862ed3fa379926a65caee02b21f9
+no access for tx:  0x3d76f969f0dfc15a4a38130188371f92de2daa95741eec3627f759a2b081f139
+no access for tx:  0xb18ef06f80dafd0af7b2fac24a9c99f0c47083f45a340df3ea641241e730e734
+no access for tx:  0x442f1c5e9eb0edf158fac679bf9c39ce9498ecb573130af006e3e196dfca5d59
+no access for tx:  0xf3d238e078c8597972f33b856401e84ec9e276d468a1e633e6b64687dbb141a6
+no access for tx:  0x28e25986d00a03c784acde886649b0bfb40afad6574146a1d0f6e35b85670ff7
+no access for tx:  0x06298b73526947a6afc10cd26dbf8c53d19b98edc3792d6751e5ef2d4cbc8a2a
+no access for tx:  0xd262dd1c2fbe29f44fe279b141134da8c9935049212156b3905d255bcbc03c12
+no access for tx:  0xb7d6612425fd42030e638f78864c6764750de3c873cc52c24771463431207249
+no access for tx:  0x1ca472a70f5c65c9088ddc12bb545ec53b8e306b0fdb65a11ed22d4fc06f20cc
+no access for tx:  0x7a97a2c0b40ba595e0508b5a4ea102b5a9f1970ad23427021d2a7437f862575b
+no access for tx:  0xcdf84a00da6ae10ca9304f2a26aa3d6457123848a41a9d1a59f05a5ea100fafb
+no access for tx:  0x515ded0fcf6befac2b0a1efe652017c41f4ec545225ca89c572d40eee9578c24
+no access for tx:  0x19dce412fab9cfd7a4197474650121942f4f2179b41a3e75822753baa4a3794b
+no access for tx:  0xccfbb8a764862f3daf6bb49500dcf06eb11f946d01ed1a9f5ee9858d4d8abc02
+no access for tx:  0xcf26fca43e969489977e3b13c22911362707f52c3010fda5b360a1b4977fad3e
+no access for tx:  0x6e388fca63aa79353ce2446012b90469add5ee234e86980c0789e1f1dc12111b
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+func initialize0x485cc955 has only 1 sender
+func initialize0x485cc955 has only 1 origin
+func mint0x40c10f19 has only 1 sender
+func mint0x40c10f19 has more than 5 origins
+func grantRole0x2f2ff15d has only 1 sender
+func grantRole0x2f2ff15d has only 1 origin
+func revokeRole0xd547741f has only 1 sender
+func revokeRole0xd547741f has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 senders
+func transferFrom0x23b872dd has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+==invariant map: 
+{ 'approve0x095ea7b3': {'require(origin==sender)': False},
+  'grantRole0x2f2ff15d': { 'isOriginOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                           'isSenderOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                           'require(origin==sender)': True},
+  'initialize0x485cc955': { 'isOriginOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                            'isSenderOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                            'require(origin==sender)': True},
+  'mint0x40c10f19': { 'isSenderOwner': '0x047d41f2544b7f63a8e991af2068a363d210d6da',
+                      'require(origin==sender)': False},
+  'revokeRole0xd547741f': { 'isOriginOwner': '0x09610d4239c8f3413509202dccc7e27c6b0a47a3',
+                            'isSenderOwner': '0xc9da980ffabbe2bbe15d4734fdae5761b86b5fc3',
+                            'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': {'require(origin==sender)': False}}
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(origin==sender)']
+0		2426	1041
+5 sampled FPs for require(origin==sender)
+len(txList3):  3467
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 43893,
+                         'require(gasStart <= constant)': 1224783},
+  'grantRole0x2f2ff15d': {},
+  'initialize0x485cc955': {},
+  'mint0x40c10f19': { 'require(gasStart - gasEnd <= constant)': 52512,
+                      'require(gasStart <= constant)': 1133649},
+  'revokeRole0xd547741f': {},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 42339,
+                          'require(gasStart <= constant)': 1259841},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 59903,
+                              'require(gasStart <= constant)': 1354640}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func approve0x095ea7b3, gas 3333849 - 3254541 = 79308
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3333849 - 3254541 = 79308 > 43893
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mint0x40c10f19, gas 2976979 - 2898334 = 78645
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2976979 - 2898334 = 78645 > 52512
+For the func transferFrom0x23b872dd, gas 399578 - 386796 = 12782
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+9	11	
+5 sampled FPs for require(gasStart <= constant)
+0x49fb49289f14701a3d2b7cd5e29d7ba9d1d056b446d276a43a56dc6761837e73
+0x4f016973287250b373e6078d3166030ec646344edc61ad2675a1f220e8b150a4
+0xbbeb01a05f072d5468213ea4f36d058bfb32e36db1d438ebe80b9524ee6b061e
+0xb86c5cec1fd46a059b7e32103f84f9de70fcb49fecef821373c5e7df413bd4cb
+0x9b7a9e87e72eb367220b399d71b9ec1f920de4d1d738f44d70e3b9def3c8e9ae
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x4f09d21311a627fd935d11fbd185322887c8c8015aa9af13a8319db2e68ca2a2
+0x4f016973287250b373e6078d3166030ec646344edc61ad2675a1f220e8b150a4
+0xa744de31038c38f3f19c51e34eb13d848ddab753322e0ee9b491137702304f4a
+0x49fb49289f14701a3d2b7cd5e29d7ba9d1d056b446d276a43a56dc6761837e73
+0xd6e44d9fa8753b82a8265d85340ffd6ac87711ce87cd88ddcdc18271ff4ca9ec
+len(txList3):  3312

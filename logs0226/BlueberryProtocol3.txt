@@ -1,0 +1,20 @@
+benchmark:  BlueberryProtocol3
+now works on benchmark:  BlueberryProtocol  contract:  0x08830038a6097c10f4a814274d5a68e64648d91c
+total transactions:  30
+total:  30
+no access for tx:  0xc8448e1a2d29c52386c599cf00cc89fcd4b7ce2b7c6f916b14b5257eccc8325d
+no access for tx:  0x4dca943bb252be77174b328accd4738be11b5e69087cc1a0d2ab0b6147c1239e
+no access for tx:  0x5c8020f0cb33f9ccfd8651b0784ce0a469dfcd1adba9b7733d49e9bcca164cc3
+no access for tx:  0xb9108ca7ee88f90830a4e2a2b7a5d6883cb70bb8ed523dccb7b24e44231d7d70
+no access for tx:  0x9eedd9e333d11a0c26b71083ea6f53492fb1149c517340b7009eb6bcec09bf6e
+no access for tx:  0xf128d5ba606ffcdf567ed91228bb862690c46d7d603fd977bd88ca84dd83541a
+no access for tx:  0x12c142c638a746557525c9c6d4ee752a80acb42587c93e940be46e1d4fbb0240
+no access for tx:  0x6d96567eadad93c44099bc98234ad64a8c0b8608ee4096055e7013e77615bce8
+no access for tx:  0x6d9d1f8e001bbf6acc750bc4df38eb31452b11d8983c29297fa313ce15e1f2f9
+no access for tx:  0xed11f1fc92cfa64a5013dc2adfba061f751a72281aab59c38a9de516484cd785
+no access for tx:  0xe814079725e7d2414e20ffa578dddbabc1177f605794c62995a16ae4b693496e
+no access for tx:  0x28e522e8e0a68cd36f567d76ec6c93fcb04a1a7847f30a355262161a70a93b84
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 

@@ -29,34 +29,6 @@ settings = toml.load("settings.toml")
 
 
 
-
-
-def checkmapPositionInStorageMapping(mapPosition, storageMapping, preimage):
-    """Given a mapPosition and a storageMapping, check if the mapPosition is in the storageMapping"""
-    # storageMapping: {0: ('Ownable._owner', 'address'), 32: ('Pausable.pauser', 'address'), 52: ('Pausable.paused', 'bool'), 64: ('Blacklistable.blacklister', 'address'), 96: ('Blacklistable.blacklisted', ('address', 'bool')), 128: ('FiatTokenV1.name', 'string'), 160: ('FiatTokenV1.symbol', 'string'), 192: ('FiatTokenV1.decimals', 'uint8'), 224: ('FiatTokenV1.currency', 'string'), 256: ('FiatTokenV1.masterMinter', 'address'), 276: ('FiatTokenV1.initialized', 'bool'), 288: ('FiatTokenV1.balances', ('address', 'uint256')), 320: ('FiatTokenV1.allowed', ('address', ('address', 'uint256'))), 352: ('FiatTokenV1.totalSupply_', 'uint256'), 384: ('FiatTokenV1.minters', ('address', 'bool')), 416: ('FiatTokenV1.minterAllowed', ('address', 'uint256')), 448: ('Rescuable._rescuer', 'address'), 480: ('EIP712Domain.DOMAIN_SEPARATOR', 'bytes32'), 512: ('GasAbstraction.TRANSFER_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 544: ('GasAbstraction.APPROVE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 576: ('GasAbstraction.INCREASE_ALLOWANCE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 608: ('GasAbstraction.DECREASE_ALLOWANCE_WITH_AUTHORIZATION_TYPEHASH', 'bytes32'), 640: ('GasAbstraction.CANCEL_AUTHORIZATION_TYPEHASH', 'bytes32'), 672: ('GasAbstraction._authorizationStates', ('address', ('bytes32', 'GasAbstraction.AuthorizationState'))), 704: ('Permit.PERMIT_TYPEHASH', 'bytes32'), 736: ('Permit._permitNonces', ('address', 'uint256')), 768: ('FiatTokenV2._initializedV2', 'bool')}
-    # preimage:  
-    # {'0x882d7ed9f2a3bb94081200846cb72e20b34d0a96f26eafd7e2ec91639183323c': 
-    #       ('Solc', 
-    #       '0000000000000000000000000000000000000000000000000000000000000003', 
-    #       '000000000000000000000000bebc44782c7db0a1a60cb6fe97d0b483032ff1c7'), 
-    # '0x8caee21460e4b97ad21ef6f50ba78c06f8ace770150686bffca228a84ab684a8': 
-    #       ('Solc', 
-    #       '0000000000000000000000000000000000000000000000000000000000000003', 
-    #       '0000000000000000000000009c211bfa6dc329c5e757a223fb72f5481d676dc1'), 
-    # '0xbeff42312369bb0ffea406565ab897ad38d0d32a39e2ed7b1fcdcb8dca706a8': 
-    #       ('Solc', 
-    #       '000000000000000000000000000000000000000000000000000000000000000a', 
-    #       '0000000000000000000000009c211bfa6dc329c5e757a223fb72f5481d676dc1'), 
-    # '0xf8e05935db44fb75f76ff7f18f35b7e3d12441171b26eeafb55f7a73378f7641': 
-    #       ('Solc', 
-    #       '0beff42312369bb0ffea406565ab897ad38d0d32a39e2ed7b1fcdcb8dca706a8', 
-    #       '000000000000000000000000bebc44782c7db0a1a60cb6fe97d0b483032ff1c7')
-    # }
-
-    pass
-
-
-
 def unifySelectors(accesList):
     for map in accesList:
         if 'Selector' in map:
@@ -548,7 +520,6 @@ class VmtraceParser:
                         addr = structLogs[jj]["stack"][-1]
                         break
                 addr = "0x" + addr[2:].zfill(40)
-
                 
                 self.incrementLogging(addr)
                 msgSender = self.getMsgSender()
@@ -563,7 +534,7 @@ class VmtraceParser:
                 if addr == contractAddress and self.logging == 1:
                     # means we are calling a function inside the target contract
                     metaTraceTree.addInternalCall(newTraceTree, self.logging)
-                else:
+                elif self.logging > 1:
                     metaTraceTree.addInternalCall(newTraceTree, self.logging)
 
 
@@ -1058,7 +1029,8 @@ class VmtraceParser:
                 self.calldataStack.pop()
                 self.decrementLogging()
 
-            elif structLogs[ii + 1]["depth"] < structLogs[ii]["depth"] \
+            elif len(structLogs) > ii + 1 and \
+                structLogs[ii + 1]["depth"] < structLogs[ii]["depth"] \
                 and structLogs[ii]["op"] != "STOP" and structLogs[ii]["op"] != "RETURN" \
                 and structLogs[ii]["op"] != "REVERT" and structLogs[ii]["op"] != "INVALID" \
                 and structLogs[ii]["op"] != "SELFDESTRUCT":
@@ -1098,8 +1070,8 @@ class VmtraceParser:
 
 
 
-            elif "error" in structLogs[ii]:
-                sys.exit("Parser: \'error\' in structLogs, but not handled by gasless send")
+            # elif "error" in structLogs[ii]:
+            #     sys.exit("Parser: \'error\' in structLogs, but not handled by gasless send")
                 
 
             # print sload
@@ -1154,24 +1126,24 @@ class VmtraceParser:
                     self.calldataStack[-1]["calldatasize"] = size
                     
 
-                elif self.calldataStack[-1]["calldatasize"] != size and self.calldataStack[-1]["calldatasize"] != -1:
-                    print("self.calldataStack:")
-                    for calldata in self.calldataStack:
-                        print("calldatasize:", calldata["calldatasize"])
-                    print("self.msgSenderStack:")
-                    for msgSender in self.msgSenderStack:
-                        print("msgSender:", msgSender)
-                    print("self.isDelegateCallStack:", self.isDelegateCallStack)
-                    print("self.contractAddressStack:")
-                    for contractAddress in self.contractAddressStack:
-                        print("contractAddress:", contractAddress)
-                    print("self.funcSelectorStack:", self.funcSelectorStack)
-                    print("len:", len(self.calldataStack))
-                    print("len:", len(self.msgSenderStack))
-                    print("len:", len(self.isDelegateCallStack))
-                    print("len:", len(self.contractAddressStack))
-                    print("len:", len(self.funcSelectorStack))
-                    sys.exit("Error: calldatasize is changed, size = {} but self.calldataStack[-1][\"calldatasize\"] = {}".format(size, self.calldataStack[-1]["calldatasize"]))
+                # elif self.calldataStack[-1]["calldatasize"] != size and self.calldataStack[-1]["calldatasize"] != -1:
+                #     print("self.calldataStack:")
+                #     for calldata in self.calldataStack:
+                #         print("calldatasize:", calldata["calldatasize"])
+                #     print("self.msgSenderStack:")
+                #     for msgSender in self.msgSenderStack:
+                #         print("msgSender:", msgSender)
+                #     print("self.isDelegateCallStack:", self.isDelegateCallStack)
+                #     print("self.contractAddressStack:")
+                #     for contractAddress in self.contractAddressStack:
+                #         print("contractAddress:", contractAddress)
+                #     print("self.funcSelectorStack:", self.funcSelectorStack)
+                #     print("len:", len(self.calldataStack))
+                #     print("len:", len(self.msgSenderStack))
+                #     print("len:", len(self.isDelegateCallStack))
+                #     print("len:", len(self.contractAddressStack))
+                #     print("len:", len(self.funcSelectorStack))
+                #     sys.exit("Error: calldatasize is changed, size = {} but self.calldataStack[-1][\"calldatasize\"] = {}".format(size, self.calldataStack[-1]["calldatasize"]))
 
 
 
@@ -1218,9 +1190,9 @@ class VmtraceParser:
                 # remove 0x prefix, add zero paddings and then add 0x prefix back
                 
                 caller = "0x" + caller[2:].zfill(40)
-
-                msgSender = self.msgSenderStack[-1]
-                msgSender = "0x" + msgSender[2:].zfill(40)
+                msgSender = caller
+                # msgSender = self.msgSenderStack[-1]
+                # msgSender = "0x" + msgSender[2:].zfill(40)
 
                 self.printIndentContentLogging("caller -> {}".format(caller))
                 if caller != msgSender:
@@ -1234,7 +1206,7 @@ class VmtraceParser:
                         print("msgSenderStack: ", self.msgSenderStack)
                         print("contractAddressStack: ", self.contractAddressStack)
                         print("isDelegateCallStack: ", self.isDelegateCallStack)
-                        sys.exit("Error! msg.sender is different from CALLER inside a Tx")
+                        # sys.exit("Error! msg.sender is different from CALLER inside a Tx")
 
             # print callvalue
             elif structLogs[ii]["op"] == "CALLVALUE":
@@ -1600,6 +1572,36 @@ proxyMap = {
     "0x88a69b4e698a4b090df6cf5bd7b2d47325ad30a3": "0x15fda9f60310d09fea54e3c99d1197dff5107248",  # Nomad bridge: WBTC
     "0x051ebd717311350f1684f89335bed4abd083a2b6": "0x2bbd66fc4898242bdbd2583bbe1d76e8b8f71445",  # DODO
     "0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5": "0xf480ee81a54e21be47aa02d0f9e29985bc7667c4",  # BeanstalkFarms interface
+
+    # "0x534a3bb1ecb886ce9e7632e33d97bf22f838d085": "0x8a3f35e9eb756ad10242655bf5075178bcb7b59f",  # DoughFina
+    # "0x8a3f35e9eb756ad10242655bf5075178bcb7b59f": "0x830926c67b09b78f854f0afa75892bd0c67902b1",
+    "0x534a3bb1ecb886ce9e7632e33d97bf22f838d085": "0x830926c67b09b78f854f0afa75892bd0c67902b1",
+
+    "0x004e9c3ef86bc1ca1f0bb5c7662861ee93350568": "0x51a7f889480c57cbeea81614f7d0be2b70db6c5e",  # Bedrock_DeFi
+    "0x047d41f2544b7f63a8e991af2068a363d210d6da": "0x702696b2aa47fd1d4feaaf03ce273009dc47d901", 
+
+    "0xcc53f8ff403824a350885a345ed4da649e060369": "0x3047d790879714930e83b7a7d8e76c2bb64d87b9",  # OnyxDAO
+    "0xbd20ae088dee315ace2c08add700775f461fea64": "0xa6a292ce698cce04710824e9573da1c166812b76",
+    "0xee894c051c402301bc19be46c231d2a8e38b0451": "0xa6a292ce698cce04710824e9573da1c166812b76",
+    "0x2c6650126b6e0749f977d280c98415ed05894711": "0xa6a292ce698cce04710824e9573da1c166812b76",
+    "0x7a89e16cc48432917c948437ac1441b78d133a16": "0xa6a292ce698cce04710824e9573da1c166812b76",
+    "0xf3354d3e288ce599988e23f9ad814ec1b004d74a": "0xa6a292ce698cce04710824e9573da1c166812b76", 
+    
+
+
+    "0x643d448cea0d3616f0b32e3718f563b164e7edd2": "0x3eedb4396387032f03d04fd0db1887f6b76d7bfa",  # BlueberryProtocol
+    "0x08830038a6097c10f4a814274d5a68e64648d91c": "0xba4ab7577d4b4d4a4e9fad4dc40564c6e5c9e365", 
+    "0x649127d0800a8c68290129f091564ad2f1d62de1": "0xca73bb2d183c4b1b28a108eb36096dc62f0b7e8c",
+    "0xe61ad5b0e40c856e6c193120bd3fa28a432911b6": "0x387815eba6097060ccab0d1dff547dd46cb34f78", 
+
+
+    "0x2409af0251dcb89ee3dee572629291f9b087c668": "0x05bfa9157e92690b179033ca2f6dd1e86b25ea4d",  # UwULend
+    # "0x2409af0251dcb89ee3dee572629291f9b087c668": "0x2e9f846ce3820531b52c08d3d4543be5c8fe7ddb", 
+    # "0x2409af0251dcb89ee3dee572629291f9b087c668": "0x3c0ada81038a078cc1272ac22745ddd1ab8839af", 
+    # "0x2409af0251dcb89ee3dee572629291f9b087c668": "0xaede01960810a655aecf86278bfdf5c968198b89", 
+
+
+
 }
 
 NOPRINT = True
@@ -1628,6 +1630,7 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
             targetFuncs.append(ilocator.targetFunc)
 
     metaTraceTree = None
+
     if proxy is not None and contract == "0x3c710b981f5ef28da1807ce7ed3f2a28580e0754":
         metaTraceTree = p.parseLogs(proxy, Tx, trace)
     else:

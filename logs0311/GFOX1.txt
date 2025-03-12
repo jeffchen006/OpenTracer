@@ -1,0 +1,89 @@
+benchmark:  GFOX1
+now works on benchmark:  GFOX  contract:  0x11a4a5733237082a6c08772927ce0a2b5f8a86b6
+total transactions:  7615
+total:  7615
+now finish:  6169  total:  7615
+no access for tx:  0xa2f420cf4a0bd2304b9a0907905c681ffacc60b42c271d4e8d7aa2180e247667
+no access for tx:  0xbc33abe595ae454e21f1dbc70e10674685bc1bc79c0f4b41a0251e0f72b58856
+no access for tx:  0xfad333b077d059c0e8ef6b20e04fdfe72617a1f1abb376781dfe6e70eaff7c83
+no access for tx:  0x4a748290dd07bd909d7e49da984f6c14fe66ab6118df5223a44dea3864e9b404
+no access for tx:  0x20fa337b73e1ee39829ca35537fee74e734fe6339cae2f274021d9619a13e995
+no access for tx:  0x59ecfc718f000dfae34b1d8dd1f425921521f514610ce39da1578ab117e01af7
+no access for tx:  0x76b3c3f41676143495e9655d3c3c54f32f965baadd624806c559f93148fdbab3
+no access for tx:  0x5ec02eda1683a8658a0e026b06fda661cca2899bd33bc90a32348f9306923d19
+no access for tx:  0x6f114ecfec145ddf6d51b772c6c14f6ac8443ab8e717b9467217486cef8cecf0
+no access for tx:  0xf5a9a9ff0dee0ed84e441ad495f6f65cab1afc685288504637a8bfcbef5bbc15
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark GFOX: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func 0x095ea7b3 has only 1 sender
+func 0x095ea7b3 has only 1 origin
+func 0x7cb64759 has only 1 sender
+func 0x7cb64759 has only 1 origin
+func 0xb0aa1e04 has only 1 sender
+func 0xb0aa1e04 has only 1 origin
+func 0x3d13f874 has more than 5 senders
+func 0x3d13f874 has more than 5 origins
+func 0xaa5a6d81 has more than 5 senders
+func 0xaa5a6d81 has more than 5 origins
+func  has only 1 sender
+func  has only 1 origin
+==invariant map: 
+{ '': { 'isOriginOwner': '0xc2037a9a462d0538ed221cdd7c184f6a3d718c40',
+        'isSenderOwner': '0xc2037a9a462d0538ed221cdd7c184f6a3d718c40',
+        'require(origin==sender)': True},
+  '0x095ea7b3': { 'isOriginOwner': '0x1dbc852b34566d7cd741e86908d7027e58c7d9ab',
+                  'isSenderOwner': '0x1dbc852b34566d7cd741e86908d7027e58c7d9ab',
+                  'require(origin==sender)': True},
+  '0x3d13f874': {'require(origin==sender)': True},
+  '0x7cb64759': { 'isOriginOwner': '0x4e6647a2bda8dfe75316a72e73586ecd24d0e700',
+                  'isSenderOwner': '0x4e6647a2bda8dfe75316a72e73586ecd24d0e700',
+                  'require(origin==sender)': True},
+  '0xaa5a6d81': {'require(origin==sender)': True},
+  '0xb0aa1e04': { 'isOriginOwner': '0x4e6647a2bda8dfe75316a72e73586ecd24d0e700',
+                  'isSenderOwner': '0x4e6647a2bda8dfe75316a72e73586ecd24d0e700',
+                  'require(origin==sender)': True},
+  'constructor': { 'isOriginOwner': '0x1dbc852b34566d7cd741e86908d7027e58c7d9ab',
+                   'isSenderOwner': '0x1dbc852b34566d7cd741e86908d7027e58c7d9ab',
+                   'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using require(origin==sender)
+exploitTx:  0x12fe79f1de8aed0ba947cec4dce5d33368d649903cb45a5d3e915cc459e751fc
+FPMap: ['require(origin==sender)']
+1		5330	2285
+5 sampled FPs for require(origin==sender)
+0x90d0296824479bde0a71ab4ab0ecdb219585948ee9d34c6b06831ea843ad182f
+len(txList3):  7614
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark GFOX: 
+no gas
+0x7d488aedc93a0392b5c1884f0c25ed4ac02becddb136dbcec81dc552636ef42e
+no gasEnd
+0x1f71cd2c717ce242f5e69e02e11588b8d3b99d9c5d958e077c54d667861d865e
+==invariant map: 
+{ '0x095ea7b3': {},
+  '0x3d13f874': { 'require(gasStart - gasEnd <= constant)': 347106,
+                  'require(gasStart <= constant)': 524763},
+  '0x7cb64759': { 'require(gasStart - gasEnd <= constant)': 22215,
+                  'require(gasStart <= constant)': 22593},
+  '0xaa5a6d81': { 'require(gasStart - gasEnd <= constant)': 481768,
+                  'require(gasStart <= constant)': 575043},
+  '0xb0aa1e04': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func 0x7cb64759, gas 671216 - 655395 = 15821
+Successfully stops the exploit using require(gasStart <= constant)
+For the func 0x3d13f874, gas 664910 - 551027 = 113883
+exploitTx:  0x12fe79f1de8aed0ba947cec4dce5d33368d649903cb45a5d3e915cc459e751fc
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	0	
+5 sampled FPs for require(gasStart <= constant)
+0x90d0296824479bde0a71ab4ab0ecdb219585948ee9d34c6b06831ea843ad182f
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  7604

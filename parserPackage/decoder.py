@@ -15,6 +15,8 @@ import copy
 from eth_abi import decode, encode
 import eth_abi
 
+from slither.core.solidity_types.elementary_type import *
+
 
 class decoder:
     def __init__(self) -> None:
@@ -119,6 +121,23 @@ class decoder:
         "uint256": 32,
         "address": 20 + 12, # for padding
     }
+
+    def type2length(self, typeStr: str):
+        if typeStr == "uint256[]":
+            return None
+        elementType = ElementaryType(typeStr)
+
+        if typeStr in self.typeLengths:
+            return self.typeLengths[typeStr]
+
+        size = None
+        try:
+            size = elementType.size / 8
+        except:
+            size = None
+        return size
+
+
     def get_memory_lengths(self, param_types, length):
         # Calculate the memory length for each parameter type
         # first decode and then encode, compared with the original length

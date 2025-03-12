@@ -1,0 +1,30 @@
+benchmark:  BlueberryProtocol1
+now works on benchmark:  BlueberryProtocol  contract:  0xffadb0bba4379dfabfb20ca6823f6ec439429ec2
+total transactions:  476
+total:  476
+now finish:  27  total:  476
+now finish:  29  total:  476
+now finish:  83  total:  476
+now finish:  115  total:  476
+now finish:  149  total:  476
+now finish:  150  total:  476
+now finish:  181  total:  476
+now finish:  190  total:  476
+now finish:  195  total:  476
+now finish:  200  total:  476
+now finish:  241  total:  476
+now finish:  252  total:  476
+now finish:  256  total:  476
+now finish:  260  total:  476
+now finish:  328  total:  476
+now finish:  350  total:  476
+now finish:  354  total:  476
+now finish:  368  total:  476
+now finish:  411  total:  476
+now finish:  419  total:  476
+now finish:  429  total:  476
+no access for tx:  0xf2f879b74942c8d293fb555d52bf4df0bd718433bce89cb9be0599f9c7eb3748
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BlueberryProtocol: 
