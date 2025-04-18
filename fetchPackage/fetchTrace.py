@@ -73,8 +73,9 @@ class fetcher:
             necessaryStackLen = max(len1, len2)
             del structLog_copy["stack"][:-necessaryStackLen]
             for ii in range(len(structLog_copy["stack"])):
-                # if structLog["stack"] contains a list of string of integers, convert them to string of hex integers
-                structLog_copy["stack"][ii] = str(hex(int(structLog_copy["stack"][ii])))
+                if not structLog_copy["stack"][ii].startswith("0x"):
+                    # if structLog["stack"] contains a list of string of integers, convert them to string of hex integers
+                    structLog_copy["stack"][ii] = str(hex(int(structLog_copy["stack"][ii])))
 
 
         if "error" in structLog_copy:
