@@ -408,19 +408,11 @@ def feature0():
 
     # print(temp)
 
-    for ii in range(0, 10):
-        print(temp['structLogs'][ii])
-    # 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c
-
-    # contracts = ["0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2", "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb", "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e", "0x54586bE62E3c3580375aE3723C145253060Ca0C2"]
-
-    # strstr = str(temp).lower()
-    # for contract in contracts:
-    #     if contract.lower() in strstr:
-    #         print("Contract Found: ", contract)
-    #     else:
-    #         print("not found")
-    
+    printLen = 10
+    if len(temp['structLogs']) < 10:
+        printLen = len(temp['structLogs'])
+    for ii in range(0, printLen):
+        print(temp['structLogs'][ii])    
 
     # Step 2: Parse the transaction trace
     print("=================== Trace Tree =====================")
@@ -428,7 +420,11 @@ def feature0():
     path = SCRIPT_DIR + "/cache/" + txHash + ".json.gz"
     metaTraceTree = analyzeOneTxGlobal(txHash, path)
     print(metaTraceTree.visualizeASE())
+
     # Step 3: Decode function ABI and Storage Accesses (dynamically track SHA3)
+    if printLen < 10:
+        print("=================== Trace is too short, likely a super simple transaction from EOA, skip Decoding Stage =====================")
+        return
     print("=================== Decoded Trace Tree =====================")
     metaTraceTree.decodeABIStorage(temp['structLogs'])
     print(metaTraceTree.visualizeASE_decoded())
