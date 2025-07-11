@@ -1,0 +1,2332 @@
+now works on benchmark:  OnyxDAO  contract:  0x2ccb7d00a9e10d0c3408b5eefb67011abfacb075
+total transactions:  156
+total:  156
+no access for tx:  0x4a72a8f2673ce0512e30a940d64ac9375ba7456eb36a949ac0dd5c85bbd8b1d2
+no access for tx:  0x99e8bdd1c0fee381cf9069fb304b47f1efc3ced7759fb87d799d87395f9a7d39
+no access for tx:  0x7563307b6925761e6a0e9031ef312be59f354b02743a244f7ebf9b2c8b81c61d
+no access for tx:  0xb7923d76c72319b2db22a041fe375c9e75cd47b99c9d3930f2f07c51d5b2226a
+no access for tx:  0xf016a0b33fabdecb8e0b69840a6104a21efd0a8bf4aae3ebacf7601fa61c6cc1
+no access for tx:  0x42fa02291f5de638f2d2ef37f130ab4a4048764d4ecf09796b66d72d872b7fb4
+no access for tx:  0x030ccf73bbc2e3c98ad1b8aa7a263c13e51b8c4461152efa403cff887a3d5f2f
+no access for tx:  0x45742e41415d0d7d637da3be816dd9e7d99aab47a8ddb7cccdc775711dcaa9d3
+no access for tx:  0xc48db1b34f724364211a2b756f4c51ddb1bf12f698823b920549dbf9de2806a4
+no access for tx:  0xe263554e3dceff3a34779e0809c78945672d37b7ba06a520b8877ba2b8953245
+no access for tx:  0x86fc02771d20f19fe7948df7d71df094bcffd0e8568e015bc6a0baa01d3cb6e5
+no access for tx:  0x76cae5d2e42c6b37ddda0062ab5b054021b4f5aa03668df9ff15368a1544d203
+no access for tx:  0xbfe4564de990073e001073ed543ba80b140d27e2c7d71054b0f38983b81755f6
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x0e02bd184e309f35fd6c5bac55d42233e8121d958ed19ccca1825fb4ad1bc31b
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0xc6eac3ac7de8597a5f9f5e40265829e7b8ae6399a7bc61fd4003d1caa4319840
+no access for tx:  0x57d98898767e9cb25962a0a5c59f3db51a4d6535f2af1e8eaa8a23535e4a3409
+no access for tx:  0xd4e3d2c1fe47758174bd7d85d81131d7038a1e700ca1fb32ee17b2ba5a0c53a6
+no access for tx:  0xdc2e5f65896db30f5c6d50d9d9900b7e02d19a58c520d6d72df0bc9ee77ec471
+no access for tx:  0xc8d132b3f4773eb5628ab8544f246f5cc2ecf98ca0216d49dcb26cb43fb3842f
+no access for tx:  0x190a5ceaa585f083a3056595477a05aaf9a656581807cdab6a37db33242c10a2
+no access for tx:  0xc4577b45fa4415fb8decf4a6b16d92db9fcc30b951b47e59c5cb290d507688b5
+no access for tx:  0xbece9187b2316ae35b6a274f98b5fc3abcb51c1cf11b8e2e16cfe59ebed6b721
+no access for tx:  0xe232607b42a0450c43a5c9b4f8bcb276dcc63ecb462f2f762dccc1b29baf0814
+no access for tx:  0xb0144c2f1d89befd53212d06d090f699d6ab17592f824027ffbfd6afe70194bf
+no access for tx:  0x2cce8903e0859a8a0a4a7d3cfa4d069e4d2c123ca2ee023b2b73e32e878873fd
+no access for tx:  0x3449de8aeab6292865db1e94756b130f205d7fc6fffd20b8649762e92584bb04
+no access for tx:  0x98485f43c7363668b89fef296263fb580769ed855e20baf0cec5f524345820b2
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func mint0x1249c58b has more than 5 senders
+func mint0x1249c58b has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func borrowBalanceCurrent0x17bfdfbc has only 1 sender
+func repayBorrowBehalf0xe5974619 has only 1 sender
+func repayBorrow0x4e4d9fea has only 1 sender
+func repayBorrow0x4e4d9fea has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'borrowBalanceCurrent0x17bfdfbc': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                                           '0xf4e607c9b0d20e8cb4823ff66d54ab0f7ac21067'],
+                                      'isSenderOwner': '0xff42a051129a1313f5c907539630238e0c9c233b',
+                                      'require(origin==sender)': False},
+  'constructor': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                   'require(origin==sender)': True},
+  'mint0x1249c58b': {'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                             '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                        'isSenderManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                             '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                        'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginManager': [ '0x5fa42ba82aeb347db601c61a998bba2725e3f3ca',
+                                                       '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                                                       '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                                       '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                                  'isSenderManager': [ '0x5fa42ba82aeb347db601c61a998bba2725e3f3ca',
+                                                       '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                                                       '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                                       '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                                  'require(origin==sender)': True},
+  'repayBorrow0x4e4d9fea': { 'isOriginOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                             'isSenderOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                             'require(origin==sender)': True},
+  'repayBorrowBehalf0xe5974619': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                                        '0xf4e607c9b0d20e8cb4823ff66d54ab0f7ac21067'],
+                                   'isSenderOwner': '0xff42a051129a1313f5c907539630238e0c9c233b',
+                                   'require(origin==sender)': False}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		109	47
+5 sampled FPs for require(origin==sender)
+len(txList3):  156
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+no gas
+0x119814062f85854706aa45c5532759e56fd61e6e63c2748c8b4cca2fd4e61ff0
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 686871,
+                        'require(gasStart <= constant)': 1037101},
+  'borrowBalanceCurrent0x17bfdfbc': { 'require(gasStart - gasEnd <= constant)': 55020,
+                                      'require(gasStart <= constant)': 224521},
+  'mint0x1249c58b': { 'require(gasStart - gasEnd <= constant)': 154961,
+                      'require(gasStart <= constant)': 246123},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 249275,
+                        'require(gasStart <= constant)': 251398},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 249827,
+                                  'require(gasStart <= constant)': 323009},
+  'repayBorrow0x4e4d9fea': { 'require(gasStart - gasEnd <= constant)': 118802,
+                             'require(gasStart <= constant)': 192906},
+  'repayBorrowBehalf0xe5974619': { 'require(gasStart - gasEnd <= constant)': 82119,
+                                   'require(gasStart <= constant)': 172626}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mint0x1249c58b, gas 10499703 - 10190963 = 308740
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10499703 - 10190963 = 308740 > 154961
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 9805163 - 8761937 = 1043226
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9805163 - 8761937 = 1043226 > 686871
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5529538 - 5411592 = 117946
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5444897 - 5330274 = 114623
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5362256 - 5248924 = 113332
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5279615 - 5167574 = 112041
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5196974 - 5086224 = 110750
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5114332 - 5004874 = 109458
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5031691 - 4923524 = 108167
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4949050 - 4842174 = 106876
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4866408 - 4760823 = 105585
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4783767 - 4679474 = 104293
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4701126 - 4598124 = 103002
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4618484 - 4516773 = 101711
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4535843 - 4435424 = 100419
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4453201 - 4354073 = 99128
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4370560 - 4272723 = 97837
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4287918 - 4191372 = 96546
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4205276 - 4110022 = 95254
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4122635 - 4028672 = 93963
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4039993 - 3947321 = 92672
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3957351 - 3865970 = 91381
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3874709 - 3784620 = 90089
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3792068 - 3703270 = 88798
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3709426 - 3621919 = 87507
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3626784 - 3540569 = 86215
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3544142 - 3459218 = 84924
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3461500 - 3377867 = 83633
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3378858 - 3296516 = 82342
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3296216 - 3215166 = 81050
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3213574 - 3133815 = 79759
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3130932 - 3052464 = 78468
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3048290 - 2971114 = 77176
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2965648 - 2889763 = 75885
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2883005 - 2808411 = 74594
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2800363 - 2727060 = 73303
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2717721 - 2645710 = 72011
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2635079 - 2564359 = 70720
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2552436 - 2483007 = 69429
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2469794 - 2401657 = 68137
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2387151 - 2320305 = 66846
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2304509 - 2238954 = 65555
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2221866 - 2157602 = 64264
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2139224 - 2076252 = 62972
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2056581 - 1994900 = 61681
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1973939 - 1913549 = 60390
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1891296 - 1832198 = 59098
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1808654 - 1750847 = 57807
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1726011 - 1669495 = 56516
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1643368 - 1588143 = 55225
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1560725 - 1506792 = 53933
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1478083 - 1425441 = 52642
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1395440 - 1344089 = 51351
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1312797 - 1262738 = 50059
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1230154 - 1181386 = 48768
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1147511 - 1100034 = 47477
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1064868 - 1018682 = 46186
+For the func redeem0xdb006a75, gas 183828 - 149961 = 33867
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	2	
+5 sampled FPs for require(gasStart <= constant)
+0x9003626c66b52c61bddb469e26872cdb2bf990e2d0afd95056591bf20527df3b
+0x2821a24842d9426f72ec2f275d602ce7b572e5e7bc0951599e62a563aa0b14f8
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x9003626c66b52c61bddb469e26872cdb2bf990e2d0afd95056591bf20527df3b
+0x2821a24842d9426f72ec2f275d602ce7b572e5e7bc0951599e62a563aa0b14f8
+len(txList3):  66
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{'mint_deposit': [250000000000000000, 10000000000000000, 250000000000000000, 200000000000000000, 3400000000000000000, 4500000000000000000, 20000000000000000, 11196161184466766, 11111111111112222, 55555834946896498, 4000000000000000, 14000000000000000, 1420000000000000000, 1420000000000000000, 700000000000000000, 20095337120592585, 19028210774390942, 16137502820909317, 8525988719155862, 19288029080272485, 8855989084367817, 500000000000000000, 20000000000000000000, 20000000000000000000, 11442424000000000, 17520995145092479, 108560632136992216, 100000000000000000]}
+==invariant map: 
+{ 'callvalue': {'mint_deposit': (4000000000000000, 20000000000000000000)},
+  'dataFlow': { 'borrow_withdraw': { 2493: [ ( 'msg.data',
+                                               4,
+                                               36,
+                                               200000000000000000,
+                                               2493),
+                                             ( 6401058870016492,
+                                               3755500000000000000)]}},
+  'mapping': {}}
+Successfully stops the exploit using callvalue
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['dataFlowUpperBound']
+0		111	45
+5 sampled FPs for dataFlowUpperBound
+now works on benchmark:  OnyxDAO  contract:  0xcc53f8ff403824a350885a345ed4da649e060369
+total transactions:  494
+total:  494
+no access for tx:  0xd0666a0d921db36f9f9bf2ea4db0055058b4b2ede58320e896bcb46db3413b9e
+no access for tx:  0xc450325019182e9a7b89d4c931f01f03df56b4792395bda8c51ea7c6adeabbbc
+no access for tx:  0x04d0a5ad220cdb510a03a1d3e01845bf3f9f47555d549017df2775267abb77a0
+no access for tx:  0x119814062f85854706aa45c5532759e56fd61e6e63c2748c8b4cca2fd4e61ff0
+no access for tx:  0x0cc3e7daca5d87d08af763adc767519a1979d82f124bc188b7f94dc4b778c88b
+no access for tx:  0xf887ddb8b76b943941dbd997146a7dec83b39247fdec9cd4e2c7411fc7e03098
+no access for tx:  0x49c9b0413211bfe2e0c3e5ec4dd2e92098eb4cd1b80fdf081404224ee01199e6
+no access for tx:  0x9f19a2a245a9f23094b3200736c226b9418af0d1513679684d3ed4aaaa925111
+no access for tx:  0x16a730618019c14750f63100d394f72afe2d4541fb6d5eb52e7607a3e9c529e4
+no access for tx:  0xa2825214788fce073ac71e8b41cb5e45624557091766d6c3b125158daea2e85a
+no access for tx:  0xf29b4cd4eb502933937d60df187680ed68296df4ca12c4467dbed894bab9c29a
+no access for tx:  0xa216d030ca0549ce072452302047eaf8e80be6030d39c6fe35716f4e1ff40481
+no access for tx:  0x0a9be328071bd2c9d2de11d19223f377dfaeda3ff27d8ec249ea30c95022e102
+no access for tx:  0x1e3278449b6f04d6ed93ed3ba953c04710cdb2bd924101c54990bb368117dc41
+no access for tx:  0xc70e17d79e26fe31d74617dfd1dfaf40551784ca8976ce61734a2c7ef76501f7
+no access for tx:  0xf979312effd7254b5f3723fe4d07a4bd2671f9568a28821b52584c4a582fc11f
+no access for tx:  0xbe208111b17ed00dfbc6e6b34c954cad6b6cb34757966376fe94069e610639fb
+no access for tx:  0x2efc8e354e6c2130a89263f3bdb5938d049bbd1fcc8f8fc38e437bf92d8fb4ac
+no access for tx:  0xbe2cd7623f7b9c34e06c0d9850cb882f18558b59e6c82d2a52c3ecc4ce37d61c
+no access for tx:  0x86fe02309e9e38f83b990a65c18a6750c8725936b48df42e63c06be958eb7219
+no access for tx:  0x306d33714aa3dcc81db3816ae41f2c49bb69352c09b0c37f7dc8dae2c0a9d050
+no access for tx:  0x4a72a8f2673ce0512e30a940d64ac9375ba7456eb36a949ac0dd5c85bbd8b1d2
+no access for tx:  0x01f3e4e3a77159f4e9de0abdc0dd1027b4bff4d689035025517c159d71d22c8b
+no access for tx:  0x747910e301be5935b35981ffac878eaf3b34f52b00ab8289892277fe5b7d7c25
+no access for tx:  0xb57eca993b3c4b557518b5913d801aeed4a046dd4291ea8dc76c3b2940ccf990
+no access for tx:  0x18d45636f5c9c9a8bf8935fd3dfd75eb85dcd28005b4921404b61a3e4f822e52
+no access for tx:  0x15f0bc2c6cbd92edbc13cef029174a39296afbdc5ea7986a69cd8def81cdead1
+no access for tx:  0xdb5dd148b6128980719ee934bf04a66113152baf5a381cfb316302a17f1bf286
+no access for tx:  0x5a085ff33e05f3d2e49e62025004551e62bc9f0dde81f03b2080dfa69bcf70c1
+no access for tx:  0x3a994e279bc4f5eec31c91b6a3a0051a45448ccfc07bfec0ecb936fc43728e9f
+no access for tx:  0xa1f50ca0e7707d45c8412cee6fe68c9a3a1a9095891f31c93b1dbead659393e5
+no access for tx:  0x5418ff22cb170632d6b16e473e8edb0332d2628da6c08e8a19a98cc54d665700
+no access for tx:  0x75238fa70c6c68f06ba4237d80679f5bd306f9b3d5ee945ffcac3ea78dd1c346
+no access for tx:  0x1ae71873cc987ad3f9ebc889eb12d80c601b20a79d37fba7446cd32ab24a1c9f
+no access for tx:  0x897d29d726c6b8f47b5507601dacdad593e58439418575fb2dbdb11e23dc55af
+no access for tx:  0x1f5a4844bddeebb52a7ef43ff6a75c85400bc028991065eb61432192fbd3b411
+no access for tx:  0xe66fb1f66984f0c81f23b80e3d3149bba578dade7012b91bd636e29230cd4e3f
+no access for tx:  0x9462c6d9849a590be8f146c16d817d8ec1c547ba1a68d834a371fff9edf6c53f
+no access for tx:  0xdb3e4aa2585224040c6fb167616e257a903c773471d4f1b9fc5c4b77c291f964
+no access for tx:  0x94dbcbf7afbf2e20beade02b9e500890d5899a0ea86c1b33d25eac75dd470a8e
+no access for tx:  0x33accf3c61c2969bb319bab10cf632a3d8698e317d30e6aa80a919e9657d0099
+no access for tx:  0x39c531450cb1117211d28e7d8f62e6e6ffa04da3ae57b23967c8214d23dedcd4
+no access for tx:  0x6a4629b67115bba8fe6ba836979139f7318468397cd41ee34b95940b1e8dee2a
+no access for tx:  0x713e8a44ea450ba7c37b3c934ec365453cffbe652f119f8461cb62c682fdba01
+no access for tx:  0xa3bd87c8d6e7d73cd4e3b083bd8b8a321b7f7f35863f9ded66675d04aabddccd
+no access for tx:  0x98c43d58cbd7c7e94eeaa331e0a2f764d39b873661e5d9a2f4703959b9b82324
+no access for tx:  0x89a37ebb1361210a020b1088425be05230ee3a7d5be48153a3d3f728f83b7439
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0x6c359a335682aef31e9379b2301a960323484b127a46dbd6aa95daaecea8ce9f
+no access for tx:  0x406ef0fdd66b2e3cb3b1fd02f8923153a794307b8ad63a6a655add63ee69b6b5
+no access for tx:  0x2656c9cf9e4c030c6fd44ab89396727aff07c82b963de77c8f804ad7ed604f7d
+no access for tx:  0xbce2e42d17d9ddb91abafea4cda9896248b4f09a6bfc75dbee2f2b11f6f1f0db
+no access for tx:  0xf362772e0d577a31bfc259a8193492e1b3abdfe68f1bdcd3da21a26ab488e66c
+no access for tx:  0xb923b77edbce0d84fbf225313e52f9c98b2464436f143d35f258d088dc1ec618
+no access for tx:  0x99e8bdd1c0fee381cf9069fb304b47f1efc3ced7759fb87d799d87395f9a7d39
+no access for tx:  0xfc9203481e9dcd97fac684558ed010008ef40ac957dfc0c8af6a431af1cba16e
+no access for tx:  0x5c0c8838354641ca8d121532dd7e24b2c05cab59de2ec1edeb8ba24e09f73845
+no access for tx:  0x08abad82fe9f24592fa0d435517e091144999c26f25ccbbf2070e2f5f1f17a13
+no access for tx:  0xb432d696ca439053b1f99a6b32bffe5446160898123299cb30c826a627c59eda
+no access for tx:  0x8d772cccce0b8aa079bbb8a5d2ab2ae53f21fc2fe25732890b88700cf9323e7b
+no access for tx:  0xa5d91d48dd837f435cee75feedea94a83fd7d5ab87941ebce9bbb6cd8d58e967
+no access for tx:  0x6ceb67c409d1c1c27980f3e6ce7f76f814cb07301d0d1cbd1527347c16f84acc
+no access for tx:  0x16c489e4d20bd21b1ca165576e8f4a479db3a485bf399f2a0c3fd516b60bfd54
+no access for tx:  0xa51080b4ff9be4afaab3bbabafa77c02e69b31b9447f50fee259a756e69769d1
+no access for tx:  0x49959443340bc073c4221e2a11dbea00a10b196c0286a0b0d3c5915c2af243ee
+no access for tx:  0xd19edbce5fd254cc3393fb26bd4f54cfc3ad98db1148ce24987b9842eaf5cd1c
+no access for tx:  0xcd60c2bf2a7f8ffa672c4fb97a5cf502330ece0e32f909972565fdb3e83328d9
+no access for tx:  0x816dc78ea9e20ca8918e521b5fa7d298427fe5effff2439675880081cd9fd114
+no access for tx:  0x47e4f828d6b20b4afcbdc6694cf54def6745b880308b9f66c2e34a79ba589d8a
+no access for tx:  0x09f450df86d3babc5487c8dfa8e539d71bf3dee245e255db9bba8205ead2298c
+no access for tx:  0x2df99e35922b7a34cff7dfd4a77be0a68af73f9989aa01554483879d833757d6
+no access for tx:  0x69530344f02cbe0b724a949ac2b8083f069860f89f65f4ef48014af78a0a6205
+no access for tx:  0x23fbf95e53f7487889fba09a1a3a49525cc86a74ce8b3f2fab00bdaadf2ff81d
+no access for tx:  0x9e1839555755954c11337078de5d9b426f58d031448d09b957d98a882ddff62f
+no access for tx:  0xf8f77a735f1e33cfe98b06616865be6192247eaefa11e1601291c17fcefb35ff
+no access for tx:  0x60aea69eea653a84a64c98a9ac8f15d3d2a60eed88323c92fb8729f07568b1f8
+no access for tx:  0x7563307b6925761e6a0e9031ef312be59f354b02743a244f7ebf9b2c8b81c61d
+no access for tx:  0xb7923d76c72319b2db22a041fe375c9e75cd47b99c9d3930f2f07c51d5b2226a
+no access for tx:  0x28577d800d07e863a0e5d1e3e8286af88987ce77d64adf3ed0ec9637e5220fc5
+no access for tx:  0xb9e98cf1149ed77f38b3724e6fdd1747e8a04728bc12cae90573a1befd04819d
+no access for tx:  0xbd3829db2e09a63f54eba3948c555b4e59fba8da7baf6315a9f6763e2adeff7a
+no access for tx:  0xe6637cba486e8c1fba4064bea4c622a453000e04f3e773fd0a72a6d08337a710
+no access for tx:  0x1d8bc2bb18d490f4e6d2aec6809c866933c2dbe8759481db2d5aeed1ad440819
+no access for tx:  0x2960ced743c3be40977c1810c81dc300adf05a38389cddc183a0e64962b923af
+no access for tx:  0x1e1d7c0ccec66ef545a323f7d73ae390812402906ef4e4dc27f7f419e9eddbe4
+no access for tx:  0xf016a0b33fabdecb8e0b69840a6104a21efd0a8bf4aae3ebacf7601fa61c6cc1
+no access for tx:  0x8894ccbbea768e152de9f6ad191cbeba5ef7300cee3e57c6234033865cff0fd2
+no access for tx:  0xf999e7f21c0bc1bdf94b55d9ba03cb47c42e123340c2220879c95ccd0b382f55
+no access for tx:  0x486bd29054e923d95459d710cdc3ce9f158daa06181ba639d02f815b0c025b06
+no access for tx:  0xfe85f611aefa2f3794d3f5cebf5abdeabdeb8b7f11c39268e3d01b71736a0761
+no access for tx:  0x0c8d05ba7d26035a14435f2efc87a4ae3840aa5f33325adba17cc5135d97be27
+no access for tx:  0xb03deeafc934f6ca6f57488684fbcd03df54e5fba3111d6db43043bae0f26b28
+no access for tx:  0x44b0c32aaf0de3b2a2ff733c66363ebfe8d10a8ca5bd606ebe4bb5236d20a1c9
+no access for tx:  0x2b17281a955314e14498d9994c475d0b34e653d327291e6f0c34813ebdaedb52
+no access for tx:  0x208a60ad2e449fa0500d925b87b5f94991dae41510cb4acb226eb52790007523
+no access for tx:  0x05021612c1c7b65520e69b33deef76612800e8d08dab807e02ba6c9797bceecf
+no access for tx:  0x0d39aeb513155b632e79819eec1a3b5b4700fbf5beb5a39482365b5ac28af7df
+no access for tx:  0x0322de9dcd5ce6d811d34a2659fd32c0b6ebc61bb14143a030c8fb73819a3f9a
+no access for tx:  0xa3a9a286f4ac9575fef818d564b43a9e5aa9f3d96db1242b66b51363e373c9f4
+no access for tx:  0x53816e932b06219a15bf8b2a608d733f79ed08ce06cd64ecbb9b5cef89791ca4
+no access for tx:  0xef693c9f3ca1f2372437b6ae30d51afd4b5a3760f143de7d2be513e1ad5ec3b0
+no access for tx:  0xf5dbbbb3b75cec7c77a72b1295bff7cbf2a7588019cd3044f418f3a32e9534eb
+no access for tx:  0x0859c5c5e35956d45af8de3e0fd00236f9ac8f951dc37f63a6a0b1c53650e218
+no access for tx:  0x73b834eac83b109121a93bb16e35e1c7dc442bbf3bfef1c2586281a8971bded4
+no access for tx:  0xf6560cf8bb8bb93b1eafd6319ff9ce651db336f411d72c6bc694d3a1857f747e
+no access for tx:  0x2830aaeca40384c610c8a1869d3fb50fbc899a4795b1a2d90ac380037814a212
+no access for tx:  0xf94e12cc1fb2e670e911284915d7958e675f11598b1f2cdafeb84607cc94225d
+no access for tx:  0x786b9617e5d1adcb081381e5a1c721cae0718914907f346e106b43313c88cb44
+no access for tx:  0xb431e815ed125f64880f172fa6a6d994310b54240e289ad19a5bd4d00bc1892e
+no access for tx:  0x06d3e79d14c6d45830bf1266ee1a6047fafafd12704a79b0fb33ba29993d0e21
+no access for tx:  0x46921f722e1f9b29dd458e4afc8216bf57245d480c04222938b3345cae67bc37
+no access for tx:  0xf16a020dd6cf90f95e940a7c9772f2a065826adf48ecbf03744302939f054dba
+no access for tx:  0xca185221b427c124a3c55caa0427a64a235b7c82cea44f9b5d9300e4db744073
+no access for tx:  0xcabb7193648c562453435904cf7124c79148e732bf096fcce6fa9fe6a9041952
+no access for tx:  0xccda4d185c1f7985e3ef8e9a92082e661827a49a1efea2ab71997c5af7cb892a
+no access for tx:  0x6c62788e49a47b4484563987363054005bb984036e49f79394630b7c11e7f7fc
+no access for tx:  0xc7fda5e4f58613d4a3953a7109dcfe7cf94877a801a62566036628453a5724c7
+no access for tx:  0xdd8be4b2ffaee2dc7528960d093a9731cd0159612be359ebb1bfcb5b499fa246
+no access for tx:  0x4cfc242c5023c8db3b456cb38fadd705a6b9cf05f30cb54aa9d811701ba5303e
+no access for tx:  0x0dabd3ab2f1ee7aa2635d9f7974e289a0cec4d6fce35b7457273f9957db3777e
+no access for tx:  0x07dc83b81c6e6b3ec2d23679bf347c2ed63b7e9f08a94a7c2b6e7ca10369bdc1
+no access for tx:  0xd133cf6e877f4d2f2585004c6b95302994cde74c8f224a7a56ca1d49b18755e6
+no access for tx:  0x56d61191e16c15582363b02c53ea04294789d458711406230cc3194cc0e2536c
+no access for tx:  0x919b26cd5288ab39964a6d900812ffbec3bd409e7b4bbad582b98852860778b1
+no access for tx:  0x1eb6c684ef13a83c79790053ba02a44f2651edbc5a08ca68df163799ed78f013
+no access for tx:  0xcc85157b3bfa6a55b735450a663b97297e5ce03e2dbb6c4db0f97ff2ec045a40
+no access for tx:  0x160d129bcf8b41658d99359ec4032c7f1c3c3c32676e7e12999593a90fdadded
+no access for tx:  0xe6751bce1934a74b86891b5c5c533365504653e503d089456daebc1ebb7130eb
+no access for tx:  0xfef45dd45504cbc80f365720ec9190fa18eaee23488f552a7104cd527a3d4854
+no access for tx:  0xc01f620a1c8d5229451a88164881e55d7c988ebf2878b3a65755bc6daf7baa6d
+no access for tx:  0xfe0d7dcaecb8c79f9e7e272989b41d0482c5b30b6ec664a15db3745b97c3cdfe
+no access for tx:  0x18966767991677505e87e682b47a3622652914d3d29cf8dd6424c535bb218ab8
+no access for tx:  0x2eeea655dbd944bbf132c26b3f19de892662bacc150fe130d724888885f708fb
+no access for tx:  0x023c846c4a405dfee280abfead07336b10ec766d350eacf7d618557d96b06a87
+no access for tx:  0x0fde9a713920756ab744fc9ecd9b2793ed1d04e49e1d3a019df0963d1812a3cb
+no access for tx:  0x078f8146a3af4009cf6672d5c175723c83b259de1451c050267cb3d34f47dc04
+no access for tx:  0xa98c80242c98d7f93b99ea1b38df8d23f7d4e27ef17bf0d61a19060c6799c0b0
+no access for tx:  0x2253e20f4081c32c47e353dd4eb5938d5c85ea5ffdad5299b31c6d4bc09e79e8
+no access for tx:  0x7902a8b14a936c2220cbb15a05600af0c99286eadd2c019b87e5f1985d34d1af
+no access for tx:  0x6a68fc096a5a4e6c4625c2c236491f090bc04e945a21a82973f211c1d8cef679
+no access for tx:  0x052827b9cd1d7f126189cb03ede967dc66211c4350c349f04fd7e9aa8300c34f
+no access for tx:  0x9f38686fb4f83dfbae08cfc18f35450b3543119b3bbbcf15a4340101f637b77f
+no access for tx:  0xc33a21caeea04642b59307d531655c432f3b1622d44ef9c5d9d9332f42850222
+no access for tx:  0x8bf15493bef98be85d0a397f884f0f8ec0e336bbcb80ce2cc037af6b11c776ac
+no access for tx:  0x9a0032047769640a65dc95640fd6b22764afa0b0e1994a90cedbf8a4480197c0
+no access for tx:  0xea2b18a7ef8387a32be87d8c562bc22fd6355a241863f5d3ad6bbe96cf1a5d78
+no access for tx:  0x9f727de9725e135c7a805f93306667a4dd4b003dba90c190d9874917b328b1e4
+no access for tx:  0x086a5823fd7f4a951176f87256383d0dda3d43a312690822af8d76181dc995f8
+no access for tx:  0xf0518dc75a6c93d4bbbca0b86d29e060daa3e7bca57018eb7de8f1a0de02e10e
+no access for tx:  0x2616c67885b5df2477fa3e1b1507b7ac9ab106b090f5092fbb2919cb3b98a1b7
+no access for tx:  0x9dfb0223a08e1540b8a6bd5e703c710edd45ccf1ceedc6e067192bdeff9d5cf9
+no access for tx:  0x8e6e74758b4119b23ff98517c6ff85cb15748677e75f245b52096654ff65e0ef
+no access for tx:  0x63c086e3ea158afe951f43f567241a1c2095c6f5faa55ea515a7623b0538168d
+no access for tx:  0xc8e18ae46ee20f7a5fb5b6ef37f4b991b625ab305e82a7b12f10004307053b3a
+no access for tx:  0x837c6e8570a204b855bfa323b0a43791ea13281b449202a1e32375dabff88058
+no access for tx:  0xa28baee6e22e4404244ae95c9d5a112e7dcf5b16ff5133f5f635b984e8974891
+no access for tx:  0xae6e41e3c1116baf3f289f9687783b6e0e7d68d4912a4c0b4400096d07310ae9
+no access for tx:  0x10a8a17f1d2b6b6f92f1d0375c7d3bc7752bbaa465e0378ee1c0841dbe712091
+no access for tx:  0xe1ce5491643f7b7532c0956e94c04a16c12fada200f6dab952d8cba6602fbe5a
+no access for tx:  0x45742e41415d0d7d637da3be816dd9e7d99aab47a8ddb7cccdc775711dcaa9d3
+no access for tx:  0xb544096ac327c285c6dbd98474d9965efd25e09d3b62ac87e830e084e8847098
+no access for tx:  0xe0ae941178390f228ae7ebdac49e620a8942d26c9042e33b861a92c3c4c82853
+no access for tx:  0x7f84e8fffb4ac3dc9d6810b500896b5cd0b50636506fc9876bd56e345e9dbe38
+no access for tx:  0xcb3e1507980d7569737d6b3182e7eaca6db390237b6b6113a5650e3f2a9e7823
+no access for tx:  0xe4163a5ebbc81344f13c6ae78992b26e4897d5b9a12b003b05a674cc5655cb12
+no access for tx:  0x41f81a57efee2e86716f3ba10bd34ea5c48ebc491c5efd5d1ea7743c7f3df3d3
+no access for tx:  0xf9d0b3ff33293c1f75268fc4992fb1f48ce5fb3fabe191d35b6b50c06f223917
+no access for tx:  0x9a472a8106c8f4d389d5a37ed93d158d4bea1241efce39f044c1743e65dc703a
+no access for tx:  0x1ae69d9fdeff8dbbd8628faa6221322e357f870652f6d72683d4819f1fa1ef59
+no access for tx:  0xdac0d3b43bf646397b58dbfd31930f3a66dad9e2df8bd622fe08a9e755779716
+no access for tx:  0x321d1dbac41c984cb324ff8e0a2f16486892d5832b2b50f4646f69b387d8ede6
+no access for tx:  0x7e00a77e585a96668cb060c9e864ea97ededdae0c74c02c54bf3ac827b20e5de
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0x209d12be8e853649d37514ea5d9a820ce6b12644f7f8dd50b7f28b8ad16972c1
+no access for tx:  0xda323f5d50388548c366cc8b08da22215014b8b4f6413ed1b5e9c48d47e92c17
+no access for tx:  0x90d460174a5b63e504f506849f970ac5e276419270dad04baf64637875a9fa43
+no access for tx:  0xdcc83315c83d4d1799351c9909d149ba2ba0198d4e39be2ace82e960ac4ade0a
+no access for tx:  0x7dfdfc9879fba2f1165b550d966c153ec0122ec50bfc7dddddafb56f3bd58132
+no access for tx:  0x2755be26d763bf0ba6243b8cd39db0162484e6149123c4984e22d92419941a8f
+no access for tx:  0xf52230b7a016d07c508912c7ac5864e87741108d8e47f61cb2201f3b232bda5e
+no access for tx:  0x210387cd739c8891218eb33daa0da9bf6442fae6a5568790fa27a98fc5d73c80
+no access for tx:  0x600d08bc93073527daf11a4ad6bb7391a5a2322272efa9481f39924cfda32479
+no access for tx:  0x0c2affb9f9cc83618093b32370d9ab10d96d7e4d35eb7f9f57e7e7b716b06f8c
+no access for tx:  0x1c591c48653a0efa9ab257428b086f0a2fb012291abd55eb682d5f0b6e2a4ebe
+no access for tx:  0x7a05a54f696f36c00b8c5302c2e688fdf643aebc2076a8d3c925c8a57ea240d5
+no access for tx:  0xc8965c63279691f9e484dae050b12b3fb39273de56dcb58ec176899406dfdae4
+no access for tx:  0x444ae66a469dbbe57f8b13e8a477b0ebb0797e7c9f8eeb23c87ffb7b03668c74
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func _become0x1d504dc6 has only 1 sender
+func _become0x1d504dc6 has only 1 origin
+func claimXcn0xc966410a has more than 5 senders
+func claimXcn0xc966410a has more than 5 origins
+func borrowAllowed0xda3d454c has more than 5 origins
+func mintAllowed0x4ef4c3e1 has more than 5 senders
+func mintAllowed0x4ef4c3e1 has more than 5 origins
+func repayBorrowAllowed0x24008a62 has more than 5 origins
+func enterMarkets0xc2998238 has more than 5 senders
+func enterMarkets0xc2998238 has more than 5 origins
+func redeemAllowed0xeabe7d91 has more than 5 senders
+func redeemAllowed0xeabe7d91 has more than 5 origins
+func redeemVerify0x51dff989 has more than 5 senders
+func redeemVerify0x51dff989 has more than 5 origins
+func liquidateBorrowAllowed0x5fc7e71e has only 1 sender
+func liquidateBorrowAllowed0x5fc7e71e has only 1 origin
+func seizeAllowed0xd02f7351 has only 1 sender
+func seizeAllowed0xd02f7351 has only 1 origin
+func claimXcn0x481436d4 has only 1 sender
+func claimXcn0x481436d4 has only 1 origin
+==invariant map: 
+{ '_become0x1d504dc6': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                         'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                         'require(origin==sender)': True},
+  'borrowAllowed0xda3d454c': { 'isSenderManager': [ '0xbd20ae088dee315ace2c08add700775f461fea64',
+                                                    '0x7a55671041869ec8e36f1e216031b0ab75670091',
+                                                    '0x2c6650126b6e0749f977d280c98415ed05894711',
+                                                    '0x2ccb7d00a9e10d0c3408b5eefb67011abfacb075'],
+                               'require(origin==sender)': False},
+  'claimXcn0x481436d4': { 'isOriginOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                          'isSenderOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                          'require(origin==sender)': True},
+  'claimXcn0xc966410a': {'require(origin==sender)': False},
+  'enterMarkets0xc2998238': {'require(origin==sender)': True},
+  'exitMarket0xede4edd0': { 'isOriginManager': [ '0x4e95c70321055fa370767e230f30aca620bc0de0',
+                                                 '0x672f242527b507fac75f8b765a0f5d67aa349abb'],
+                            'isSenderManager': [ '0x4e95c70321055fa370767e230f30aca620bc0de0',
+                                                 '0x672f242527b507fac75f8b765a0f5d67aa349abb'],
+                            'require(origin==sender)': True},
+  'liquidateBorrowAllowed0x5fc7e71e': { 'isOriginOwner': '0x0124d0fa0dfb1430dfcff16ec6a96945e7a0bc10',
+                                        'isSenderOwner': '0x7a55671041869ec8e36f1e216031b0ab75670091',
+                                        'require(origin==sender)': False},
+  'mintAllowed0x4ef4c3e1': {'require(origin==sender)': False},
+  'mintVerify0x41c728b9': { 'isOriginManager': [ '0x9112dd25b648cb69b117517f848c0315110f2284',
+                                                 '0x6942049509693fbb63d7f1395dae5cfe1ccec1ba',
+                                                 '0x3d293d7c84c6f949f2d1725fe3a03d3e2bb13ac5'],
+                            'isSenderManager': [ '0x93069250cfef3514334ead881fccc407b855123e',
+                                                 '0xbf4401a50e595526df10a2afa6e75455a7e66e11',
+                                                 '0x354a006c570a7f581c30c9dbf9fdd79330764e77'],
+                            'require(origin==sender)': False},
+  'redeemAllowed0xeabe7d91': {'require(origin==sender)': False},
+  'redeemVerify0x51dff989': {'require(origin==sender)': False},
+  'repayBorrowAllowed0x24008a62': { 'isSenderManager': [ '0xbd20ae088dee315ace2c08add700775f461fea64',
+                                                         '0x7a55671041869ec8e36f1e216031b0ab75670091',
+                                                         '0x2ccb7d00a9e10d0c3408b5eefb67011abfacb075'],
+                                    'require(origin==sender)': False},
+  'seizeAllowed0xd02f7351': { 'isOriginOwner': '0x0124d0fa0dfb1430dfcff16ec6a96945e7a0bc10',
+                              'isSenderOwner': '0xbd20ae088dee315ace2c08add700775f461fea64',
+                              'require(origin==sender)': False}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isSenderOwner
+Successfully stops the exploit using isOriginOwner
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		345	149
+5 sampled FPs for require(origin==sender)
+len(txList3):  494
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_become0x1d504dc6': {},
+  'borrowAllowed0xda3d454c': { 'require(gasStart - gasEnd <= constant)': 485364,
+                               'require(gasStart <= constant)': 811655},
+  'claimXcn0x481436d4': {},
+  'claimXcn0xc966410a': { 'require(gasStart - gasEnd <= constant)': 951559,
+                          'require(gasStart <= constant)': 1433941},
+  'enterMarkets0xc2998238': { 'require(gasStart - gasEnd <= constant)': 76179,
+                              'require(gasStart <= constant)': 125204},
+  'exitMarket0xede4edd0': { 'require(gasStart - gasEnd <= constant)': 175154,
+                            'require(gasStart <= constant)': 273874},
+  'liquidateBorrowAllowed0x5fc7e71e': {},
+  'mintAllowed0x4ef4c3e1': { 'require(gasStart - gasEnd <= constant)': 63028,
+                             'require(gasStart <= constant)': 514589},
+  'mintVerify0x41c728b9': { 'require(gasStart - gasEnd <= constant)': 5431,
+                            'require(gasStart <= constant)': 316959},
+  'redeemAllowed0xeabe7d91': { 'require(gasStart - gasEnd <= constant)': 248994,
+                               'require(gasStart <= constant)': 1814519},
+  'redeemVerify0x51dff989': { 'require(gasStart - gasEnd <= constant)': 28099,
+                              'require(gasStart <= constant)': 1762130},
+  'repayBorrowAllowed0x24008a62': { 'require(gasStart - gasEnd <= constant)': 64641,
+                                    'require(gasStart <= constant)': 2040638},
+  'seizeAllowed0xd02f7351': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 10115008 - 9904106 = 210902
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10115008 - 9904106 = 210902 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func enterMarkets0xc2998238, gas 10161129 - 9493280 = 667849
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10161129 - 9493280 = 667849 > 76179
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 9496511 - 8516334 = 980177
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9496511 - 8516334 = 980177 > 485364
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 8450919 - 7960407 = 490512
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+8450919 - 7960407 = 490512 > 485364
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 7947455 - 7465019 = 482436
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 7461442 - 6984075 = 477367
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 6970836 - 6500006 = 470830
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrowAllowed0xda3d454c, gas 6183432 - 5737917 = 445515
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 5420820 - 5303178 = 117642
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5420820 - 5303178 = 117642 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 5349941 - 5257439 = 92502
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 5328066 - 5244249 = 83817
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5328066 - 5244249 = 83817 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 5313677 - 5223640 = 90037
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5313677 - 5223640 = 90037 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 5267925 - 5178705 = 89220
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 5248019 - 5165453 = 82566
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5248019 - 5165453 = 82566 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 5233598 - 5144812 = 88786
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5233598 - 5144812 = 88786 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 5187846 - 5099877 = 87969
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 5167940 - 5086625 = 81315
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5167940 - 5086625 = 81315 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 5153519 - 5065984 = 87535
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5153519 - 5065984 = 87535 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 5107767 - 5021049 = 86718
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 5087861 - 5007797 = 80064
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5087861 - 5007797 = 80064 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 5073441 - 4987158 = 86283
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5073441 - 4987158 = 86283 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 5027688 - 4942221 = 85467
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 5007782 - 4928969 = 78813
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+5007782 - 4928969 = 78813 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4993362 - 4908330 = 85032
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4993362 - 4908330 = 85032 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4947609 - 4863394 = 84215
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4927703 - 4850142 = 77561
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4927703 - 4850142 = 77561 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4913282 - 4829501 = 83781
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4913282 - 4829501 = 83781 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4867530 - 4784566 = 82964
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4847624 - 4771314 = 76310
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4847624 - 4771314 = 76310 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4833204 - 4750674 = 82530
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4833204 - 4750674 = 82530 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4787452 - 4705739 = 81713
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4767546 - 4692487 = 75059
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4767546 - 4692487 = 75059 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4753126 - 4671847 = 81279
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4753126 - 4671847 = 81279 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4707372 - 4626910 = 80462
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4687466 - 4613658 = 73808
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4687466 - 4613658 = 73808 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4673046 - 4593019 = 80027
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4673046 - 4593019 = 80027 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4627294 - 4548084 = 79210
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4607388 - 4534832 = 72556
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4607388 - 4534832 = 72556 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4592967 - 4514191 = 78776
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4592967 - 4514191 = 78776 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4547215 - 4469256 = 77959
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4527309 - 4456004 = 71305
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4527309 - 4456004 = 71305 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4512889 - 4435364 = 77525
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4512889 - 4435364 = 77525 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4467135 - 4390427 = 76708
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4447229 - 4377175 = 70054
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4447229 - 4377175 = 70054 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4432809 - 4356535 = 76274
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4432809 - 4356535 = 76274 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4387057 - 4311600 = 75457
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4367151 - 4298348 = 68803
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4367151 - 4298348 = 68803 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4352730 - 4277708 = 75022
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4352730 - 4277708 = 75022 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4306977 - 4232772 = 74205
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4287071 - 4219520 = 67551
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4287071 - 4219520 = 67551 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4272650 - 4198879 = 73771
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4272650 - 4198879 = 73771 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4226898 - 4153944 = 72954
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4206992 - 4140692 = 66300
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4206992 - 4140692 = 66300 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4192572 - 4120052 = 72520
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4192572 - 4120052 = 72520 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4146818 - 4075115 = 71703
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4126912 - 4061863 = 65049
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4126912 - 4061863 = 65049 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4112492 - 4041223 = 71269
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4112492 - 4041223 = 71269 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 4066739 - 3996287 = 70452
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 4046833 - 3983035 = 63798
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4046833 - 3983035 = 63798 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 4032412 - 3962395 = 70017
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+4032412 - 3962395 = 70017 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3986661 - 3917460 = 69201
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3966755 - 3904209 = 62546
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3966755 - 3904209 = 62546 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3952335 - 3883569 = 68766
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3952335 - 3883569 = 68766 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3906581 - 3838632 = 67949
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3886675 - 3825380 = 61295
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3886675 - 3825380 = 61295 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3872255 - 3804740 = 67515
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3872255 - 3804740 = 67515 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3826501 - 3759803 = 66698
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3806595 - 3746551 = 60044
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3806595 - 3746551 = 60044 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3792175 - 3725911 = 66264
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3792175 - 3725911 = 66264 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3746422 - 3680975 = 65447
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3726516 - 3667723 = 58793
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3726516 - 3667723 = 58793 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3712095 - 3647083 = 65012
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3712095 - 3647083 = 65012 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3666343 - 3602147 = 64196
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3646437 - 3588895 = 57542
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3646437 - 3588895 = 57542 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3632017 - 3568256 = 63761
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3632017 - 3568256 = 63761 > 63028
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3586263 - 3523319 = 62944
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3566357 - 3510067 = 56290
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3566357 - 3510067 = 56290 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3551937 - 3489427 = 62510
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3506184 - 3444491 = 61693
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3486278 - 3431239 = 55039
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3486278 - 3431239 = 55039 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3471857 - 3410598 = 61259
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3426104 - 3365662 = 60442
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3406198 - 3352410 = 53788
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3406198 - 3352410 = 53788 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3391777 - 3331770 = 60007
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3346024 - 3286833 = 59191
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3326118 - 3273581 = 52537
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3326118 - 3273581 = 52537 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3311698 - 3252942 = 58756
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3265944 - 3208005 = 57939
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3246038 - 3194753 = 51285
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3246038 - 3194753 = 51285 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3231618 - 3174113 = 57505
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3185866 - 3129178 = 56688
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3165960 - 3115926 = 50034
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3165960 - 3115926 = 50034 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3151539 - 3095285 = 56254
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3105786 - 3050349 = 55437
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3085880 - 3037097 = 48783
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3085880 - 3037097 = 48783 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 3071460 - 3016457 = 55003
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 3025706 - 2971520 = 54186
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 3005800 - 2958268 = 47532
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3005800 - 2958268 = 47532 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2991380 - 2937629 = 53751
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2945627 - 2892693 = 52934
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2925721 - 2879441 = 46280
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2925721 - 2879441 = 46280 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2911300 - 2858800 = 52500
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2865547 - 2813864 = 51683
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2845641 - 2800612 = 45029
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2845641 - 2800612 = 45029 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2831220 - 2779971 = 51249
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2785466 - 2735034 = 50432
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2765560 - 2721782 = 43778
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2765560 - 2721782 = 43778 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2751140 - 2701142 = 49998
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2705386 - 2656205 = 49181
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2685480 - 2642953 = 42527
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2685480 - 2642953 = 42527 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2671060 - 2622314 = 48746
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2625307 - 2577378 = 47929
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2605401 - 2564126 = 41275
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2605401 - 2564126 = 41275 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2590980 - 2543485 = 47495
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2545227 - 2498549 = 46678
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2525321 - 2485297 = 40024
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2525321 - 2485297 = 40024 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2510901 - 2464657 = 46244
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2465147 - 2419720 = 45427
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2445241 - 2406468 = 38773
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2445241 - 2406468 = 38773 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2430821 - 2385828 = 44993
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2385068 - 2340892 = 44176
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2365162 - 2327640 = 37522
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2365162 - 2327640 = 37522 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2350741 - 2307000 = 43741
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2304987 - 2262063 = 42924
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2285081 - 2248811 = 36270
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2285081 - 2248811 = 36270 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2270660 - 2228170 = 42490
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2224907 - 2183234 = 41673
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2205001 - 2169982 = 35019
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2205001 - 2169982 = 35019 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2190581 - 2149342 = 41239
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2144826 - 2104404 = 40422
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2124920 - 2091152 = 33768
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2124920 - 2091152 = 33768 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2110500 - 2070512 = 39988
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 2064747 - 2025576 = 39171
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 2044841 - 2012324 = 32517
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2044841 - 2012324 = 32517 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 2030420 - 1991684 = 38736
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 1984666 - 1946747 = 37919
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 1964760 - 1933495 = 31265
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1964760 - 1933495 = 31265 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1950340 - 1912855 = 37485
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 1904586 - 1867918 = 36668
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 1884680 - 1854666 = 30014
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1884680 - 1854666 = 30014 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1870260 - 1834026 = 36234
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemAllowed0xeabe7d91, gas 1824506 - 1789089 = 35417
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemVerify0x51dff989, gas 1804600 - 1775837 = 28763
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+1804600 - 1775837 = 28763 > 28099
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1790179 - 1755197 = 34982
+For the func redeemAllowed0xeabe7d91, gas 1744427 - 1710261 = 34166
+For the func redeemVerify0x51dff989, gas 1724521 - 1697009 = 27512
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1710100 - 1676369 = 33731
+For the func redeemAllowed0xeabe7d91, gas 1664346 - 1631432 = 32914
+For the func redeemVerify0x51dff989, gas 1644440 - 1618180 = 26260
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1630020 - 1597540 = 32480
+For the func redeemAllowed0xeabe7d91, gas 1584265 - 1552602 = 31663
+For the func redeemVerify0x51dff989, gas 1564359 - 1539350 = 25009
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1549939 - 1518710 = 31229
+For the func redeemAllowed0xeabe7d91, gas 1504185 - 1473773 = 30412
+For the func redeemVerify0x51dff989, gas 1484279 - 1460521 = 23758
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1469858 - 1439881 = 29977
+For the func redeemAllowed0xeabe7d91, gas 1424105 - 1394944 = 29161
+For the func redeemVerify0x51dff989, gas 1404199 - 1381692 = 22507
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1389779 - 1361053 = 28726
+For the func redeemAllowed0xeabe7d91, gas 1344024 - 1316115 = 27909
+For the func redeemVerify0x51dff989, gas 1324118 - 1302863 = 21255
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1309698 - 1282223 = 27475
+For the func redeemAllowed0xeabe7d91, gas 1263944 - 1237286 = 26658
+For the func redeemVerify0x51dff989, gas 1244038 - 1224034 = 20004
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1229617 - 1203393 = 26224
+For the func redeemAllowed0xeabe7d91, gas 1183863 - 1158456 = 25407
+For the func redeemVerify0x51dff989, gas 1163957 - 1145204 = 18753
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1149537 - 1124565 = 24972
+For the func redeemAllowed0xeabe7d91, gas 1103782 - 1079626 = 24156
+For the func redeemVerify0x51dff989, gas 1083877 - 1066375 = 17502
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mintAllowed0x4ef4c3e1, gas 1069456 - 1045735 = 23721
+For the func redeemAllowed0xeabe7d91, gas 1023702 - 1000798 = 22904
+For the func redeemVerify0x51dff989, gas 1003796 - 987546 = 16250
+For the func repayBorrowAllowed0x24008a62, gas 302443 - 284685 = 17758
+For the func redeemAllowed0xeabe7d91, gas 170519 - 158946 = 11573
+For the func redeemVerify0x51dff989, gas 148648 - 145759 = 2889
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	3	
+5 sampled FPs for require(gasStart <= constant)
+0xb95bedc9aca18f14d46d8b4dd7dce4bcd100f3275179a43d817048fbba105531
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x9003626c66b52c61bddb469e26872cdb2bf990e2d0afd95056591bf20527df3b
+0x9f683fbc813dd9b3b4ee5cc28a463b5bb92d33c728ddfbd511f70e8c54e0f7c0
+0x373a1ba48cd01cbacd88849518fb4351b40d438e125951feb2b9ba83124ac47f
+len(txList3):  294
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  OnyxDAO  contract:  0xf3354d3e288ce599988e23f9ad814ec1b004d74a
+total transactions:  82
+total:  82
+no access for tx:  0x2efc8e354e6c2130a89263f3bdb5938d049bbd1fcc8f8fc38e437bf92d8fb4ac
+no access for tx:  0x18d45636f5c9c9a8bf8935fd3dfd75eb85dcd28005b4921404b61a3e4f822e52
+no access for tx:  0x94c41a478e7ca0747c80f9f15792233400b9de011aa2f7903e99f8e6a8a37416
+no access for tx:  0x98c43d58cbd7c7e94eeaa331e0a2f764d39b873661e5d9a2f4703959b9b82324
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0xbce2e42d17d9ddb91abafea4cda9896248b4f09a6bfc75dbee2f2b11f6f1f0db
+no access for tx:  0xd4c6d57e54bf320c03cd6791f397a3d409698118317fab3e686248dc60474f92
+no access for tx:  0x06d3e79d14c6d45830bf1266ee1a6047fafafd12704a79b0fb33ba29993d0e21
+no access for tx:  0x8d6c5bfc836011e677d4600520ff3ac62b9d59d8caaea0b1e0c010a7a550e840
+no access for tx:  0x4cf0d1d86be175bc5cc8e92d549f2a4fa63648dbc0a4d2f9bfdfb31257ea264c
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0xc8cd34656b3daf62815e2b66c1a0040f6211c530478800f892d214d07923ca68
+no access for tx:  0xbe5c4c0d9ad72cc7409a1a878f7d931b54225d01fc0bb5ce76c162a21fbf9c1d
+no access for tx:  0x6defdaa593b70f5e4a40c05e8ec88f0b6f5d96db9b2985243aed03fd725dbf12
+no access for tx:  0x7fa6ee6f2f856283d34ccf3e78586219b05b8c4e58a0ad2d942baa8cf797b224
+no access for tx:  0x4415d608a9ea2f53e075d9c194d4a9de1040eaa9cd8af3b183497cce075744bd
+no access for tx:  0x8332d4fbd1ddca5fbff2e8ff0daad18e3aaf1865f48879020e1b4007ec9e0366
+no access for tx:  0xac0dca97f2ecd9a56b673a74e8b0e6e98d57996a950475d94fe8dc8b9908f3c0
+no access for tx:  0xfa323648acbf517d7e47cec686f356b3594eddd7e44828eff971d0ab0e759d3a
+no access for tx:  0xc355b18bda504a592347abbcca705da45c7bb4a1e4fd1c62c76f204d0b699984
+no access for tx:  0x4d9a7a7107ceff7a7202a1e03cf20cbf5933a0ab6d068b9296b7651c4418442a
+no access for tx:  0x81d383573633dcb6e2d73c7ba73b6c26d705fc46fa755a6ed63f7afef9307ddc
+no access for tx:  0x901458ac5365a8a1c309fafaf76bf5a6972345335d93e0db1c2ecc011dac3bab
+no access for tx:  0x084ade0811fdec1c2b5b3491918a52239ed042e68d757e4f324dac3b6e51ba5d
+no access for tx:  0xcd1c3ec6d172859195e50620b2b5b6b1f71ba0f36d6f65f2325d43c7a60fcec2
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0xd40ac7ac785222c049df233206a0ae6b51afa5fd',
+                                           '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0xd40ac7ac785222c049df233206a0ae6b51afa5fd',
+                                           '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c'],
+                      'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginOwner': '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                        'isSenderOwner': '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                        'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		57	25
+5 sampled FPs for require(origin==sender)
+len(txList3):  82
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 724425,
+                        'require(gasStart <= constant)': 1086177},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 196271,
+                      'require(gasStart <= constant)': 307111},
+  'redeem0xdb006a75': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 8251473 - 7639040 = 612433
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  14
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{ 'callvalue': {},
+  'dataFlow': { 'borrow_withdraw': { 2813: [ ( 'msg.data',
+                                               4,
+                                               36,
+                                               4200000000000000000000,
+                                               2813),
+                                             ( 4200000000000000000000,
+                                               20000000000000000000000)]}},
+  'mapping': {}}
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['dataFlowUpperBound']
+0		59	23
+5 sampled FPs for dataFlowUpperBound
+now works on benchmark:  OnyxDAO  contract:  0x7a89e16cc48432917c948437ac1441b78d133a16
+total transactions:  82
+total:  82
+no access for tx:  0xc70e17d79e26fe31d74617dfd1dfaf40551784ca8976ce61734a2c7ef76501f7
+no access for tx:  0x01f3e4e3a77159f4e9de0abdc0dd1027b4bff4d689035025517c159d71d22c8b
+no access for tx:  0x4acdba632cb8930e9881f8b57373188292f72cb91cac5ed3863fa15c745d0e42
+no access for tx:  0x6a4629b67115bba8fe6ba836979139f7318468397cd41ee34b95940b1e8dee2a
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0x2656c9cf9e4c030c6fd44ab89396727aff07c82b963de77c8f804ad7ed604f7d
+no access for tx:  0x3bcc8c4efbdb95073e9277358a654f50774081f4340cbadde20d271368829d46
+no access for tx:  0x8117d37258cb60d268415cfeb700936cddd3a83d9255e4bcd81f832b0c388c92
+no access for tx:  0xb0e3ec88815b88bc0fb42c10035419ad6c7adfa07b9e6efb88c92bf91cf0d17c
+no access for tx:  0xb12a6a0ade8dbb4808d5263c93a3713f75c1743edec494edf0035d298ce98269
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0x0c3e2b47244cbe357db573cb23a1daa8086df57da7fe1a97a718e3354758137a
+no access for tx:  0xfc1d3c2b5b2797c12f4fb02c52fa1e03f253cc2fdb53c0c855dc3c3c837a5ece
+no access for tx:  0xfa97dc4083a3b332a446b95d31a5f337cccf950c81df61252e2371c3974a7bb5
+no access for tx:  0x1edbdc27ea10745594bddab2832397f4b50e156b8cf094e84ab951a53d36b68f
+no access for tx:  0xc6af076d7961d8f20e5d0217d3311b126ce3388a21bc62886d35875552a83b51
+no access for tx:  0xba9b38cd42e74e410764391e72ead5cca5003ec1c46ade8c9165cec13251ff7e
+no access for tx:  0xedea672cfa335b04cbb9c5ec4f1483028b81ea15e7a5cbc3dd71519b66586492
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9'],
+                      'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginOwner': '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9',
+                        'isSenderOwner': '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9',
+                        'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		57	25
+5 sampled FPs for require(origin==sender)
+len(txList3):  82
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 725627,
+                        'require(gasStart <= constant)': 1094979},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 206008,
+                      'require(gasStart <= constant)': 321568},
+  'redeem0xdb006a75': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 7738462 - 7141966 = 596496
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  15
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  OnyxDAO  contract:  0x2c6650126b6e0749f977d280c98415ed05894711
+total transactions:  98
+total:  98
+no access for tx:  0xf979312effd7254b5f3723fe4d07a4bd2671f9568a28821b52584c4a582fc11f
+no access for tx:  0x747910e301be5935b35981ffac878eaf3b34f52b00ab8289892277fe5b7d7c25
+no access for tx:  0x5e64a7f16361dcb79a17467d2d467d88fba0f3485b31231888047d7647efbbbc
+no access for tx:  0x59af639b580aa50eea304cb99d8f974c0ad71e7079106cff0b0070588a3f5a45
+no access for tx:  0x713e8a44ea450ba7c37b3c934ec365453cffbe652f119f8461cb62c682fdba01
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0x406ef0fdd66b2e3cb3b1fd02f8923153a794307b8ad63a6a655add63ee69b6b5
+no access for tx:  0xeb596dd0b3a820c7cf8c994f7e4f05093dbf752e165b52492f0151b8f7bc7ed4
+no access for tx:  0xa3a9a286f4ac9575fef818d564b43a9e5aa9f3d96db1242b66b51363e373c9f4
+no access for tx:  0xd30de97bc3d6d4355881c9e143b4f736984402e3f75314048abda94c517926fc
+no access for tx:  0x19fff7e3358864e057c932239079f2385db6cec24dcbee42bf845b59941d91e4
+no access for tx:  0x525d23fe61c5daf399e58aa2863ec2a66843e6d48b2fde6eff939b178317d5db
+no access for tx:  0x5ee710aae7d8a939806ff89e87f9c4d2979b94b182b4d9f747eb08f6015a5f15
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0x318fa8b5e32eb0354fe56f6268cc2f0a407daae882800f4c60eab66bd9dc1f61
+no access for tx:  0x208ba2f68442fe992c39aa1ddd0e1f76c3d4a5e619595dac6ddf8c8dddf9a018
+no access for tx:  0x6b45e0654625e8f1149df951d03d7c6723ed0f97b4ec95fd95be6d1d837fb88e
+no access for tx:  0xd3ad75d3bb0c335c1f0e74ea9355d9ace6ee891d8f61d91a35c1e61f53f432a6
+no access for tx:  0x741f70d84403243ea88eff8deaae93aa3976672c9b33010f9039a70998a52af9
+no access for tx:  0x09a50de0b3a79a71ebeb74cd3768f7df327ebb36d4b6176a91be121ffd63e8d2
+no access for tx:  0x1579a590e6fac4b232315741cdf6e44c5b91d9a2839369037e5b9f732b66b0b5
+no access for tx:  0x17f7db97e91362e8874351972ab840d48f082e39212faedf24cfc41c64706f84
+no access for tx:  0x3cf6010f0c88e3568096900b0e6e5cae480373de0ebec6935503aead17882d31
+no access for tx:  0xb8ee5277b326b931e2385facc5466f4e383b742b8493c2202f77ab8b66dfac06
+no access for tx:  0xef27035821723c768f4a3c64b22b40753ce7ef82165ae305584eae360a42393c
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func redeemUnderlying0x852a12e3 has only 1 sender
+func redeemUnderlying0x852a12e3 has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                             '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                             '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c',
+                                           '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c',
+                                           '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b'],
+                      'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                  'isSenderOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                  'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		68	30
+5 sampled FPs for require(origin==sender)
+len(txList3):  98
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 727562,
+                        'require(gasStart <= constant)': 1097859},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 208939,
+                      'require(gasStart <= constant)': 325935},
+  'redeemUnderlying0x852a12e3': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 7232397 - 6633435 = 598962
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  20
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  OnyxDAO  contract:  0xee894c051c402301bc19be46c231d2a8e38b0451
+total transactions:  76
+total:  76
+no access for tx:  0x7dfdfc9879fba2f1165b550d966c153ec0122ec50bfc7dddddafb56f3bd58132
+no access for tx:  0x2755be26d763bf0ba6243b8cd39db0162484e6149123c4984e22d92419941a8f
+no access for tx:  0xf52230b7a016d07c508912c7ac5864e87741108d8e47f61cb2201f3b232bda5e
+no access for tx:  0x210387cd739c8891218eb33daa0da9bf6442fae6a5568790fa27a98fc5d73c80
+no access for tx:  0x600d08bc93073527daf11a4ad6bb7391a5a2322272efa9481f39924cfda32479
+no access for tx:  0x0c2affb9f9cc83618093b32370d9ab10d96d7e4d35eb7f9f57e7e7b716b06f8c
+no access for tx:  0xae90f7062be4af1e2830d5355d8e71eeab527580db4e13f549f44ac50f4b1fdf
+no access for tx:  0xff1a6a5c309fb2c01d1c27e9f61b732b0617597928a0bfdee785a903beccdc3e
+no access for tx:  0x8f49ae688449ed6d8401f4ef902b59d08bb842f13bd2853c0109c6be0a33b80b
+no access for tx:  0x80f379f62527af139ba5bde967e55b0f4696aa0f212a7323a91893e6878e7308
+no access for tx:  0x81b437330147ca5e325f072efcfbf54e0fa16d44c585051aad946672459f9a06
+no access for tx:  0x2aaad10fb83a7b0dec86caf49e26aea7e3bd9467b61ea3aec48c94be23d5813a
+no access for tx:  0x1c591c48653a0efa9ab257428b086f0a2fb012291abd55eb682d5f0b6e2a4ebe
+no access for tx:  0x0f6f4548261dbabd60c6de8f0b24615cff6e99cbe7e7e9d3027679b7ce846f26
+no access for tx:  0x4a98a69893cbf2f1172de76628ffb58c88dac2d40ac78ffcb896ee6650302751
+no access for tx:  0x5d0b8a61c9690bb89119c0c0635416da4a9a4018183b63970c937936e8f550e3
+no access for tx:  0xea680f441aa61e2ae9e4eb89bee4ccb6ac6654463028f0a889e2d253ac0d1407
+no access for tx:  0x079248c096e7f060f380a534da87132c89df393acd1a5bbb324e44bbd538d161
+no access for tx:  0x60ac2929c4ae61497fc2e6809af4fef58f1d75c83158c2ffd65de39c297a33b7
+no access for tx:  0x7a05a54f696f36c00b8c5302c2e688fdf643aebc2076a8d3c925c8a57ea240d5
+no access for tx:  0x750377da2b4065e6fd435125c4fb0649f9d5fb275146d965dc5be47125ffd0e9
+no access for tx:  0x5002280365c1ee15f1e77b9feec0a4dfb36c73c23fb004e3c5dcb8ddc2f83760
+no access for tx:  0x81d383573633dcb6e2d73c7ba73b6c26d705fc46fa755a6ed63f7afef9307ddc
+no access for tx:  0x901458ac5365a8a1c309fafaf76bf5a6972345335d93e0db1c2ecc011dac3bab
+no access for tx:  0x084ade0811fdec1c2b5b3491918a52239ed042e68d757e4f324dac3b6e51ba5d
+no access for tx:  0xcd1c3ec6d172859195e50620b2b5b6b1f71ba0f36d6f65f2325d43c7a60fcec2
+no access for tx:  0x0f1525705e5a3c4cee215fa3bf57cbaa9096bd32a3c188237f46890978e391ba
+no access for tx:  0xfa0891bc229c6b566f4d7a6ef00516bbb0a237dc2b498f98c9dc88876a761494
+no access for tx:  0x9de8ad8e8519900bd7902ecbb8b42c568b88e6c4f4c81b67f42641013d6f04e2
+no access for tx:  0x66b6b42b8e6c198762ac4aa29c1a962fc6bb68c7ab09cf9b702047b248d68563
+no access for tx:  0xc8965c63279691f9e484dae050b12b3fb39273de56dcb58ec176899406dfdae4
+no access for tx:  0x9d23ddb215be39d65aba4a46803cdb8de736a059bee573540de3d2e71eca524f
+no access for tx:  0x69a4a46e95b12a424433ab4a5f4971e8b2221d8a426e03bff09751279dc0cd70
+no access for tx:  0x7c9b1d6a3a0f085d776828d25ca5f213618294f461030f5815cdd0d1b1d07b73
+no access for tx:  0x91c0717ec0cee12ca481f736b718c88b36c47767dbeb3da14cbf15a2c782eb49
+no access for tx:  0x483f9af9ee9a2779fc14bc1ade3213822f275df6a16d1de73c6bf18373061eda
+no access for tx:  0xd013392af359d88dc63bd2a46518ba56f28c71d2e7aaa7c9ed869e93e54a7e0c
+no access for tx:  0xb95bedc9aca18f14d46d8b4dd7dce4bcd100f3275179a43d817048fbba105531
+no access for tx:  0xe86367c82b7feae00ce384d1a2479cd7597b8aad648a9a872d9a418ede28ccfb
+no access for tx:  0xa2421462be14f787403e3bf417c108054291ae24732c793408e357c580901db4
+no access for tx:  0x444ae66a469dbbe57f8b13e8a477b0ebb0797e7c9f8eeb23c87ffb7b03668c74
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func mint0xa0712d68 has more than 5 senders
+func mint0xa0712d68 has more than 5 origins
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                       'isSenderOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                  'isSenderOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                   'isSenderOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                             '0x3546502606e0e9b70636cce43e1844288c6d44aa'],
+                        'isSenderManager': [ '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                             '0x3546502606e0e9b70636cce43e1844288c6d44aa'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                            'isSenderOwner': '0x4e1266c7a132dded71c9a4ee74f4ca79c75c125d',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': {'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		53	23
+5 sampled FPs for require(origin==sender)
+len(txList3):  76
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 361960,
+                        'require(gasStart <= constant)': 555067},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 212915,
+                      'require(gasStart <= constant)': 333216}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 6420089 - 5851682 = 568407
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+6420089 - 5851682 = 568407 > 361960
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  33
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{ 'callvalue': {},
+  'dataFlow': { 'borrow_withdraw': { 2813: [ ( 'msg.data',
+                                               4,
+                                               36,
+                                               820293609,
+                                               2813),
+                                             (820293609, 9500000000000)]}},
+  'mapping': {}}
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['dataFlowUpperBound']
+0		55	21
+5 sampled FPs for dataFlowUpperBound
+now works on benchmark:  Auctus  contract:  0xe7597f774fd0a15a617894dc39d45a28b97afa4f
+total transactions:  80
+total:  80
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Auctus: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Auctus: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark Auctus: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  Audius  contract:  0x4deca517d6817b6510798b7328f2314d3003abac
+total transactions:  905
+total:  905
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark Audius: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  Audius  contract:  0xe6d97b2099f142513be7a2a068be040656ae4591
+total transactions:  13707
+total:  13707
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark Audius: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  Audius  contract:  0x4d7968ebfd390d5e7926cb3587c39eff2f9fb225
+total transactions:  7110
+total:  7110
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Audius: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark Audius: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  BaconProtocol  contract:  0xb8919522331c59f5c16bdfaa6a121a6e03a91f62
+total transactions:  1167
+total:  1167
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark BaconProtocol: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark BaconProtocol: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark BaconProtocol: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MetaSwap  contract:  0x824dcd7b044d60df2e89b1bb888e66d8bcf41491
+total transactions:  677
+total:  677
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MetaSwap: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MetaSwap  contract:  0xacb83e0633d6605c5001e2ab59ef3c745547c8c7
+total transactions:  14291
+total:  14291
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MetaSwap: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MetaSwap  contract:  0x5f86558387293b6009d7896A61fcc86C17808D62
+total transactions:  4696
+total:  4696
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MetaSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MetaSwap: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MonoXFi  contract:  0x2920f7d6134f4669343e70122ca9b8f19ef8fa5d
+total transactions:  146
+total:  146
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MonoXFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MonoXFi  contract:  0xc36a7887786389405ea8da0b87602ae3902b88a1
+total transactions:  1293
+total:  1293
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MonoXFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MonoXFi  contract:  0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4
+total transactions:  861
+total:  861
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MonoXFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  MonoXFi  contract:  0x532d7ebe4556216490c9d03460214b58e4933454
+total transactions:  217
+total:  217
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark MonoXFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark MonoXFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  NowSwap  contract:  0x9536a78440f72f5e9612949f1848fe5e9d4934cc
+total transactions:  2433
+total:  2433
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark NowSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark NowSwap: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark NowSwap: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  OmniNFT  contract:  0x218615c78104e16b5f17764d35b905b638fe4a92
+total transactions:  23
+total:  23
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OmniNFT: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OmniNFT: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OmniNFT: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  OmniNFT  contract:  0xebe72cdafebc1abf26517dd64b28762df77912a9
+total transactions:  129
+total:  129
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OmniNFT: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OmniNFT: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OmniNFT: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  PopsicleFi  contract:  0xc4ff55a4329f84f9bf0f5619998ab570481ebb48
+total transactions:  971
+total:  971
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PopsicleFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  PopsicleFi  contract:  0xd63b340f6e9cccf0c997c83c8d036fa53b113546
+total transactions:  2194
+total:  2194
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PopsicleFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  PopsicleFi  contract:  0xb53dc33bb39efe6e9db36d7ef290d6679facbec7
+total transactions:  307
+total:  307
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PopsicleFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  PopsicleFi  contract:  0x6f3f35a268b3af45331471eabf3f9881b601f5aa
+total transactions:  335
+total:  335
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PopsicleFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+now works on benchmark:  PopsicleFi  contract:  0xdd90112eaf865e4e0030000803ebbb4d84f14617
+total transactions:  163
+total:  163
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PopsicleFi: 
+==invariant map: 
+{}
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PopsicleFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

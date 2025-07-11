@@ -171,10 +171,10 @@ def reformatExecutionTable(executionTable: list):
         newExecutionTable.append( (contract, new_executionList) )
     return newExecutionTable
 
-
 def mainTestIndividual():
-    mainDoughFina2()
-
+    # mainDoughFina2()
+    # mainBlueberryProtocol1()
+    mainUwULend1()
 
 def mainDoughFina1():
     benchmark = "DoughFina"
@@ -212,8 +212,6 @@ def mainDoughFina2():
     # print(DataSourceMapList)
     # print(accessList)
     # print(splitedTraceTree)
-
-
 
 def mainBedrock_DeFi1():
     benchmark = "Bedrock_DeFi"
@@ -265,9 +263,6 @@ def mainGFOX1():
     # print(accessList)
     # print(splitedTraceTree)
 
-
-
-
 def mainGFOX2():
     benchmark = "GFOX"
     contract = "0x8f1cece048cade6b8a05dfa2f90ee4025f4f2662"
@@ -289,7 +284,7 @@ def mainBlueberryProtocol1():
     exitFunction = []
     exploitTx = "0xf0464b01d962f714eee9d4392b2494524d0e10ce3eb3723873afd1346b8b06e4"
     mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
-
+    
 def mainBlueberryProtocol2():
     benchmark = "BlueberryProtocol"
     contract = "0x643d448cea0d3616f0b32e3718f563b164e7edd2"
@@ -376,6 +371,12 @@ def mainUwULend1():
     exitFunction = ["borrow", "withdraw"]
     exploitTx = "0x242a0fb4fde9de0dc2fd42e8db743cbc197ffa2bf6a036ba0bba303df296408b"
     mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
 
 def mainPrismaFi1():
     benchmark = "PrismaFi"
@@ -522,12 +523,469 @@ def mainOnyxDAO7():
 
 
 
-    
+
+def mainAuctus():
+    benchmark = "Auctus"
+    contract = "0xe7597f774fd0a15a617894dc39d45a28b97afa4f"
+    l1 = [
+        locator("write", FUNCTION, fromAddr="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
+                name="transferFrom", position=2),
+    ]
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x2e7d7e7a6eb157b98974c8687fbd848d0158d37edc1302ea08ee5ddb376befea"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+def mainAudius1():
+    benchmark = "Audius"
+    contract = "0x4deca517d6817b6510798b7328f2314d3003abac"
+    # 0x35dd16dfa4ea1522c29ddd087e8f076cad0ae5e8
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainAudius2():
+    benchmark = "Audius"
+    contract = "0xe6d97b2099f142513be7a2a068be040656ae4591"
+    # 0xea10fd3536fce6a5d40d55c790b96df33b26702f
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainAudius3():
+    benchmark = "Audius"
+    contract = "0x4d7968ebfd390d5e7926cb3587c39eff2f9fb225"
+    # 0xf24aeab628493f82742db68596b532ab8a141057
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainBaconProtocol():
+    benchmark = "BaconProtocol"
+    contract = "0xb8919522331c59f5c16bdfaa6a121a6e03a91f62"
+    l1 = [
+        locator("lend", FUNCTION, fromAddr="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
+                name="transferFrom", position=2),
+    ]
+    l2 = []
+    l3 = [
+        locator("redeem", FUNCTION, fromAddr="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
+                name="transfer", position=1),
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x7d2296bcb936aa5e2397ddf8ccba59f54a178c3901666b49291d880369dbcf31"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainMetaSwap1():
+    benchmark = "MetaSwap"
+    contract = "0x824dcd7b044d60df2e89b1bb888e66d8bcf41491"
+    # 0x88cc4aa0dd6cf126b00c012dda9f6f4fd9388b17
+    l1 = [
+        locator("swap", FUNCTION, fromAddr="0x57ab1ec28d129707052df4df418d58a2d46d5f51", \
+                name="transferFrom,", position=1),
+        locator("swap", FUNCTION, fromAddr="0x5f86558387293b6009d7896a61fcc86c17808d62", \
+                name="transferFrom,", position=1),
+        locator("swap", FUNCTION, fromAddr="", \
+                name="transferFrom,", position=1),
+        locator("swap", FUNCTION, fromAddr="", \
+                name="transferFrom,", position=1),     
+    ]
+    l2 = []
+    l3 = [
+        locator("swap", FUNCTION, fromAddr="0x5f86558387293b6009d7896a61fcc86c17808d62", \
+                name="transfer", position=1),
+        locator("swap", FUNCTION, fromAddr="0x57ab1ec28d129707052df4df418d58a2d46d5f51", \
+                name="transfer", position=1),
+        locator("swap", FUNCTION, fromAddr="", \
+                name="transfer", position=1),
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x2b023d65485c4bb68d781960c2196588d03b871dc9eb1c054f596b7ca6f7da56"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainMetaSwap2():
+    benchmark = "MetaSwap"
+    contract = "0xacb83e0633d6605c5001e2ab59ef3c745547c8c7"
+    # 0xc68bf77e33f1df59d8247dd564da4c8c81519db6
+    l1 = [
+        locator("removeLiquidity", FUNCTION, fromAddr="0x5f86558387293b6009d7896a61fcc86c17808d62", \
+                name="burnFrom", position=1),
+    ]
+    l2 = []
+    l3 = [
+        locator("removeLiquidity", FUNCTION, fromAddr="0x6b175474e89094c44da98b954eedeac495271d0f", \
+                name="transfer", position=1),
+        locator("removeLiquidity", FUNCTION, fromAddr="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", \
+                name="transfer", position=1),
+        locator("removeLiquidity", FUNCTION, fromAddr="0xdac17f958d2ee523a2206206994597c13d831ec7", \
+                name="transfer", position=1),
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x2b023d65485c4bb68d781960c2196588d03b871dc9eb1c054f596b7ca6f7da56"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainMetaSwap3():
+    benchmark = "MetaSwap"
+    contract = "0x5f86558387293b6009d7896A61fcc86C17808D62"
+    # 0x59f5a371df7d2a01863cbb011a5a1ed45326710c
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x2b023d65485c4bb68d781960c2196588d03b871dc9eb1c054f596b7ca6f7da56"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainMonoXFi1():
+    benchmark = "MonoXFi"
+    contract = "0x2920f7d6134f4669343e70122ca9b8f19ef8fa5d"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x9f14d093a2349de08f02fc0fb018dadb449351d0cdb7d0738ff69cc6fef5f299"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainMonoXFi2():
+    benchmark = "MonoXFi"
+    contract = "0xc36a7887786389405ea8da0b87602ae3902b88a1"
+    # 0x66e7d7839333f502df355f5bd87aea24bac2ee63
+    l1 = [
+        locator("swapExactTokenForToken", FUNCTION, fromAddr="0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", \
+                name="transferFrom", position=2),
+        locator("addLiquidity", FUNCTION, fromAddr="0x2920f7d6134f4669343e70122ca9b8f19ef8fa5d", \
+                name="transferFrom", position=2),
+    ]
+    l2 = []
+    l3 = [
+        locator("swapExactTokenForToken", FUNCTION, fromAddr="0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4", \
+                name="safeTransferERC20Token", position=2),
+        locator("removeLiquidity", FUNCTION, fromAddr="0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4", \
+                name="safeTransferERC20Token", position=2),
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x9f14d093a2349de08f02fc0fb018dadb449351d0cdb7d0738ff69cc6fef5f299"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+def mainMonoXFi3():
+    benchmark = "MonoXFi"
+    contract = "0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4"
+    # 0x7164be9fd69f2e1de9b6b75b17e1b86268f18b45
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x9f14d093a2349de08f02fc0fb018dadb449351d0cdb7d0738ff69cc6fef5f299"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainMonoXFi4():
+    benchmark = "MonoXFi"
+    contract = "0x532d7ebe4556216490c9d03460214b58e4933454"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x9f14d093a2349de08f02fc0fb018dadb449351d0cdb7d0738ff69cc6fef5f299"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainNowSwap():
+    benchmark = "NowSwap"
+    contract = "0x9536a78440f72f5e9612949f1848fe5e9d4934cc"
+    l1 = []
+    l2 = []
+    l3 = [
+        locator("swap", FUNCTION, fromAddr="0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", \
+                name="transfer", position=1),
+        locator("swap", FUNCTION, fromAddr="0xdac17f958d2ee523a2206206994597c13d831ec7", \
+                name="transfer", position=1),
+
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xf3158a7ea59586c5570f5532c22e2582ee9adba2408eabe61622595197c50713"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainOmniNFT1():
+    benchmark = "OmniNFT"
+    contract = "0x218615c78104e16b5f17764d35b905b638fe4a92"
+    # 0x4e21f48add00e579b774cdad1656c6625c280381
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x264e16f4862d182a6a0b74977df28a85747b6f237b5e229c9a5bbacdf499ccb4"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainOmniNFT2():
+    benchmark = "OmniNFT"
+    contract = "0xebe72cdafebc1abf26517dd64b28762df77912a9"
+    # 0x50c7a557d408a5f5a7fdbe1091831728ae7eba45
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0x264e16f4862d182a6a0b74977df28a85747b6f237b5e229c9a5bbacdf499ccb4"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainPopsicleFi1():
+    benchmark = "PopsicleFi"
+    contract = "0xc4ff55a4329f84f9bf0f5619998ab570481ebb48"
+    l1 = [
+
+    ]
+    l2 = []
+    l3 = [
+        locator("withdraw", FUNCTION, fromAddr="0x4e68ccd3e89f51c3074ca5072bbac773960dfa36", \
+                name="collect", position=3),
+    ]
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainPopsicleFi2():
+    benchmark = "PopsicleFi"
+    contract = "0xd63b340f6e9cccf0c997c83c8d036fa53b113546"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+def mainPopsicleFi3():
+    benchmark = "PopsicleFi"
+    contract = "0xb53dc33bb39efe6e9db36d7ef290d6679facbec7"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+
+
+def mainPopsicleFi4():
+    benchmark = "PopsicleFi"
+    contract = "0x6f3f35a268b3af45331471eabf3f9881b601f5aa"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainPopsicleFi5():
+    benchmark = "PopsicleFi"
+    contract = "0xdd90112eaf865e4e0030000803ebbb4d84f14617"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+def mainPopsicleFi6():
+    benchmark = "PopsicleFi"
+    contract = "0xe22eacac57a1adfa38dca1100ef17654e91efd35"
+    l1 = []
+    l2 = []
+    l3 = []
+    enterFunction = []
+    exitFunction = []
+    exploitTx = "0xcd7dae143a4c0223349c16237ce4cd7696b1638d116a72755231ede872ab70fc"
+    mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
+    # SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))    
+    # path = SCRIPT_DIR + "/newBenchmarks/" + benchmark + "/Txs/" + exploitTx + ".json.gz"
+    # DataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, exploitTx, path, l1, l2, l3)        
+    # print(DataSourceMapList)
+    # print(accessList)
+    # print(splitedTraceTree)
+
+
+
+
+
+
+
+
 # For invariant OB, we need to mark enter function and exit function, 
 # For invariant DFU, don't need to do any thing
-
-
-
 
 def mainTest():
     benchmark = "Punk_1"
@@ -552,11 +1010,9 @@ def mainTest():
     mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFunction, exitFunction)
 
 
-
 #  0x9d373e78a0ad96b50cb8c51b44cc76406c06f467c321c3fc8136e444c8d1a1f2
-
 # recollect 
-def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFuncs, useCache = False, reCollect = False):
+def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFuncs, useCache = False, reCollect = True):
     print("now works on benchmark: ", benchmark, " contract: ", contract)
     
     # Step 1: Collect transactions
@@ -609,21 +1065,30 @@ def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFun
         for ii in range(len(txHashes)):
             if readAccessList(contract, txHashes[ii]) != []:
                 continue
-            print("now finish: ", ii, " total: ", len(txHashes))
+            # print("now finish: ", ii, " total: ", len(txHashes))
             if txHashes[ii] is None:
                 continue
             
             if reCollect:
-                if txHashes[ii] == "0x9d373e78a0ad96b50cb8c51b44cc76406c06f467c321c3fc8136e444c8d1a1f2":
+                if txHashes[ii] == "0x9d373e78a0ad96b50cb8c51b44cc76406c06f467c321c3fc8136e444c8d1a1f2" or \
+                    txHashes[ii] == "0x28492fdcffa1882462d7e670cbee6e33b7f65ad45fbc0b81906bc2d31674c8a8" or \
+                    txHashes[ii] == "0xb648fb50749a32b293d8cd8dad7ec52b1e3df889643c84a69e53413899c4a0de" or \
+                    txHashes[ii] == "0x64a134c3255212609482a294223501365b6e643ff321b895f0eb15fd32c6ad2e" or \
+                    txHashes[ii] == "0xc05619a3ea4de1d8bd7f98dc24b3e44b24242aab09dec21996ff8cadae932eb6" or \
+                    txHashes[ii] == "0x4a4862539fa57f1b55760bd69c5d48dd331093959307547a8d63fb85a56e99b7" or \
+                    txHashes[ii] == "0x893b6746027bd7270bd9b858fe3b55221fcd8610d9086641330e789146e80b5d":
                     continue 
-                # try:
-                dataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, txHashes[ii], pathList[ii], l1, l2, l3)        
-                writeDataSource(contract, txHashes[ii], dataSourceMapList)
-                writeAccessList(contract, txHashes[ii], accessList)
-                writeSplitedTraceTree(contract, txHashes[ii], splitedTraceTree)
-                # except Exception as e:
-                #     print(e, file=sys.stderr)
-                #     print("Some error happened when analyzing tx: {} path: {}".format(txHashes[ii], pathList[ii]), file=sys.stderr)
+                    
+                print("now finish: ", ii, " total: ", len(txHashes), " tx: ", txHashes[ii])
+                
+                try:
+                    dataSourceMapList, accessList, splitedTraceTree = analyzeOneTx(contract, txHashes[ii], pathList[ii], l1, l2, l3)        
+                    writeDataSource(contract, txHashes[ii], dataSourceMapList)
+                    writeAccessList(contract, txHashes[ii], accessList)
+                    writeSplitedTraceTree(contract, txHashes[ii], splitedTraceTree)
+                except Exception as e:
+                    print(e, file=sys.stderr)
+                    print("Some error happened when analyzing tx: {} path: {}".format(txHashes[ii], pathList[ii]), file=sys.stderr)
 
             # if ii > 1170:
             #     return
@@ -662,11 +1127,12 @@ def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFun
             pickle.dump(accesslistTable, f)
 
 
-    # # Invariant Category 1: Access Control
-    # print("=====================================================")
-    # print("=============== Access Control ======================")
-    # print("=====================================================")
-    # inferAccessControl(accesslistTable, len(txHashes))
+    # Invariant Category 1: Access Control
+    print("=====================================================")
+    print("=============== Access Control ======================")
+    print("=====================================================")
+    inferAccessControl(accesslistTable, len(txHashes))
+
 
     # Invariant Category 2: Time Locks
     print("=====================================================")
@@ -679,11 +1145,12 @@ def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFun
     else:
         inferTimeLocks(accesslistTable, enterFuncs, exitFuncs, len(txHashes))
 
-    # # Invariant Category 3: Gas Control
-    # print("=====================================================")
-    # print("=================== Gas Control =====================")
-    # print("=====================================================")
-    # inferGasControl(accesslistTable, len(txHashes))
+
+    # Invariant Category 3: Gas Control
+    print("=====================================================")
+    print("=================== Gas Control =====================")
+    print("=====================================================")
+    inferGasControl(accesslistTable, len(txHashes))
 
 
     executionListTable = reformatExecutionTable(executionListTable)
@@ -700,6 +1167,14 @@ def mainContract(benchmark, contract, l1, l2, l3, exploitTx, enterFuncs, exitFun
 
 if __name__ == '__main__':
     # mainTestIndividual()
+    # mainPrismaFi1()
+    # mainPrismaFi2()
+    # mainPrismaFi3()
+
+    # mainPrismaFi1()
+    # mainOnyxDAO3()
+    # mainPrismaFi3()
+
 
     # # # read an argument from command line to specify the benchmark
     # if len(sys.argv) != 2:
@@ -713,39 +1188,59 @@ if __name__ == '__main__':
     # mainDoughFina2()  # does not support implementation of implementation of a proxy
 
     # mainBedrock_DeFi1()
-    mainBedrock_DeFi2()
+    # mainBedrock_DeFi2()
 
-    mainGFOX1()
-    mainGFOX2()
+    # mainGFOX1()
+    # mainGFOX2()
 
-    mainBlueberryProtocol1()
-    mainBlueberryProtocol2()
-    mainBlueberryProtocol3()
-    mainBlueberryProtocol4()
-    mainBlueberryProtocol5()
+    # mainBlueberryProtocol1()
+    # mainBlueberryProtocol2()
+    # mainBlueberryProtocol3()
+    # mainBlueberryProtocol4()
+    # mainBlueberryProtocol5()
 
-    mainUwULend1()
+    # mainUwULend1()
 
-    mainPrismaFi1()
-    mainPrismaFi2()
-    mainPrismaFi3()
+    # mainPrismaFi1()
+    # mainPrismaFi2()
+    # mainPrismaFi3()
 
-    # cProfile.run('mainPikeFinance()', sort='cumtime')
+    # # cProfile.run('mainPikeFinance()', sort='cumtime')
 
-    mainPikeFinance()
+    # mainPikeFinance()
 
-    mainOnyxDAO1()
-    mainOnyxDAO2()
-    mainOnyxDAO3()
-    mainOnyxDAO4()
-    mainOnyxDAO5()
-    mainOnyxDAO6()
-    mainOnyxDAO7()
+    # mainOnyxDAO1()
+    # mainOnyxDAO2()
+    # mainOnyxDAO4()
+    # mainOnyxDAO5()
+    # mainOnyxDAO6()
+    # mainOnyxDAO7()
 
     
-
     # # mainTest()
     # # mainTestTime()
+
+    # For major revision
+    # mainAuctus()
+    # mainAudius1()
+    # mainAudius2()
+    # mainAudius3()
+    # mainBaconProtocol()
+    # mainMetaSwap1()
+    # mainMetaSwap2()
+    # mainMetaSwap3()
+    # mainMonoXFi1()
+    mainMonoXFi2() # has some problems. 
+    mainMonoXFi3()
+    mainMonoXFi4()
+    mainNowSwap()
+    mainOmniNFT1()
+    mainOmniNFT2()
+    mainPopsicleFi1()
+    mainPopsicleFi2()
+    mainPopsicleFi3()
+    mainPopsicleFi4()
+    mainPopsicleFi5()   
 
 
 

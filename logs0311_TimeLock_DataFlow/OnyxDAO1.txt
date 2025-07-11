@@ -1,0 +1,448 @@
+benchmark:  OnyxDAO1
+now works on benchmark:  OnyxDAO  contract:  0x2ccb7d00a9e10d0c3408b5eefb67011abfacb075
+total transactions:  156
+total:  156
+no access for tx:  0x4a72a8f2673ce0512e30a940d64ac9375ba7456eb36a949ac0dd5c85bbd8b1d2
+no access for tx:  0x99e8bdd1c0fee381cf9069fb304b47f1efc3ced7759fb87d799d87395f9a7d39
+no access for tx:  0x7563307b6925761e6a0e9031ef312be59f354b02743a244f7ebf9b2c8b81c61d
+no access for tx:  0xb7923d76c72319b2db22a041fe375c9e75cd47b99c9d3930f2f07c51d5b2226a
+no access for tx:  0xf016a0b33fabdecb8e0b69840a6104a21efd0a8bf4aae3ebacf7601fa61c6cc1
+no access for tx:  0x42fa02291f5de638f2d2ef37f130ab4a4048764d4ecf09796b66d72d872b7fb4
+no access for tx:  0x030ccf73bbc2e3c98ad1b8aa7a263c13e51b8c4461152efa403cff887a3d5f2f
+no access for tx:  0x45742e41415d0d7d637da3be816dd9e7d99aab47a8ddb7cccdc775711dcaa9d3
+no access for tx:  0xc48db1b34f724364211a2b756f4c51ddb1bf12f698823b920549dbf9de2806a4
+no access for tx:  0xe263554e3dceff3a34779e0809c78945672d37b7ba06a520b8877ba2b8953245
+no access for tx:  0x86fc02771d20f19fe7948df7d71df094bcffd0e8568e015bc6a0baa01d3cb6e5
+no access for tx:  0x76cae5d2e42c6b37ddda0062ab5b054021b4f5aa03668df9ff15368a1544d203
+no access for tx:  0xbfe4564de990073e001073ed543ba80b140d27e2c7d71054b0f38983b81755f6
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x0e02bd184e309f35fd6c5bac55d42233e8121d958ed19ccca1825fb4ad1bc31b
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0xc6eac3ac7de8597a5f9f5e40265829e7b8ae6399a7bc61fd4003d1caa4319840
+no access for tx:  0x57d98898767e9cb25962a0a5c59f3db51a4d6535f2af1e8eaa8a23535e4a3409
+no access for tx:  0xd4e3d2c1fe47758174bd7d85d81131d7038a1e700ca1fb32ee17b2ba5a0c53a6
+no access for tx:  0xdc2e5f65896db30f5c6d50d9d9900b7e02d19a58c520d6d72df0bc9ee77ec471
+no access for tx:  0xc8d132b3f4773eb5628ab8544f246f5cc2ecf98ca0216d49dcb26cb43fb3842f
+no access for tx:  0x190a5ceaa585f083a3056595477a05aaf9a656581807cdab6a37db33242c10a2
+no access for tx:  0xc4577b45fa4415fb8decf4a6b16d92db9fcc30b951b47e59c5cb290d507688b5
+no access for tx:  0xbece9187b2316ae35b6a274f98b5fc3abcb51c1cf11b8e2e16cfe59ebed6b721
+no access for tx:  0xe232607b42a0450c43a5c9b4f8bcb276dcc63ecb462f2f762dccc1b29baf0814
+no access for tx:  0xb0144c2f1d89befd53212d06d090f699d6ab17592f824027ffbfd6afe70194bf
+no access for tx:  0x2cce8903e0859a8a0a4a7d3cfa4d069e4d2c123ca2ee023b2b73e32e878873fd
+no access for tx:  0x3449de8aeab6292865db1e94756b130f205d7fc6fffd20b8649762e92584bb04
+no access for tx:  0x98485f43c7363668b89fef296263fb580769ed855e20baf0cec5f524345820b2
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func mint0x1249c58b has more than 5 senders
+func mint0x1249c58b has more than 5 origins
+func borrow0xc5ebeaec has more than 5 senders
+func borrow0xc5ebeaec has more than 5 origins
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func borrowBalanceCurrent0x17bfdfbc has only 1 sender
+func repayBorrowBehalf0xe5974619 has only 1 sender
+func repayBorrow0x4e4d9fea has only 1 sender
+func repayBorrow0x4e4d9fea has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': {'require(origin==sender)': True},
+  'borrowBalanceCurrent0x17bfdfbc': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                                           '0xf4e607c9b0d20e8cb4823ff66d54ab0f7ac21067'],
+                                      'isSenderOwner': '0xff42a051129a1313f5c907539630238e0c9c233b',
+                                      'require(origin==sender)': False},
+  'constructor': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                   'require(origin==sender)': True},
+  'mint0x1249c58b': {'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                             '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                        'isSenderManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                             '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                        'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginManager': [ '0x5fa42ba82aeb347db601c61a998bba2725e3f3ca',
+                                                       '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                                                       '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                                       '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                                  'isSenderManager': [ '0x5fa42ba82aeb347db601c61a998bba2725e3f3ca',
+                                                       '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                                                       '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                                       '0x8cdf129ac91eb6feadb16777203f3cca82f2337f'],
+                                  'require(origin==sender)': True},
+  'repayBorrow0x4e4d9fea': { 'isOriginOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                             'isSenderOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                             'require(origin==sender)': True},
+  'repayBorrowBehalf0xe5974619': { 'isOriginManager': [ '0x897358804e2986effa2d8534128c34f65285f7f5',
+                                                        '0xf4e607c9b0d20e8cb4823ff66d54ab0f7ac21067'],
+                                   'isSenderOwner': '0xff42a051129a1313f5c907539630238e0c9c233b',
+                                   'require(origin==sender)': False}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		109	47
+5 sampled FPs for require(origin==sender)
+len(txList3):  156
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+no gas
+0x119814062f85854706aa45c5532759e56fd61e6e63c2748c8b4cca2fd4e61ff0
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 686871,
+                        'require(gasStart <= constant)': 1037101},
+  'borrowBalanceCurrent0x17bfdfbc': { 'require(gasStart - gasEnd <= constant)': 55020,
+                                      'require(gasStart <= constant)': 224521},
+  'mint0x1249c58b': { 'require(gasStart - gasEnd <= constant)': 154961,
+                      'require(gasStart <= constant)': 246123},
+  'redeem0xdb006a75': { 'require(gasStart - gasEnd <= constant)': 249275,
+                        'require(gasStart <= constant)': 251398},
+  'redeemUnderlying0x852a12e3': { 'require(gasStart - gasEnd <= constant)': 249827,
+                                  'require(gasStart <= constant)': 323009},
+  'repayBorrow0x4e4d9fea': { 'require(gasStart - gasEnd <= constant)': 118802,
+                             'require(gasStart <= constant)': 192906},
+  'repayBorrowBehalf0xe5974619': { 'require(gasStart - gasEnd <= constant)': 82119,
+                                   'require(gasStart <= constant)': 172626}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mint0x1249c58b, gas 10499703 - 10190963 = 308740
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+10499703 - 10190963 = 308740 > 154961
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 9805163 - 8761937 = 1043226
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+9805163 - 8761937 = 1043226 > 686871
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5529538 - 5411592 = 117946
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5444897 - 5330274 = 114623
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5362256 - 5248924 = 113332
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5279615 - 5167574 = 112041
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5196974 - 5086224 = 110750
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5114332 - 5004874 = 109458
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 5031691 - 4923524 = 108167
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4949050 - 4842174 = 106876
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4866408 - 4760823 = 105585
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4783767 - 4679474 = 104293
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4701126 - 4598124 = 103002
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4618484 - 4516773 = 101711
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4535843 - 4435424 = 100419
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4453201 - 4354073 = 99128
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4370560 - 4272723 = 97837
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4287918 - 4191372 = 96546
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4205276 - 4110022 = 95254
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4122635 - 4028672 = 93963
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 4039993 - 3947321 = 92672
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3957351 - 3865970 = 91381
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3874709 - 3784620 = 90089
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3792068 - 3703270 = 88798
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3709426 - 3621919 = 87507
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3626784 - 3540569 = 86215
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3544142 - 3459218 = 84924
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3461500 - 3377867 = 83633
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3378858 - 3296516 = 82342
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3296216 - 3215166 = 81050
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3213574 - 3133815 = 79759
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3130932 - 3052464 = 78468
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 3048290 - 2971114 = 77176
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2965648 - 2889763 = 75885
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2883005 - 2808411 = 74594
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2800363 - 2727060 = 73303
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2717721 - 2645710 = 72011
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2635079 - 2564359 = 70720
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2552436 - 2483007 = 69429
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2469794 - 2401657 = 68137
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2387151 - 2320305 = 66846
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2304509 - 2238954 = 65555
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2221866 - 2157602 = 64264
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2139224 - 2076252 = 62972
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 2056581 - 1994900 = 61681
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1973939 - 1913549 = 60390
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1891296 - 1832198 = 59098
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1808654 - 1750847 = 57807
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1726011 - 1669495 = 56516
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1643368 - 1588143 = 55225
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1560725 - 1506792 = 53933
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1478083 - 1425441 = 52642
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1395440 - 1344089 = 51351
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1312797 - 1262738 = 50059
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1230154 - 1181386 = 48768
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1147511 - 1100034 = 47477
+Successfully stops the exploit using require(gasStart <= constant)
+For the func redeemUnderlying0x852a12e3, gas 1064868 - 1018682 = 46186
+For the func redeem0xdb006a75, gas 183828 - 149961 = 33867
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+2	2	
+5 sampled FPs for require(gasStart <= constant)
+0x9003626c66b52c61bddb469e26872cdb2bf990e2d0afd95056591bf20527df3b
+0x2821a24842d9426f72ec2f275d602ce7b572e5e7bc0951599e62a563aa0b14f8
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x9003626c66b52c61bddb469e26872cdb2bf990e2d0afd95056591bf20527df3b
+0x2821a24842d9426f72ec2f275d602ce7b572e5e7bc0951599e62a563aa0b14f8
+len(txList3):  66
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{'mint_deposit': [250000000000000000, 10000000000000000, 250000000000000000, 200000000000000000, 3400000000000000000, 4500000000000000000, 20000000000000000, 11196161184466766, 11111111111112222, 55555834946896498, 4000000000000000, 14000000000000000, 1420000000000000000, 1420000000000000000, 700000000000000000, 20095337120592585, 19028210774390942, 16137502820909317, 8525988719155862, 19288029080272485, 8855989084367817, 500000000000000000, 20000000000000000000, 20000000000000000000, 11442424000000000, 17520995145092479, 108560632136992216, 100000000000000000]}
+==invariant map: 
+{ 'callvalue': {'mint_deposit': (4000000000000000, 20000000000000000000)},
+  'dataFlow': { 'borrow_withdraw': { 2493: [ ( 'msg.data',
+                                               4,
+                                               36,
+                                               200000000000000000,
+                                               2493),
+                                             ( 6401058870016492,
+                                               3755500000000000000)]}},
+  'mapping': {}}
+Successfully stops the exploit using callvalue
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['dataFlowUpperBound']
+0		111	45
+5 sampled FPs for dataFlowUpperBound

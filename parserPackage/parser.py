@@ -75,7 +75,7 @@ class VmtraceParser:
 
         if isDelegate:
             return self.msgSenderStack[-1]
-        elif not self.isDelegateCallStack[-1]:
+        elif len(self.isDelegateCallStack) > 1 and not self.isDelegateCallStack[-1]:
             return self.contractAddressStack[-1]
         else:
             for jj in range(len(self.isDelegateCallStack) - 1, -1, -1):
@@ -863,9 +863,10 @@ class VmtraceParser:
             # check if matches the pattern of RETURN
             if structLogs[ii]["op"] == "RETURN":
                 # self.printIndentContent("Function Returns with something(RETURN)")
-                self.printIndentContentLogging("Currently Leaving from a contract(RETURN)", self.contractAddressStack[-1])
-                calldata = self.calldataStack[-1]["calldata"]
-                self.printIndentContentLogging("callData = ", calldata)
+                if len(self.contractAddressStack) > 0:
+                    self.printIndentContentLogging("Currently Leaving from a contract(RETURN)", self.contractAddressStack[-1])
+                    calldata = self.calldataStack[-1]["calldata"]
+                    self.printIndentContentLogging("callData = ", calldata)
                 if self.logging > 0:
                     metaTraceTree.updateInfo({"structLogsEnd": ii}, self.logging)
                     gasEnd = structLogs[ii]["gas"]
@@ -910,20 +911,25 @@ class VmtraceParser:
                                                     "Decoded calldata types": Ctypes, \
                                                     "Decoded calldata": Cdecoded}, self.logging)
                         
-
-                funcSelector = self.funcSelectorStack.pop()
-                self.contractAddressStack.pop()
-                self.msgSenderStack.pop()
-                self.isDelegateCallStack.pop()
-                self.calldataStack.pop()
+                if len(self.funcSelectorStack) > 0:
+                    funcSelector = self.funcSelectorStack.pop()
+                if len(self.contractAddressStack) > 0:
+                    self.contractAddressStack.pop()
+                if len(self.msgSenderStack) > 0:
+                    self.msgSenderStack.pop()
+                if len(self.isDelegateCallStack) > 0:
+                    self.isDelegateCallStack.pop()
+                if len(self.calldataStack) > 0:
+                    self.calldataStack.pop()
                 
                 self.decrementLogging()
 
             elif structLogs[ii]["op"] == "STOP":
                 # self.printIndentContent("Function Returns with nothing(STOP)")
-                self.printIndentContentLogging("Currently Leaving from a contract(STOP)", self.contractAddressStack[-1])
-                calldata = self.calldataStack[-1]["calldata"]
-                self.printIndentContentLogging("callData = ", calldata)
+                if len(self.contractAddressStack) > 0:
+                    self.printIndentContentLogging("Currently Leaving from a contract(STOP)", self.contractAddressStack[-1])
+                    calldata = self.calldataStack[-1]["calldata"]
+                    self.printIndentContentLogging("callData = ", calldata)
 
                 if self.logging > 0:
                     try:
@@ -952,12 +958,17 @@ class VmtraceParser:
                     except IndexError:
                         # potentially it's a call to fallback function
                         pass
-               
-                funcSelector = self.funcSelectorStack.pop()
-                self.contractAddressStack.pop()
-                self.msgSenderStack.pop()
-                self.isDelegateCallStack.pop()
-                self.calldataStack.pop()
+                        
+                if len(self.funcSelectorStack) > 0:
+                    funcSelector = self.funcSelectorStack.pop()
+                if len(self.contractAddressStack) > 0:
+                    self.contractAddressStack.pop()
+                if len(self.msgSenderStack) > 0:
+                    self.msgSenderStack.pop()
+                if len(self.isDelegateCallStack) > 0:
+                    self.isDelegateCallStack.pop()
+                if len(self.calldataStack) > 0:
+                    self.calldataStack.pop()
                 self.decrementLogging()
 
             elif structLogs[ii]["op"] == "REVERT":
@@ -1122,7 +1133,7 @@ class VmtraceParser:
             elif structLogs[ii]["op"] == "CALLDATASIZE":
                 size = structLogs[ii + 1]["stack"][-1]
                 self.printIndentContentLogging("msg.data.size -> {} bytes".format(size))
-                if "calldatasize" not in self.calldataStack[-1]:
+                if len(self.calldataStack) > 0 and  "calldatasize" not in self.calldataStack[-1]:
                     self.calldataStack[-1]["calldatasize"] = size
                     
 
@@ -1162,15 +1173,18 @@ class VmtraceParser:
                 # print("calldata[{}] -> {}".format(index, value))
                 # self.printIndentContentLogging("calldata[{}] -> {}".format(index, value))
                 
+                oldCalldata = ""
+                if len(self.calldataStack) > 1 and "calldata" in self.calldataStack[-1]:
+                    oldCalldata = self.calldataStack[-1]["calldata"]
 
-                oldCalldata = self.calldataStack[-1]["calldata"]
                 calldataSizeInt = -1
-                if "calldatasize" in self.calldataStack[-1]:
+                if len(self.calldataStack) >  1 and "calldatasize" in self.calldataStack[-1]:
                     calldataSize = self.calldataStack[-1]["calldatasize"]
                     calldataSizeInt = int(calldataSize, 16)
                 newCalldata = self.decoder.getCalldataHex(oldCalldata, calldataSizeInt, index, value)
 
-                self.calldataStack[-1]["calldata"] = newCalldata
+                if len(self.calldataStack) > 0:
+                    self.calldataStack[-1]["calldata"] = newCalldata
                 
                 
                 # print("Old method: ", self.calldataStack[-1]["calldata"])
@@ -1602,6 +1616,27 @@ proxyMap = {
 
 
 
+    # Audius:
+    "0x4deca517d6817b6510798b7328f2314d3003abac": "0x35dd16dfa4ea1522c29ddd087e8f076cad0ae5e8",
+    "0xe6d97b2099f142513be7a2a068be040656ae4591": "0xea10fd3536fce6a5d40d55c790b96df33b26702f",
+    "0x4d7968ebfd390d5e7926cb3587c39eff2f9fb225": "0xf24aeab628493f82742db68596b532ab8a141057",
+    # MetaSwap:
+    "0x824dcd7b044d60df2e89b1bb888e66d8bcf41491": "0x88cc4aa0dd6cf126b00c012dda9f6f4fd9388b17",
+    "0xacb83e0633d6605c5001e2ab59ef3c745547c8c7": "0xc68bf77e33f1df59d8247dd564da4c8c81519db6",
+    # "0xc68bf77e33f1df59d8247dd564da4c8c81519db6": "0x2069043d7556b1207a505eb459d18d908df29b55",
+    "0x5f86558387293b6009d7896A61fcc86C17808D62": "0x59f5a371df7d2a01863cbb011a5a1ed45326710c",
+
+    # MonoXFi:
+    "0xc36a7887786389405ea8da0b87602ae3902b88a1": "0x66e7d7839333f502df355f5bd87aea24bac2ee63",
+    "0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4": "0x7164be9fd69f2e1de9b6b75b17e1b86268f18b45",
+
+    # OmniNFT:
+    "0xebe72cdafebc1abf26517dd64b28762df77912a9": "0x50c7a557d408a5f5a7fdbe1091831728ae7eba45",
+
+
+
+
+
 }
 
 NOPRINT = True
@@ -1622,7 +1657,9 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
     if path.endswith(".json"):
         trace = readJson(path)
     elif path.endswith(".gz"):
+        print(path)
         trace = readCompressedJson(path)
+        
 
     targetFuncs = []
     for ilocator in (depositLocators + investLocators + withdrawLocators):
@@ -1665,7 +1702,7 @@ def analyzeOneTx(contract, Tx, path, depositLocators, investLocators, withdrawLo
     for traceTree in splitedTraceTree:
         # if traceTree.info["name"] == "exchange" :
         #     print("now is the time")
-        if traceTree.info["name"] == "fallback" and traceTree.info["Selector"] != "0x":
+        if "name" in traceTree.info and traceTree.info["name"] == "fallback" and traceTree.info["Selector"] != "0x":
             funcSigMap = a.contract2funcSigMap(contract)
             traceTree.info["name"] = funcSigMap[traceTree.info["Selector"].lower()][0]
         

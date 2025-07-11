@@ -77,6 +77,9 @@ class CrawlEtherscan:
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
         response = requests.get(GETrequest).json()
         receiptJson = response["result"]
+        if "Max calls per sec rate limit reached" in receiptJson:
+            return self.Contract2Sourcecode(contractAddress)
+        
         if isinstance(receiptJson, list) and len(receiptJson) == 1:
             receiptJson = receiptJson[0]
         _save_contract(receiptJson, self.cur, contractAddress, self.conn)
@@ -96,6 +99,10 @@ class CrawlEtherscan:
         if response['result'] == 'Contract source code not verified':
             self.ABIMap[contractAddress] = {}
             return {}
+        if response['status'] == '0' and response['message'] == 'NOTOK' and \
+            "Max calls per sec rate limit reached" in response['result']:
+            return self.Contract2ABI(contractAddress)
+        
         result = json.loads(response['result'])
         self.ABIMap[contractAddress] = result
         return result
@@ -242,8 +249,9 @@ class CrawlEtherscan:
             self.cacheDeployer[contractAddress] = None
             save_object(self.cacheDeployer, "cacheDeployer")
             return None
-        elif response['status'] == '0' and response['message'] == 'NOTOK' and response['result'] == "Max rate limit reached":
-            time.sleep(1)
+        elif response['status'] == '0' and response['message'] == 'NOTOK' and "Max calls per sec rate limit reache" in response['result']:
+            # time.sleep(1)
+            print("Max calls per sec rate limit reached, retrying..., tx = ", contractAddress)
             return self.Contract2DeployTx(contractAddress)
         else:
             # print(response)
@@ -266,16 +274,23 @@ class CrawlEtherscan:
             '&contractaddresses={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
         response = requests.get(GETrequest).json()
+
+        if response['status'] == '0' and "Max calls per sec rate " in response['result']:
+            # time.sleep(1)
+            print("Max calls per sec rate limit reached, retrying..., contract = ", contractAddress)
+            return self.Contract2DeployTx(contractAddress)
+        
         
         if response['status'] == '0' and response['message'] == 'No data found':
             self.cacheDeployTx[contractAddress] = None
             save_object(self.cacheDeployTx, "cacheDeployTx")
             return None
-        elif response['status'] == '0' and response['message'] == 'NOTOK' and response['result'] == "Max rate limit reached":
-            time.sleep(1)
+        elif response['status'] == '0' and response['message'] == 'NOTOK' and "Max calls per sec rate limit reached" in response['result']:
+            # time.sleep(1)
+            print("Max calls per sec rate limit reached, retrying..., contract = ", contractAddress)
             return self.Contract2DeployTx(contractAddress)
         else:
-            # print(response)
+            print(response)
             self.cacheDeployTx[contractAddress] = response['result'][0]['txHash']
             save_object(self.cacheDeployTx, "cacheDeployTx")
             return response['result'][0]['txHash']
@@ -306,8 +321,8 @@ class CrawlEtherscan:
             '&txhash={}'\
             '&apikey={}'.format(Tx, self.getEtherScanAPIkey())
         response = requests.get(GETrequest).json()
-        if "result" not in response or response["result"] == "Max rate limit reached":
-            time.sleep(1)
+        if "result" not in response or "Max calls per sec rate limit reached" in response["result"]:
+            # time.sleep(1)
             print("rate limit reached")
             print("Tx:", Tx)
             if Tx == "":
@@ -336,8 +351,8 @@ class CrawlEtherscan:
             '&apikey={}'.format(Tx, self.getEtherScanAPIkey())
         response = requests.get(GETrequest).json()
         receiptJson = response["result"]
-        if receiptJson == "Max rate limit reached":
-            time.sleep(1)
+        if "Max calls per sec rate limit reached" in receiptJson:
+            # time.sleep(1)
             return self.Tx2Receipt2(Tx)
 
         receiptStored["input"] = receiptJson["input"]

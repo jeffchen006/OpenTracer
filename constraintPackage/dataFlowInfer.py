@@ -170,8 +170,14 @@ def readValuePCTypeFromSource(source, metaData, ABI):
             #     print(source)
 
         elif source[1] == "SLOAD":
-            # remove padding zeros for source[2]
-            source = (source[0], source[1], removePaddingZeros(source[2]), source[3])
+
+            if len(source) == 4:
+                source = (source[0], source[1], removePaddingZeros(source[2]), source[3])
+            elif len(source) == 5:
+                source = (source[0], source[1], removePaddingZeros(source[2]), source[3], source[4])
+
+
+            
 
             # todo storage mapping
             value = int(source[-2], 16)
@@ -182,6 +188,13 @@ def readValuePCTypeFromSource(source, metaData, ABI):
 
             if len(source[2]) > 7: 
                 type = "unknown(toDebug)"
+
+            # MonoXFi
+            if source[0] == "0x66e7d7839333f502df355f5bd87aea24bac2ee63":
+                if source[2] == "0x6e":
+                    type = "uint256"  
+                elif source[2] == "0x67":
+                    type = "uint256"
             
             # bZx2
             if source[0] == "0x85ca13d8496b2d22d6518faeb524911e096dd7e0":
@@ -1043,6 +1056,10 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs, txCount, trainTxList, 
 
             else:
                 for source in sources:
+                    if len(source) == 5 and source[1] == "SLOAD" and source[2] == "0x000000000000000000000000000000000000000000000000000000000000006e" and \
+                             source[3] == "0x59653e37f8c491c3be36e5dd4d503ca32b5ab2f4" and source[4] == 16792:
+                        print("now it's the time")
+
                     value, pc, type, dataType = readValuePCTypeFromSource(source, metaData, ABI)
                     
                     if value == None and pc == None:
@@ -1062,7 +1079,7 @@ def inferDataFlows(executionTable, enterFuncs, exitFuncs, txCount, trainTxList, 
                                 if tx not in FPMap["callvalue"]:
                                     FPMap["callvalue"].append(tx)
                     else:
-
+                        # print(source)
                         if "int" in type:
                             if name in invariantMap["dataFlow"] and \
                                     pc in invariantMap["dataFlow"][name]:

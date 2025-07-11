@@ -1,0 +1,144 @@
+benchmark:  PrismaFi2
+now works on benchmark:  PrismaFi  contract:  0xcc7218100da61441905e0c327749972e3cbee9ee
+total transactions:  162
+total:  162
+no access for tx:  0x7d740ce425f534f74c6182e740bebac1d7f73a90ae45809001d77f17936fe8e3
+no access for tx:  0x40d9813fec5052e91cae4299879760b76730aedbaadf2f60e0a00a79253a6bcb
+no access for tx:  0xbb19b350567e2a4fbeec5acff18f3dcd31c48b3879e65f386dfdecfff8bd29f7
+no access for tx:  0xfd8eb29c915b70f9e1183372175dda7981b1c25f64073d95c03705e2ce6419e3
+no access for tx:  0xb336a22ba1e93b89d8211929e21013d3a31c7f7c7430581ad1584599dab3db07
+no access for tx:  0x989f727ed7fe80e1eca03f4d7de9a316426939129421d78ed79eec0f95e4c895
+no access for tx:  0x51b3d7a2931863518499f384b1e73bcdf2a90f3d4d8214c784fe858daffce793
+no access for tx:  0xa99eb6b333adc21ffaaf608a00baf83f2add03962a02c770a75da0e4c7f04158
+no access for tx:  0xad9fef7d38331eb7703f6f4dbe3f688b0a3f911a7e5c408a0f2b8eb5deda1786
+no access for tx:  0xefd8dfb8d7b50c01f785a83e2403ff247a8443a27ece25dd23c154b7550edb7e
+no access for tx:  0x4a34f98510553b7ed817a5ff845a9b1a8a016cb8eb108afc107625024fc028b4
+no access for tx:  0xd172c15242022531d152774fffc0de30e9a7e5d8828199322dc0ff054b263ee1
+no access for tx:  0x2f8f96a96663376a4cb7ac574c1c9832e1ea297358b088bb5c7c388703e7cadb
+no access for tx:  0xb01035080fa3305019f2631778c1f708be2764eefce4be37fd78b884e8219e03
+no access for tx:  0x5c974e13724be24d6b525bf26cb0da2c87c50d3f4f4ea063bdd670ad97b55bde
+no access for tx:  0xdbf1b01bcba23dcb05f28c4649ee59c19fae77b56ef1ef16a7522b5943a79ca6
+no access for tx:  0xe4276adefc2b6477ad6899e1c136d9b6b4dca97ff9bf0dffe110b9a194dabbb0
+no access for tx:  0xf8b962befa69a3a9290037603d02a83539423fd8585aeb4cebf7b62a64708898
+no access for tx:  0x84dfc5ba3571a2e3b60df4bc29bf4ce4626c0b8e553d181a78ca7a75fc6fbeae
+no access for tx:  0x30997a054add015f00f145d9b9e98eea671298c2661a0041aab5f9cea46e6a4d
+no access for tx:  0xa6c880a2baae61137f46fd55a13ff7f2812fe2d6653837e3d153e55c49c3d894
+no access for tx:  0x5dc585b732f85030ceedc18d1292dcb0f5fb900bfc386daece778e5b02ea8851
+no access for tx:  0x8e2e1d2ec8028694ebe129a56add983798d30bc46b747c599ee6d712d82f3c37
+no access for tx:  0x9fb3e5298a3c9191b25bf65b04e3166e99eecb9282f52b2e460c50db7900e166
+no access for tx:  0xe29e5694adbebbb120b7d26814cd2cb2393f644675d7ee1e51af80a3057f2c21
+no access for tx:  0x50098636bb7e022fb6f2556438780f39b6efdcb3dcd89c4ecbfa8774e52750ee
+no access for tx:  0xf4861db1e555f1ba4e4d7a9365d42dd88347bd5de57972bfc083eb61a4c4e059
+no access for tx:  0x468190fd61d86fdbd556772f9919f3de53f5e63deb4408ff77fede20ce4e3871
+no access for tx:  0x003b6653cfe0993b53e0e75b0b2d5fe0fa2ce56522b7f40659d71171f4641432
+no access for tx:  0xed0498d6c3359148be9596c4e9559355884fa9dc9a7e4c893fd73cb35b0cd320
+no access for tx:  0x0e1f6cd9c2dadd1f812d6c554ec1e54353eab785676a8eaf4b17fc865f78cb9c
+no access for tx:  0x0cf0b8ea47a4de8c8e8bbe9970df65f6e26cdba3e1c93cdfa80a67ce56c684a1
+no access for tx:  0x553d8a5d72223a325f2780295feded4e310e1749ca2eb9769e80651ce3188617
+no access for tx:  0x389828bcc6b947a5d4f8c0a6c593489764ffaf7e54642d993719dd7ee6e92539
+no access for tx:  0x1a6d192fb30675c85762c37d4ed3af91ecf8b340b6789e878e6186a153832df6
+no access for tx:  0x62644a35977889d043db20240198f8963d3b8f38e40eaabbd859e7756145115a
+no access for tx:  0x4a9accaed60eee7deb614c77fd64925625f342040e259700cb8bb4b64e6c60f6
+no access for tx:  0x7677d41e5710b5418b2fc189e3cd6628854585ef6993db75888b493ec5b5ecbd
+no access for tx:  0x26403dab8be5fb8603c631ef34585097b98633c1269d98973b93b226ac50d581
+no access for tx:  0x68e887f468a1f805aa9f3c45687b82c205bf400f6298a19c6042174464cd6f52
+no access for tx:  0x6fb61d1c4f474b3ab8eb90da4d3db731d021e9b2aef3e9768fb7c3b94ee84976
+no access for tx:  0x6fd75e6f6ad0a739e7a43663010364e90830477281e1476b27d5ef6bc853b3d5
+no access for tx:  0x285cf51936f230e8dbfccb263fbb449a009000613a4fafe7354b4f7e0f27d6c6
+no access for tx:  0xa525ac5d5b6e1aec5a816733a9025a2f8071724d3a089a77d674352d63b43562
+no access for tx:  0x1f362ec20b34f3d26c48d7629cd255bd57e7136219255b26fba5b37b22006e1e
+no access for tx:  0xbfcd4829d7ad6ca6c4215e149fe2267dd824eebea7edde988f716120d34c2bf1
+no access for tx:  0xbc47b58d331df16d9e83376444aa1eed21678d9afbdc70468fcb213a539c559b
+no access for tx:  0xa4068e0751a1b32e49fce67f59ec2273421c0890fe0c7f8f90a5807361695acd
+no access for tx:  0xf261a9a515aff54bd6245aec9166223b1713911e4ad5951b7bc90ca06fa5c373
+no access for tx:  0x6d85f9004ca7cf43038ce83d18b251ead78e87a416a011aa225010f6e3584660
+no access for tx:  0xd05944ad6651c1a41376a62909681e41e6a7417fe4dc6878f8ac1128d8f1f70a
+no access for tx:  0x4d55d07e37359a2cc685bb0d55ca47afddd1af6a3e86eb9b76d4fac2eef3a840
+no access for tx:  0x579f1b47d24fc197e57a6ed559d155afc2c743325b6a435ded33a5011106d0a8
+no access for tx:  0x470146fcaffa529c2d731717360cdada3ea344e70d2609186810481997ff62a4
+no access for tx:  0xb592d496d1124fd95dd4a4a0e9fb641a3367e36f9c2e0eebc0e03381721e1a99
+no access for tx:  0x598e09b8adc8fc15ee8121b07bd7f26f890e578bac86595f2dc6f3a98e1f0517
+no access for tx:  0x13eea337567fe70fa1141875fc9886199a6ed5fcbc21d69d0e6edf0d1e6707a0
+no access for tx:  0xead46d65a4e4fb126057d891dc85eea1b4c49191c6e0d88c1381afcca7dd526a
+no access for tx:  0xec199e0ff7e322388f52a12d115c1f5d5b0c96858da6ab52bce6b37b0bdfa56b
+no access for tx:  0x655d0e2fd371c99c0eab725dad369d210097362b9ad510209942e6d4a99b753e
+no access for tx:  0x8e308c60105aae99f259710c5fa1139eec3c16beda0a60e13e153e9368d38e0e
+no access for tx:  0xc68f12e47bd97d0c16fa4f38851eab149bdd88165d7b4bc8ebf8787f196f79af
+no access for tx:  0x90cbaa078342c937191aaa9c36895a16ce27fdfc690f933e5207273d461a3e37
+no access for tx:  0x3fd034d57d35bc6e2f753902e830c3be4dcc2155e5798fbeee727716d1fe0c46
+no access for tx:  0xcc74b089556331346bce2b723531435130701c97825749b234ea043a39ba03b8
+no access for tx:  0xf815ac078ea64f4b31679457469e52f3ca8be5a43f4f85b5e8b069851939ae63
+no access for tx:  0xfe260c272ff57bffffbf258a11461bcf7667bbfe9244b957a013f7fb71add019
+no access for tx:  0x1ab820963ba3dba53b20ce631e9a30ea7a38f70023e47dc580ceac2820041f1f
+no access for tx:  0xa53835a720aaaff1cc80c5e9566e92a7fff16feb91f087cc3edb2f6afe7d39bc
+no access for tx:  0xf90ac9780853de398dcaa73803d6c0a9d2845e86d94eb41e784119d819a76dc5
+no access for tx:  0x898ab714717db92ceefdb4499e855bbe48fc2393dc0468c5f45e52f900f11b9e
+no access for tx:  0x7f3583c96e841676e3330e4199096542464af893da38f136c4894a49202b0d03
+no access for tx:  0xcca61b3d9f04b208a8ef3a35f0657fd1d80da9e85ae7be73fde86dcc2d7cb15d
+no access for tx:  0x4bd369978ddcc077502f84b354745a1c82ea67c187c0c8e8217230750eff945a
+no access for tx:  0x500d19a8d81ebff3bbc493fb15a7ca8622003a2e6a36b3c9c1e15153ade73f9f
+no access for tx:  0x13f1ce5bd44621d1a546cce0b0cdcf1dda102f1fb0a02f9b35c23d0b7a6374fe
+no access for tx:  0x343c2819b95d5286f3d50c4eda822ac2d6b73356cd86cec1828450c247134496
+no access for tx:  0x9278cecee7696cc8457aebb56ff9cc24d6298c667dfcec3595ef1ef457b11341
+no access for tx:  0x70b97c0a77a8e211c510f64274903e4eb7ac52e5f39cd3a76f2ec3621338ab0a
+no access for tx:  0x9fc563cb475ffb807aaab635ee29f43694a0ea66ecb1d777956930b152df58f7
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark PrismaFi: 
+func constructor has only 1 sender
+func constructor has only 1 origin
+func migrateTrove0x85617d58 has more than 5 senders
+func migrateTrove0x85617d58 has more than 5 origins
+func onFlashLoan0x23e30c8b has only 1 sender
+func onFlashLoan0x23e30c8b has more than 5 origins
+==invariant map: 
+{ 'constructor': { 'isOriginOwner': '0xd8531a94100f15af7521a7b6e724ac4959e0a025',
+                   'isSenderOwner': '0xd8531a94100f15af7521a7b6e724ac4959e0a025',
+                   'require(origin==sender)': True},
+  'migrateTrove0x85617d58': {'require(origin==sender)': False},
+  'onFlashLoan0x23e30c8b': { 'isSenderOwner': '0x4591dbff62656e7859afe5e45f6f47d3669fbb28',
+                             'require(origin==sender)': False}}
+exploitTx:  0x00c503b595946bccaea3d58025b5f9b3726177bbdc9674e634244135282116c7
+FPMap: ['require(origin==sender)']
+0		113	49
+5 sampled FPs for require(origin==sender)
+len(txList3):  162
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark PrismaFi: 
+no gas
+0xc8d4059c4394812b142dc88a8a8534687bb8857c10f2093bffc9c44a90ee6f56
+==invariant map: 
+{ 'migrateTrove0x85617d58': { 'require(gasStart - gasEnd <= constant)': 1334455,
+                              'require(gasStart <= constant)': 2065522},
+  'onFlashLoan0x23e30c8b': { 'require(gasStart - gasEnd <= constant)': 1211047,
+                             'require(gasStart <= constant)': 1895742}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func onFlashLoan0x23e30c8b, gas 2530781 - 1197171 = 1333610
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2530781 - 1197171 = 1333610 > 1211047
+For the func onFlashLoan0x23e30c8b, gas 517585 - 129756 = 387829
+exploitTx:  0x00c503b595946bccaea3d58025b5f9b3726177bbdc9674e634244135282116c7
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+1	1	
+5 sampled FPs for require(gasStart <= constant)
+0x5c3efffbfc9896424f5fd2142e6cac179e6719a7c39c4536015e86942a1e684b
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x5c3efffbfc9896424f5fd2142e6cac179e6719a7c39c4536015e86942a1e684b
+len(txList3):  82
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark PrismaFi: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

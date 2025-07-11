@@ -65,9 +65,88 @@ no access for tx:  0xccfbb8a764862f3daf6bb49500dcf06eb11f946d01ed1a9f5ee9858d4d8
 no access for tx:  0xcf26fca43e969489977e3b13c22911362707f52c3010fda5b360a1b4977fad3e
 no access for tx:  0x6e388fca63aa79353ce2446012b90469add5ee234e86980c0789e1f1dc12111b
 =====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+func initialize0x485cc955 has only 1 sender
+func initialize0x485cc955 has only 1 origin
+func mint0x40c10f19 has only 1 sender
+func mint0x40c10f19 has more than 5 origins
+func grantRole0x2f2ff15d has only 1 sender
+func grantRole0x2f2ff15d has only 1 origin
+func revokeRole0xd547741f has only 1 sender
+func revokeRole0xd547741f has only 1 origin
+func approve0x095ea7b3 has more than 5 senders
+func approve0x095ea7b3 has more than 5 origins
+func transferFrom0x23b872dd has more than 5 senders
+func transferFrom0x23b872dd has more than 5 origins
+func transfer0xa9059cbb has more than 5 senders
+func transfer0xa9059cbb has more than 5 origins
+==invariant map: 
+{ 'approve0x095ea7b3': {'require(origin==sender)': False},
+  'grantRole0x2f2ff15d': { 'isOriginOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                           'isSenderOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                           'require(origin==sender)': True},
+  'initialize0x485cc955': { 'isOriginOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                            'isSenderOwner': '0x9251fd3d79522bb2243a58fff1db43e25a495aab',
+                            'require(origin==sender)': True},
+  'mint0x40c10f19': { 'isSenderOwner': '0x047d41f2544b7f63a8e991af2068a363d210d6da',
+                      'require(origin==sender)': False},
+  'revokeRole0xd547741f': { 'isOriginOwner': '0x09610d4239c8f3413509202dccc7e27c6b0a47a3',
+                            'isSenderOwner': '0xc9da980ffabbe2bbe15d4734fdae5761b86b5fc3',
+                            'require(origin==sender)': False},
+  'transfer0xa9059cbb': {'require(origin==sender)': False},
+  'transferFrom0x23b872dd': {'require(origin==sender)': False}}
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(origin==sender)']
+0		2426	1041
+5 sampled FPs for require(origin==sender)
+len(txList3):  3467
+=====================================================
 =================== Time Locks ======================
 =====================================================
 enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+==invariant map: 
+{ 'approve0x095ea7b3': { 'require(gasStart - gasEnd <= constant)': 43893,
+                         'require(gasStart <= constant)': 1224783},
+  'grantRole0x2f2ff15d': {},
+  'initialize0x485cc955': {},
+  'mint0x40c10f19': { 'require(gasStart - gasEnd <= constant)': 52512,
+                      'require(gasStart <= constant)': 1133649},
+  'revokeRole0xd547741f': {},
+  'transfer0xa9059cbb': { 'require(gasStart - gasEnd <= constant)': 42339,
+                          'require(gasStart <= constant)': 1259841},
+  'transferFrom0x23b872dd': { 'require(gasStart - gasEnd <= constant)': 59903,
+                              'require(gasStart <= constant)': 1354640}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func approve0x095ea7b3, gas 3333849 - 3254541 = 79308
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+3333849 - 3254541 = 79308 > 43893
+Successfully stops the exploit using require(gasStart <= constant)
+For the func mint0x40c10f19, gas 2976979 - 2898334 = 78645
+Successfully stops the exploit using require(gasStart - gasEnd <= constant)
+2976979 - 2898334 = 78645 > 52512
+For the func transferFrom0x23b872dd, gas 399578 - 386796 = 12782
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+9	11	
+5 sampled FPs for require(gasStart <= constant)
+0x9b7a9e87e72eb367220b399d71b9ec1f920de4d1d738f44d70e3b9def3c8e9ae
+0x4f09d21311a627fd935d11fbd185322887c8c8015aa9af13a8319db2e68ca2a2
+0xa744de31038c38f3f19c51e34eb13d848ddab753322e0ee9b491137702304f4a
+0xbbeb01a05f072d5468213ea4f36d058bfb32e36db1d438ebe80b9524ee6b061e
+0x5c74791db85e9e352076d650f0e6787717ca09decff9549a2f86c36704c829a2
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+0x5c74791db85e9e352076d650f0e6787717ca09decff9549a2f86c36704c829a2
+0x4f016973287250b373e6078d3166030ec646344edc61ad2675a1f220e8b150a4
+0xbbeb01a05f072d5468213ea4f36d058bfb32e36db1d438ebe80b9524ee6b061e
+0xb86c5cec1fd46a059b7e32103f84f9de70fcb49fecef821373c5e7df413bd4cb
+0x49fb49289f14701a3d2b7cd5e29d7ba9d1d056b446d276a43a56dc6761837e73
+len(txList3):  3312
 =====================================================
 =================== DataFlow ========================
 =====================================================

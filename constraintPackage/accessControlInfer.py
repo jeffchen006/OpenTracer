@@ -132,6 +132,9 @@ def inferAccessControl(accesslistTable, txCount):
                 sys.exit("access control infer: not one function call in a transaction")
 
             for funcCall in funcCallList[0]:
+                if funcCall["msg.sender"] is None:
+                    continue
+                
                 sender = funcCall["msg.sender"].lower()
                 name = ""
                 if "type" in funcCall and funcCall["type"] == "staticcall":
@@ -332,7 +335,9 @@ def inferAccessControl(accesslistTable, txCount):
                     
             else:
                 for funcCall in funcCallList[0]:
-                    sender = funcCall["msg.sender"].lower()
+                    # print(funcCall)
+                    # print(tx)
+                    sender = funcCall["msg.sender"].lower() if "msg.sender" in funcCall and funcCall["msg.sender"] is not None else None
                    # build name
                     name = ""
                     if "name" in funcCall:

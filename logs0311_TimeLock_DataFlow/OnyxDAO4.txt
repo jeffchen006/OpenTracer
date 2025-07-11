@@ -1,0 +1,136 @@
+benchmark:  OnyxDAO4
+now works on benchmark:  OnyxDAO  contract:  0xf3354d3e288ce599988e23f9ad814ec1b004d74a
+total transactions:  82
+total:  82
+no access for tx:  0x2efc8e354e6c2130a89263f3bdb5938d049bbd1fcc8f8fc38e437bf92d8fb4ac
+no access for tx:  0x18d45636f5c9c9a8bf8935fd3dfd75eb85dcd28005b4921404b61a3e4f822e52
+no access for tx:  0x94c41a478e7ca0747c80f9f15792233400b9de011aa2f7903e99f8e6a8a37416
+no access for tx:  0x98c43d58cbd7c7e94eeaa331e0a2f764d39b873661e5d9a2f4703959b9b82324
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0xbce2e42d17d9ddb91abafea4cda9896248b4f09a6bfc75dbee2f2b11f6f1f0db
+no access for tx:  0xd4c6d57e54bf320c03cd6791f397a3d409698118317fab3e686248dc60474f92
+no access for tx:  0x06d3e79d14c6d45830bf1266ee1a6047fafafd12704a79b0fb33ba29993d0e21
+no access for tx:  0x8d6c5bfc836011e677d4600520ff3ac62b9d59d8caaea0b1e0c010a7a550e840
+no access for tx:  0x4cf0d1d86be175bc5cc8e92d549f2a4fa63648dbc0a4d2f9bfdfb31257ea264c
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0xc8cd34656b3daf62815e2b66c1a0040f6211c530478800f892d214d07923ca68
+no access for tx:  0xbe5c4c0d9ad72cc7409a1a878f7d931b54225d01fc0bb5ce76c162a21fbf9c1d
+no access for tx:  0x6defdaa593b70f5e4a40c05e8ec88f0b6f5d96db9b2985243aed03fd725dbf12
+no access for tx:  0x7fa6ee6f2f856283d34ccf3e78586219b05b8c4e58a0ad2d942baa8cf797b224
+no access for tx:  0x4415d608a9ea2f53e075d9c194d4a9de1040eaa9cd8af3b183497cce075744bd
+no access for tx:  0x8332d4fbd1ddca5fbff2e8ff0daad18e3aaf1865f48879020e1b4007ec9e0366
+no access for tx:  0xac0dca97f2ecd9a56b673a74e8b0e6e98d57996a950475d94fe8dc8b9908f3c0
+no access for tx:  0xfa323648acbf517d7e47cec686f356b3594eddd7e44828eff971d0ab0e759d3a
+no access for tx:  0xc355b18bda504a592347abbcca705da45c7bb4a1e4fd1c62c76f204d0b699984
+no access for tx:  0x4d9a7a7107ceff7a7202a1e03cf20cbf5933a0ab6d068b9296b7651c4418442a
+no access for tx:  0x81d383573633dcb6e2d73c7ba73b6c26d705fc46fa755a6ed63f7afef9307ddc
+no access for tx:  0x901458ac5365a8a1c309fafaf76bf5a6972345335d93e0db1c2ecc011dac3bab
+no access for tx:  0x084ade0811fdec1c2b5b3491918a52239ed042e68d757e4f324dac3b6e51ba5d
+no access for tx:  0xcd1c3ec6d172859195e50620b2b5b6b1f71ba0f36d6f65f2325d43c7a60fcec2
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0xd40ac7ac785222c049df233206a0ae6b51afa5fd',
+                                           '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0xd40ac7ac785222c049df233206a0ae6b51afa5fd',
+                                           '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c'],
+                      'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginOwner': '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                        'isSenderOwner': '0xd91e1875728f4e0c75b9e49173eb16ca9b88de8c',
+                        'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		57	25
+5 sampled FPs for require(origin==sender)
+len(txList3):  82
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 724425,
+                        'require(gasStart <= constant)': 1086177},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 196271,
+                      'require(gasStart <= constant)': 307111},
+  'redeem0xdb006a75': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 8251473 - 7639040 = 612433
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  14
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{ 'callvalue': {},
+  'dataFlow': { 'borrow_withdraw': { 2813: [ ( 'msg.data',
+                                               4,
+                                               36,
+                                               4200000000000000000000,
+                                               2813),
+                                             ( 4200000000000000000000,
+                                               20000000000000000000000)]}},
+  'mapping': {}}
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['dataFlowUpperBound']
+0		59	23
+5 sampled FPs for dataFlowUpperBound

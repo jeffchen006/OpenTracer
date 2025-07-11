@@ -1,0 +1,115 @@
+benchmark:  OnyxDAO5
+now works on benchmark:  OnyxDAO  contract:  0x7a89e16cc48432917c948437ac1441b78d133a16
+total transactions:  82
+total:  82
+no access for tx:  0xc70e17d79e26fe31d74617dfd1dfaf40551784ca8976ce61734a2c7ef76501f7
+no access for tx:  0x01f3e4e3a77159f4e9de0abdc0dd1027b4bff4d689035025517c159d71d22c8b
+no access for tx:  0x4acdba632cb8930e9881f8b57373188292f72cb91cac5ed3863fa15c745d0e42
+no access for tx:  0x6a4629b67115bba8fe6ba836979139f7318468397cd41ee34b95940b1e8dee2a
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0x2656c9cf9e4c030c6fd44ab89396727aff07c82b963de77c8f804ad7ed604f7d
+no access for tx:  0x3bcc8c4efbdb95073e9277358a654f50774081f4340cbadde20d271368829d46
+no access for tx:  0x8117d37258cb60d268415cfeb700936cddd3a83d9255e4bcd81f832b0c388c92
+no access for tx:  0xb0e3ec88815b88bc0fb42c10035419ad6c7adfa07b9e6efb88c92bf91cf0d17c
+no access for tx:  0xb12a6a0ade8dbb4808d5263c93a3713f75c1743edec494edf0035d298ce98269
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0x0c3e2b47244cbe357db573cb23a1daa8086df57da7fe1a97a718e3354758137a
+no access for tx:  0xfc1d3c2b5b2797c12f4fb02c52fa1e03f253cc2fdb53c0c855dc3c3c837a5ece
+no access for tx:  0xfa97dc4083a3b332a446b95d31a5f337cccf950c81df61252e2371c3974a7bb5
+no access for tx:  0x1edbdc27ea10745594bddab2832397f4b50e156b8cf094e84ab951a53d36b68f
+no access for tx:  0xc6af076d7961d8f20e5d0217d3311b126ce3388a21bc62886d35875552a83b51
+no access for tx:  0xba9b38cd42e74e410764391e72ead5cca5003ec1c46ade8c9165cec13251ff7e
+no access for tx:  0xedea672cfa335b04cbb9c5ec4f1483028b81ea15e7a5cbc3dd71519b66586492
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+func redeem0xdb006a75 has only 1 sender
+func redeem0xdb006a75 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9'],
+                      'require(origin==sender)': True},
+  'redeem0xdb006a75': { 'isOriginOwner': '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9',
+                        'isSenderOwner': '0x25d39525c9fd1c409dad1fb7420c5e7046d8cea9',
+                        'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		57	25
+5 sampled FPs for require(origin==sender)
+len(txList3):  82
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 725627,
+                        'require(gasStart <= constant)': 1094979},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 206008,
+                      'require(gasStart <= constant)': 321568},
+  'redeem0xdb006a75': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 7738462 - 7141966 = 596496
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  15
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

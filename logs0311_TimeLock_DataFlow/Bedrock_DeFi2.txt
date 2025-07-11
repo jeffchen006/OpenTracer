@@ -3278,9 +3278,32 @@ no access for tx:  0x7311cd91f599cef87107a9a028ddba7abc6004f2dad95f10750603b9bd9
 no access for tx:  0x16b6a635d70e27b887daf5853311083c3cc925d8ada6f3842a67693a9f2ecb7e
 no access for tx:  0x74d06bf21c256028d91ce6ee9d39905ffc544d7108014c2189040a9b1d648ee8
 =====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+==invariant map: 
+{}
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(origin==sender)']
+N/A		2302	987
+5 sampled FPs for require(origin==sender)
+len(txList3):  3289
+=====================================================
 =================== Time Locks ======================
 =====================================================
 enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark Bedrock_DeFi: 
+==invariant map: 
+{}
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+N/A	N/A	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  1
 =====================================================
 =================== DataFlow ========================
 =====================================================
@@ -3291,3 +3314,6 @@ callvalue map:
 {}
 ==invariant map: 
 {'callvalue': {}, 'dataFlow': {}, 'mapping': {}}
+exploitTx:  0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940
+FPMap: ['dataFlowUpperBound']
+N/A		2304	985

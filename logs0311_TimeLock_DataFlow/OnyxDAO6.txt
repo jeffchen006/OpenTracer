@@ -1,0 +1,126 @@
+benchmark:  OnyxDAO6
+now works on benchmark:  OnyxDAO  contract:  0x2c6650126b6e0749f977d280c98415ed05894711
+total transactions:  98
+total:  98
+no access for tx:  0xf979312effd7254b5f3723fe4d07a4bd2671f9568a28821b52584c4a582fc11f
+no access for tx:  0x747910e301be5935b35981ffac878eaf3b34f52b00ab8289892277fe5b7d7c25
+no access for tx:  0x5e64a7f16361dcb79a17467d2d467d88fba0f3485b31231888047d7647efbbbc
+no access for tx:  0x59af639b580aa50eea304cb99d8f974c0ad71e7079106cff0b0070588a3f5a45
+no access for tx:  0x713e8a44ea450ba7c37b3c934ec365453cffbe652f119f8461cb62c682fdba01
+no access for tx:  0x67e9919f17524b15873dbce980e4404f26d20a5faf284280556f486fd6b3052b
+no access for tx:  0x406ef0fdd66b2e3cb3b1fd02f8923153a794307b8ad63a6a655add63ee69b6b5
+no access for tx:  0xeb596dd0b3a820c7cf8c994f7e4f05093dbf752e165b52492f0151b8f7bc7ed4
+no access for tx:  0xa3a9a286f4ac9575fef818d564b43a9e5aa9f3d96db1242b66b51363e373c9f4
+no access for tx:  0xd30de97bc3d6d4355881c9e143b4f736984402e3f75314048abda94c517926fc
+no access for tx:  0x19fff7e3358864e057c932239079f2385db6cec24dcbee42bf845b59941d91e4
+no access for tx:  0x525d23fe61c5daf399e58aa2863ec2a66843e6d48b2fde6eff939b178317d5db
+no access for tx:  0x5ee710aae7d8a939806ff89e87f9c4d2979b94b182b4d9f747eb08f6015a5f15
+no access for tx:  0x86b9643eede7d17fc55eaed38bcb2bf285ee1f713532f7966dac3320d32d5101
+no access for tx:  0x11c75f542bbde40f92319e4d46921cbfc39e8d3d3527084e0fc07eba1c79dd0c
+no access for tx:  0x318fa8b5e32eb0354fe56f6268cc2f0a407daae882800f4c60eab66bd9dc1f61
+no access for tx:  0x208ba2f68442fe992c39aa1ddd0e1f76c3d4a5e619595dac6ddf8c8dddf9a018
+no access for tx:  0x6b45e0654625e8f1149df951d03d7c6723ed0f97b4ec95fd95be6d1d837fb88e
+no access for tx:  0xd3ad75d3bb0c335c1f0e74ea9355d9ace6ee891d8f61d91a35c1e61f53f432a6
+no access for tx:  0x741f70d84403243ea88eff8deaae93aa3976672c9b33010f9039a70998a52af9
+no access for tx:  0x09a50de0b3a79a71ebeb74cd3768f7df327ebb36d4b6176a91be121ffd63e8d2
+no access for tx:  0x1579a590e6fac4b232315741cdf6e44c5b91d9a2839369037e5b9f732b66b0b5
+no access for tx:  0x17f7db97e91362e8874351972ab840d48f082e39212faedf24cfc41c64706f84
+no access for tx:  0x3cf6010f0c88e3568096900b0e6e5cae480373de0ebec6935503aead17882d31
+no access for tx:  0xb8ee5277b326b931e2385facc5466f4e383b742b8493c2202f77ab8b66dfac06
+no access for tx:  0xef27035821723c768f4a3c64b22b40753ce7ef82165ae305584eae360a42393c
+=====================================================
+=============== Access Control ======================
+=====================================================
+====== benchmark OnyxDAO: 
+func initialize0x1a31d465 has only 1 sender
+func initialize0x1a31d465 has only 1 origin
+func _becomeImplementation0x56e67728 has only 1 sender
+func _becomeImplementation0x56e67728 has only 1 origin
+func _setReserveFactor0xfca7820b has only 1 sender
+func _setReserveFactor0xfca7820b has only 1 origin
+func _setPendingAdmin0xb71d1a0c has only 1 sender
+func _setPendingAdmin0xb71d1a0c has only 1 origin
+func redeemUnderlying0x852a12e3 has only 1 sender
+func redeemUnderlying0x852a12e3 has only 1 origin
+func _acceptAdmin0xe9c714f2 has only 1 sender
+func _acceptAdmin0xe9c714f2 has only 1 origin
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                              'isSenderOwner': '0x08edf0f2af8672029eb445742b3b4072c6158df3',
+                              'require(origin==sender)': False},
+  '_becomeImplementation0x56e67728': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                       'require(origin==sender)': True},
+  '_setPendingAdmin0xb71d1a0c': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                  'require(origin==sender)': True},
+  '_setReserveFactor0xfca7820b': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                                   'require(origin==sender)': True},
+  'borrow0xc5ebeaec': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                             '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c'],
+                        'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                             '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                             '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c'],
+                        'require(origin==sender)': True},
+  'initialize0x1a31d465': { 'isOriginOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'isSenderOwner': '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b',
+                            'require(origin==sender)': True},
+  'mint0xa0712d68': { 'isOriginManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c',
+                                           '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b'],
+                      'isSenderManager': [ '0xe0eedc3d73592e7c172d51501f936658b8e934ce',
+                                           '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                           '0x60905a5bc89e3cfc714823e7d8e3cfbe9ce7ea0c',
+                                           '0x7ec7d0db303b09fe634efc27c8d2603b4ebf5e3b'],
+                      'require(origin==sender)': True},
+  'redeemUnderlying0x852a12e3': { 'isOriginOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                  'isSenderOwner': '0x8cf877e91118ab50ff00de1e6e6a566c9c2b8228',
+                                  'require(origin==sender)': True}}
+Successfully stops the exploit using require(origin==sender)
+Successfully stops the exploit using isSenderManager
+Successfully stops the exploit using isOriginManager
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(origin==sender)']
+0		68	30
+5 sampled FPs for require(origin==sender)
+len(txList3):  98
+=====================================================
+=================== Time Locks ======================
+=====================================================
+enterFuncs or exitFuncs is empty, so OB does not apply
+=====================================================
+=================== Gas Control =====================
+=====================================================
+====== benchmark OnyxDAO: 
+==invariant map: 
+{ '_acceptAdmin0xe9c714f2': {},
+  '_becomeImplementation0x56e67728': {},
+  '_setPendingAdmin0xb71d1a0c': {},
+  '_setReserveFactor0xfca7820b': {},
+  'borrow0xc5ebeaec': { 'require(gasStart - gasEnd <= constant)': 727562,
+                        'require(gasStart <= constant)': 1097859},
+  'initialize0x1a31d465': {},
+  'mint0xa0712d68': { 'require(gasStart - gasEnd <= constant)': 208939,
+                      'require(gasStart <= constant)': 325935},
+  'redeemUnderlying0x852a12e3': {}}
+Successfully stops the exploit using require(gasStart <= constant)
+For the func borrow0xc5ebeaec, gas 7232397 - 6633435 = 598962
+exploitTx:  0x46567c731c4f4f7e27c4ce591f0aebdeb2d9ae1038237a0134de7b13e63d8729
+FPMap: ['require(gasStart <= constant)', 'require(gasStart - gasEnd <= constant)']
+0	0	
+5 sampled FPs for require(gasStart <= constant)
+5 sampled FPs for require(gasStart - gasEnd <= constant)
+len(txList3):  20
+=====================================================
+=================== DataFlow ========================
+=====================================================
+====== benchmark OnyxDAO: 
+mapping map: 
+{}
+callvalue map: 
+{}
+==invariant map: 
+{'callvalue': {}, 'dataFlow': {}, 'mapping': {}}

@@ -72,7 +72,8 @@ class decoder:
             s = oldCalldataHex[:startIndexHex] + calldataReadHex
         else:
             if endIndexHex > len(oldCalldataHex) and inputcalldataSize != -1:
-                sys.exit("Decoder Error: endIndexHex > len(oldCalldataHex)")
+                # sys.exit("Decoder Error: endIndexHex > len(oldCalldataHex)")
+                return oldCalldataHex
                 
             # if len(calldataReadHex) != 64:
             #     sys.exit("Decoder Error: len(calldataReadHex) != 64")
