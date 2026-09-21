@@ -1,0 +1,17 @@
+[project]
+name = "opentracer"
+version = "0.1.0"
+description = "An Ethereum Dynamic Analyzer, a.k.a, open-sourced transaction explorer similar to Phalcon/EthTx/TxTracer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "eth-abi>=6.0.0",
+    "hexbytes>=2.0.0",
+    "numpy>=2.5.3",
+    "packaging>=26.3",
+    "requests>=2.34.2",
+    "slither-analyzer>=0.11.6",
+    "toml>=0.10.2",
+    "tomlkit>=0.15.1",
+    "web3>=7.16.0",
+]
