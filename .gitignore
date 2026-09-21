@@ -13,6 +13,9 @@ crawlPackage/cache/
 
 settings.toml
 
+# virtualenv created by `uv sync`
+.venv/
+
 # where we store the cache of transactions
 cache/
 

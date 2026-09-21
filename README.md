@@ -137,6 +137,17 @@ OpenTracer has been rigorously tested on both Ubuntu Linux and MacOS.
 ## Dependencies
 To ensure smooth operation of OpenTracer, the following dependencies must be installed:
 
+### Python environment
+Python dependencies are declared in `pyproject.toml` and pinned in `uv.lock`, and are
+managed with [uv](https://docs.astral.sh/uv/). OpenTracer requires Python >= 3.12.
+
+```bash
+uv sync
+```
+
+This creates a `.venv/` with the locked versions. Prefix commands with `uv run`
+(for example `uv run python main.py`) or activate the environment directly.
+
 ### sqlite3
 Utilized for caching transactions and contracts data.
 - Pre-installed on MacOS.
@@ -147,10 +158,8 @@ Utilized for caching transactions and contracts data.
   - Ensure to install all necessary compiler versions through the tools above.
 
 ### Slither
-A Solidity static analysis framework.
-```bash
-python3 -m pip install slither-analyzer
-```
+A Solidity static analysis framework. It is already declared in `pyproject.toml`,
+so `uv sync` installs it; no separate install step is needed.
 
 ### TrueBlocks (Only needed if feature 2 is needed )
 Install TrueBlocks from the official documentation.

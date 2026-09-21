@@ -84,7 +84,8 @@ def _parseValue(val):
         return toDict(val)
     # convert 'HexBytes' type to 'str'
     elif 'HexBytes' in str(type(val)):
-        return val.hex()
+        # hexbytes >= 2 dropped the '0x' prefix from .hex(), keep it for callers
+        return val.to_0x_hex()
     else:
         return val
 
@@ -122,7 +123,7 @@ class CrawlQuickNode:
         #     self.cacheReceipt[Tx] = receiptJson
         #     return receiptJson
         receipt = self.get_w3().eth.get_transaction_receipt(Tx)
-        # receiptJson = Web3.toJSON(receipt)
+        # receiptJson = Web3.to_json(receipt)
         # receiptJson = json.loads(receiptJson)
         receiptJson = toDict(receipt)
         # save_object(receiptJson, filename)
@@ -183,10 +184,10 @@ class CrawlQuickNode:
 
     def BlockIndex2TxGasUsed(self, block: int, blockIndex: int) -> int:
         """Given a block number and a block index, return the pair (tx hash, gasUsed)"""
-        # block_hex = Web3.toHex(block)
+        # block_hex = Web3.to_hex(block)
         block_hex = hex(block)
         output = self.get_w3().eth.get_transaction_by_block(block_hex, blockIndex)
-        hexstring = output["hash"].hex()
+        hexstring = HexBytes(output["hash"]).to_0x_hex()
         gasUsed = output["gas"]
         return (hexstring, gasUsed)
 
@@ -219,7 +220,7 @@ class CrawlQuickNode:
 
     def batch_Blocks2Receipts(self, blocks: list) -> list:
         """Given a list of blocks, return a list of receipts"""
-        values = self.batchRequests([("eth_getBlockByNumber", [Web3.toHex(block), True]) for block in blocks])
+        values = self.batchRequests([("eth_getBlockByNumber", [Web3.to_hex(block), True]) for block in blocks])
         return values
         
     def BlockIndex2Tx(self, block: int, blockIndex: int) -> str:
@@ -245,9 +246,9 @@ class CrawlQuickNode:
         blockstatsJson = load_object(filename)
         if blockstatsJson is not None:
             return blockstatsJson
-        block_hex = Web3.toHex(block)
+        block_hex = Web3.to_hex(block)
         receipt = self.get_w3().eth.get_block(block_hex)
-        receiptJson = Web3.toJSON(receipt)
+        receiptJson = Web3.to_json(receipt)
         receiptJson = json.loads(receiptJson)
         save_object(receiptJson, filename)
         return receiptJson
@@ -267,7 +268,7 @@ class CrawlQuickNode:
             receipts = self.batch_Blocks2Receipts(batch) 
             for block, receipt in zip(batch, receipts):
                 filename = "blocks/{}_Receipt".format(block)
-                receiptJson = Web3.toJSON(receipt)
+                receiptJson = Web3.to_json(receipt)
                 receiptJson = json.loads(receiptJson)
                 save_object(receiptJson, filename)      
 
@@ -321,7 +322,7 @@ class CrawlQuickNode:
     
     def ETHBalanceOf(self, address: str, block: int):
         url = self.get_url()
-        block_hex = Web3.toHex(block)
+        block_hex = Web3.to_hex(block)
         payload = json.dumps(
         {
             "method": "eth_getBalance",
@@ -345,10 +346,10 @@ class CrawlQuickNode:
         # use eth_call to get the balance of the contract'
         erc20 = erc20.lower()
         url = self.get_url()
-        block_hex = Web3.toHex(block)
+        block_hex = Web3.to_hex(block)
         # 0x70a08231: balanceOf function signature
 
-        data = "0x70a08231" +   Web3.toHex(Web3.toBytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
+        data = "0x70a08231" +   Web3.to_hex(Web3.to_bytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
         payload = json.dumps({
         "method": "eth_call",
         "params": [
@@ -446,7 +447,7 @@ class CrawlQuickNode:
                 [ 
                     (
                         "eth_getBalance", 
-                        [contract, Web3.toHex(block) ]
+                        [contract, Web3.to_hex(block) ]
                     ) for block in blocks
                 ]
             )
@@ -455,7 +456,7 @@ class CrawlQuickNode:
             paramsDict = {
                             "from": None,
                             "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                            "data": "0x70a08231" +   Web3.toHex(Web3.toBytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
+                            "data": "0x70a08231" +   Web3.to_hex(Web3.to_bytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
                         }
 
             values1 = self.batchRequests(
@@ -464,7 +465,7 @@ class CrawlQuickNode:
                         "eth_call",
                         [
                             paramsDict, 
-                            str(Web3.toHex(block))
+                            str(Web3.to_hex(block))
                         ]
                     ) for block in blocks
                 ]
@@ -478,7 +479,7 @@ class CrawlQuickNode:
             paramsDict = {
                             "from": None,
                             "to": address.lower(),
-                            "data": "0x70a08231" +   Web3.toHex(Web3.toBytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
+                            "data": "0x70a08231" +   Web3.to_hex(Web3.to_bytes(hexstr=contract)) .lstrip("0x").rjust(64, "0")
                         }
             
             values = self.batchRequests(
@@ -487,7 +488,7 @@ class CrawlQuickNode:
                         "eth_call",
                         [
                             paramsDict, 
-                            str(Web3.toHex(block))
+                            str(Web3.to_hex(block))
                         ]
                     ) for block in blocks
                 ]

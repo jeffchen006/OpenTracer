@@ -100,7 +100,7 @@ class decoder:
 
     def extractMemory(self, memoryList: list, offset, length):
         """Given memory (a list of str), an offset (eg. 0x100), a length (eg. 0x20), return memory snippet which represents return value"""
-        memoryWhole = ''.join(memoryList)
+        memoryWhole = ''.join(word.removeprefix("0x") for word in memoryList)
         offsetInt = int(offset, base = 16)
         lengthInt = int(length, base = 16)
         offsetBytesLen = offsetInt * 2
