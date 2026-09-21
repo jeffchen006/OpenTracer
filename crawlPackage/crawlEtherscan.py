@@ -378,8 +378,8 @@ class CrawlEtherscan:
 
     def BlockIndex2Tx(self, block: int, blockIndex: int) -> str:
         """Given a block number and a block index, return the tx hash"""
-        block_hex = Web3.toHex(block)
-        block_index = Web3.toHex(blockIndex)
+        block_hex = Web3.to_hex(block)
+        block_index = Web3.to_hex(blockIndex)
         GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=proxy'\
             '&action=eth_getTransactionByBlockNumberAndIndex'\
             '&tag={}'\
