@@ -132,7 +132,7 @@ class slitherAnalyzer:
                 if funcSig[0] == "constructor":
                     funcSelector = "constructor"
                 else:    
-                    funcSelector = Web3.keccak(text=funcSigStr).hex()[0:10]
+                    funcSelector = "0x" + Web3.keccak(text=funcSigStr)[:4].hex()
                 funcSigMap[funcSelector] = funcSigTuple
 
         return funcSigMap

@@ -71,7 +71,7 @@ class CrawlEtherscan:
         receiptJson = _load_contract(contractAddress, self.cur)
         if receiptJson is not None and not isinstance(receiptJson, str):
             return receiptJson
-        GETrequest = 'https://api.etherscan.io/api?module=contract'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=contract'\
             '&action=getsourcecode'\
             '&address={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
@@ -87,7 +87,7 @@ class CrawlEtherscan:
         """Given a contract address, return the ABI"""
         if contractAddress in self.ABIMap:
             return self.ABIMap[contractAddress]
-        GETrequest = 'https://api.etherscan.io/api?module=contract'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=contract'\
             '&action=getabi'\
             '&address={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
@@ -105,7 +105,7 @@ class CrawlEtherscan:
         if contractAddress in self.VerifyMap:
             return self.VerifyMap[contractAddress]
         
-        GETrequest = 'https://api.etherscan.io/api?module=contract'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=contract'\
             '&action=getabi'\
             '&address={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
@@ -148,7 +148,7 @@ class CrawlEtherscan:
                     for input in function['inputs']:
                         functionSign += input['type'] + ','
                     functionSign = functionSign[:-1] + ')'
-                functionSelector = Web3.keccak(text=functionSign).hex()[0:10]
+                functionSelector = "0x" + Web3.keccak(text=functionSign)[:4].hex()
                 functionSigMap[functionSelector] = (function['name'], [], [])
                 for input in function['inputs']:
                     functionSigMap[functionSelector][1].append(input['type'])
@@ -201,7 +201,7 @@ class CrawlEtherscan:
                         functionSign += input['type'] + ','
                         
                     functionSign = functionSign[:-1] + ')'
-                functionSelector = Web3.keccak(text=functionSign).hex()[0:10]
+                functionSelector = "0x" + Web3.keccak(text=functionSign)[:4].hex()
                 if not containsTuple:
                     functionSigMap[functionSelector] = (function['name'], [], [], readOnly)
                     for input in function['inputs']:
@@ -214,7 +214,7 @@ class CrawlEtherscan:
 
     def Contract2Bytecode(self, contractAddress: str) -> str:
         """Given a contract address, return the bytecode"""
-        GETrequest = 'https://api.etherscan.io/api?module=proxy'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=proxy'\
             '&action=eth_getCode'\
             '&address={}'\
             '&tag=latest'\
@@ -232,7 +232,7 @@ class CrawlEtherscan:
         if self.cacheDeployer is not None and contractAddress in self.cacheDeployer:
             return self.cacheDeployer[contractAddress]
 
-        GETrequest = 'https://api.etherscan.io/api?module=contract'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=contract'\
             '&action=getcontractcreation'\
             '&contractaddresses={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
@@ -261,7 +261,7 @@ class CrawlEtherscan:
         if self.cacheDeployTx is not None and contractAddress in self.cacheDeployTx:
             return self.cacheDeployTx[contractAddress]
 
-        GETrequest = 'https://api.etherscan.io/api?module=contract'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=contract'\
             '&action=getcontractcreation'\
             '&contractaddresses={}'\
             '&apikey={}'.format(contractAddress, self.getEtherScanAPIkey())
@@ -283,8 +283,8 @@ class CrawlEtherscan:
 
     def Tx2Status(self, Tx: str) -> int:
         """Given a Tx hash, return the transaction status"""
-        GETrequest = 'https://api.etherscan.io/api'\
-            '?module=transaction'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1'\
+            '&module=transaction'\
             '&action=gettxreceiptstatus'\
             '&txhash={}'\
             '&apikey={}'.format(Tx, self.getEtherScanAPIkey())
@@ -298,8 +298,8 @@ class CrawlEtherscan:
         if receiptStored is not None:
             # print("stored")
             return receiptStored
-        GETrequest = 'https://api.etherscan.io/api'\
-            '?module=proxy'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1'\
+            '&module=proxy'\
             '&action=eth_getTransactionReceipt'\
             '&txhash={}'\
             '&apikey={}'.format(Tx, self.getEtherScanAPIkey())
@@ -327,8 +327,8 @@ class CrawlEtherscan:
         if receiptStored is not None and "input" in receiptStored and "value" in receiptStored and \
             receiptStored["input"] is not None and receiptStored["value"] is not None:
             return receiptStored
-        GETrequest = 'https://api.etherscan.io/api'\
-            '?module=proxy'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1'\
+            '&module=proxy'\
             '&action=eth_getTransactionByHash'\
             '&txhash={}'\
             '&apikey={}'.format(Tx, self.getEtherScanAPIkey())
@@ -380,7 +380,7 @@ class CrawlEtherscan:
         """Given a block number and a block index, return the tx hash"""
         block_hex = Web3.toHex(block)
         block_index = Web3.toHex(blockIndex)
-        GETrequest = 'https://api.etherscan.io/api?module=proxy'\
+        GETrequest = 'https://api.etherscan.io/v2/api?chainid=1&module=proxy'\
             '&action=eth_getTransactionByBlockNumberAndIndex'\
             '&tag={}'\
             '&index={}'\
